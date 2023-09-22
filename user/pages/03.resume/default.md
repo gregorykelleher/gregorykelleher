@@ -3,7 +3,7 @@ title: Résumé
 menu: Résumé
 ---
 
-My name's Gregory Kelleher and I'm a software engineer working for Overstock in the west of Ireland.
+My name's Gregory Kelleher and I'm a software engineer working for Qualcomm in Ireland.
 
 I've always had a strong interest in technology, evident in my diverse experience across numerous technological domains. From IoT to automotive, I've built a comprehensive skillset building and testing software for real-world projects.
 

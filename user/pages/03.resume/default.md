@@ -3,94 +3,94 @@ title: Résumé
 menu: Résumé
 ---
 
-My name's Gregory Kelleher and I'm a software engineer working for Qualcomm in Ireland.
+My name's Gregory Kelleher and I'm a software engineer working for Qualcomm in Ireland
 
-I've always had a strong interest in technology, evident in my diverse experience across numerous technological domains. From IoT to automotive, I've built a comprehensive skillset building and testing software for real-world projects.
+I've been lucky to have experience in a range of software domains spanning Automotive, IoT, Cloud to AI Accelerators. Accordingly, I've built a proven track record contributing to high-profile projects across both Research and Production
 
-With a background in R&D development for Jaguar Land Rover and Intel, I've also been fortunate to have been involved in some cutting-edge projects down through the years.
+I'm well-versed in C++17 and Modern CMake, and have a keen interest in doing technical presentations in my spare time
 
 ---
 <br></br>
 
 ##Experience
 
-**Overstock.com Ltd** 
+**Qualcomm Technologies, Inc.**
 
 _Software Engineer • January 2021 - current_
 
-Currently in a new role at Overstock.com working as part of their e-commerce division.
+Member of Qualcomm’s high-calibre Corporate R&D team, designing and developing middleware for state-of-the-art Cloud AI inference accelerator
+
+Responsible for architecting and delivering critical feature sets (namely stream profiling tooling to provide performance analysis and optimisations)
+
+Self-driven effort to introduce CTest and Conan into project repositories, leading to more efficient build pipelines and streamlined dependency management
+
+Heavily contributed to the design and development of a specialised Windows kernel-mode driver (KMDF) solution
+
+Advocated and prevailed on the choice of C++17, following best practices; duly led the conversion of ancillary drivers to adopt the same model I espoused
+
+Pioneered implementation of WPP software tracing, significantly enhancing diagnostic capabilities and enabling real-time monitoring of system events
+
+Took the initiative in designing Cloud AI Manager, akin to Nvidia DCGM, and executed extensive software prototypes, ultimately securing project approval
+
+Tailored Jupyter notebooks to showcase the performance of Hugging Face NLP/ML models on Cloud AI hardware, illustrating capabilities to stakeholders
+
+**Overstock.com Ltd** 
+
+_Software Engineer • January 2021 - January 2022_
+
+Responsible for building and maintaining a suite of cloud-native microservice applications in live production for Customer Relationship Management (CRM)
+
+Initiated and successfully deployed the AWS CDK IaC framework, significantly improving the efficiency of infrastructure provisioning and management
 
 **Jaguar Land Rover Research & Development Ireland Ltd** 
 
 _Automotive Software Engineer • August 2018 - January 2021_
 
-Worked across a broad software domain that encompasses both research and production projects.
+Over 2 years of experience delivering robust software at the highest ISO 26262 ASIL-D rated safety-critical requirements; in research and production settings
 
-Extensive experience writing modern C++ for next-generation Electrical Vehicle Architecture (EVA). Strong focus on delivering ASIL-D rated software with strict compliance to MISRA and AutoSAR coding standards.
+Continuous contributions to the BSP for the new Land Rover Defender (L663)
 
-Long-term involvement on the Land Rover Defender (L663) programme, developing production software to enable SOTA capabilities for network diagnostics.
+Built extensive experience with latest automotive virtualisation technologies
+
+Heavily involved in the design and development of the off-boarding agent for the Land Rover Defender, with the goal to provide SOTA capabilities to enable Level 2 grade ADAS diagnostics
+
+Long-term commitment writing bespoke software to evaluate experimental EVA architecture proposals
+
+Assisted in the construction of a full-sized vehicle skeleton rig to demonstrate software running on genuine automotive hardware
+
+Maintained and enhanced cross-team GitLab CI/CD pipeline at scale
 
 **Intel Research & Development Ireland Ltd**
 
-_Software Engineer • Feb 2017 - Aug 2017_
+_Software Engineer • Feb 2017 - Aug 2017, May 2016 - Sept 2016_
 
-Intern working as part of the Strategy and Solutions Engineering Division (SSED). Conducted study into the role for Information Security in relation to IoT. Special focus into Direct Anonymous Attestation (DAA) algorithms, as well as cryptographic protocols such as TLS/SSL.
+Contributed to latest firmware for Quark SoC Atlas Peak BSP and built proficiencies with dynamic testing analysis for SoCs
 
-Familiarity with OpenSSL and implementing TLS/SSL best practices, e.g. HSTS, HPKP, ECDHE, HTTP/2, OCSP stapling, forward secrecy .etc
-
-**Intel Research & Development Ireland Ltd** 
-
-_Software Engineer • May 2016 - Sept 2016_
-
-Summer internship working with embedded systems and micro-controllers as part of Quark Solutions Division (QSD). Built proficiency in C with GNU toolchain, alongside debugging tools such as GDB and OpenOCD, as well as VCS (Git and Gerrit).
+Delivered research project on IoT security, showcasing 'Zero-Touch' Secure Device Onboarding with Direct Anonymous Attestation (DAA) algorithms
 
 ---
 <br></br>
 
 ##Proficiencies
 
-**Systems and Embedded Programming**
+**Systems/Application Programming and Scripting**
 
-+ Modern C++14 and above
-+ CMake and Conan
-+ Google Test
-+ GNU toolchain (gcc, gcov, gdb .etc)
-+ Git
-+ ANSI C
-
-**Debugging and Analysis Tooling**
-
-+ Valgrind
-+ CppCheck
-+ Clang-tidy
-+ lcov/gcov
-+ OpenOCD
-+ LDRA
++ Modern C++ (C++17 and above) with Modern CMake (3.0+)
++ Git, Clang/GNU toolchains, Google Test, CTest and Conan
++ Static Analyzer tooling like Clang-format, Clang-Tidy, Cppcheck, LDRA
++ Familiarity with industry standards: ISOCPP, ISO26262, AutoSAR
++ Python (3.8 and above) alongside Pylint, Black, Pytest
++ Jupyter Notebooks with PyTorch and Hugging Face Transformers Library
 
 **Operating Systems and Platforms**
 
-+ Linux
-+ QNX (Microkernel UNIX)
-+ freeRTOS
++ Windows (WDK), Linux and QNX (Micro-kernel UNIX)
++ Numerous (x86/ARM) evaluation boards and SoC platforms
 + Yocto Project and BitBake
-+ Beagleboard and NXP
-+ Numerous (x86/ARM) evaluation boards
-+ Intel Quark (Clanton, Mint Valley, Atlas Peak)
-+ Intel Atom (Denverton)
 
-**DevOps**
+**Web and CI/CD**
 
-+ GitLab Runner
-+ Docker, Vagrant
-+ Packer, Ansible
-
-**Web Development**
-
-+ NGINX: performance, optimisation config .etc
-+ Caddy Web Server
-+ DigitalOcean
-+ SQL, Firebase
-+ Grav CMS
++ GitLab Runner, Jenkins, Docker, AWS CDK, Ansible, Artifactory, GCP Cloud
 
 ---
 <br></br>
@@ -99,50 +99,7 @@ Summer internship working with embedded systems and micro-controllers as part of
 
 **Maynooth University** • B.Sc. Computer Science and Software Engineering • 2014 - 2018
 
-**Sligo Grammar School** • Leaving Certificate • 2014 
-
 ---
 <br></br>
 
-##Recent Work
-
-**Centre of Talented Youth Ireland • Educator • Jan 2016 - March 2016**
-
-Class Educator leading a class of 20 students for 3 months. Taught electronics and embedded programming using Intel Galileo micro-controllers.
-
-Designed and delivered on my own course-work, including practical experiments building electronic circuits and creating embedded projects. My notes and slides can be found on my website [here](https://gregorykelleher.com/gizmos_and_gadgets).
-
-**Centre of Talented Youth Ireland • Educator • Jan 2017 - March 2017**
-
-Granted to be an Educator at DCU's Centre of Talented Youth Ireland again for a further 3 months. The course is based upon teaching students computer gaming using GameMaker software and tools.
-
-**CoderDojo Ireland • Demonstrator • Sept 2015 - May 2017**
-
-CoderDojo is a free computer programming club for young people of all ages. I volunteer each Thursday in my local Dojo at Maynooth University.
-
-**Web Development • Freelancing • Previously**
-
-I've often done freelance work to develop and build progressive web applications and websites for clients through the years. Taking on side projects has enabled me to further build upon my technical skills, as well as providing an avenue for me to experiment with new technologies.
-
-Most, if not all my work has been hosted on my own personal server and I frequently aim to improve on my work. Documentation can also be found on my website and [Github](https://github.com/gregorykelleher).
-
----
-<br></br>
-
-##Associations
-
-**Demonstrator** • CoderDojo Maynooth University
-
-**Educator** • DCU Centre for Talented Youth Ireland
-
-**Member** • Computer Science Club Maynooth University
-
-**Presenter** • Dublin Maker Faire
-
-**Winners** • Innovation Academy Education Award, Science Hackathon Dublin
-
----
-<br></br>
-
-<a href="/user/pages/03.resume/gregory_kelleher_resume.pdf" download class="btn">Download Résumé</a> 
-
+<a href="/user/pages/03.resume/gregory_kelleher_resume_2023.pdf" download class="btn">Download Résumé</a> 

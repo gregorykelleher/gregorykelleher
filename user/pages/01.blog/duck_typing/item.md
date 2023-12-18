@@ -1,6 +1,6 @@
 ---
 title: The merits of Static Paradigms versus Duck Typing
-date: 13:08 02/07/2021
+date: 13:08 03/16/2021
 highlight:
     theme: monokai
 taxonomy:

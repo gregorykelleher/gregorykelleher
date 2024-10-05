@@ -5,7 +5,7 @@ route: about
 
 Hi, my name's Gregory Kelleher.
 
-I'm a software engineer employed at Qualcomm. Whether inside or outside the office, I enjoy learning and discovering all things 'tech'.
+I'm a software engineer from Ireland, currently living it up in the Alps 🏔️. Whether inside or outside the office, I enjoy learning and discovering all things 'tech'.
 
 As such, I inevitably find myself engaged in a range of activities. Whether configuring my web server, tinkering with electronics or dabbling in projects; I'm almost always at the keyboard.
 

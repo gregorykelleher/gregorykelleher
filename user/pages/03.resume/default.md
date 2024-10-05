@@ -3,11 +3,11 @@ title: Résumé
 menu: Résumé
 ---
 
-My name's Gregory Kelleher and I'm a software engineer working for Qualcomm in Ireland
+My name's Gregory Kelleher. Originally I'm from Ireland but I'm now working as a software engineer in Austria.
 
-I've been lucky to have experience in a range of software domains spanning Automotive, IoT, Cloud to AI Accelerators. Accordingly, I've built a proven track record contributing to high-profile projects across both Research and Production
+I've been lucky to have experience in a range of software domains spanning Automotive, IoT, Cloud to AI Accelerators. Accordingly, I've built a proven track record contributing to high-profile projects across both Research and Production.
 
-I'm well-versed in C++17 and Modern CMake, and have a keen interest in doing technical presentations in my spare time
+I'm well-versed in C++17 and Modern CMake, and have a keen interest in doing technical presentations in my spare time..
 
 ---
 <br></br>
@@ -16,7 +16,7 @@ I'm well-versed in C++17 and Modern CMake, and have a keen interest in doing tec
 
 **Qualcomm Technologies, Inc.**
 
-_Software Engineer • January 2021 - current_
+_Software Engineer • January 2021 - May 2024_
 
 Member of Qualcomm’s high-calibre Corporate R&D team, designing and developing middleware for state-of-the-art Cloud AI inference accelerator
 

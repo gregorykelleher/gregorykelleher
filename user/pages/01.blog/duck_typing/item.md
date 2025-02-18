@@ -164,6 +164,8 @@ auto quack_and_fly(Bird bird, Args&& ...args) -> void {
 }
 ```
 
+!!! This function is recursive; the overload processes the first bird, and then calls `quack_and_fly()` again for the remaining birds. The `std::forward<decltype(args)>(args)...` is used for perfect forwarding, preserving value categories (lvalues vs. rvalues) of the arguments passed in
+
 And so then in `main()` you could use the interface like so:
 
 ```cpp
@@ -201,7 +203,7 @@ struct Penguin
 
 template<typename Bird>
 concept isBirdLike = requires (Bird bird) {
-    { bird.quack(), bird.fly() } -> std::convertible_to<void>;
+    { bird.quack(), bird.fly() } -> std::same_as<void>;
 };
 
 template<isBirdLike Bird, typename... Args>
@@ -227,14 +229,14 @@ in requirements with 'Bird bird' [with Bird = Penguin]
 ...
 ```
 
-Finally, for the last example you can keep things a little simpler by just using an [abbreviated function template](https://en.cppreference.com/w/cpp/language/function_template#Abbreviated_function_template) with `auto` as the placeholder type.
+For the last example you can keep things a little simpler by just using an [abbreviated function template](https://en.cppreference.com/w/cpp/language/function_template#Abbreviated_function_template) with `auto` as the placeholder type.
 
 With C++20 we can avoid any explicit template boilerplating, by instead leveraging `auto` as a _"non-constraining type-constraint"_ like this:
 
 ```cpp
 template<typename Bird>
 concept isBirdLike = requires (Bird bird) {
-    { bird.quack(), bird.fly() } -> std::convertible_to<void>;
+    { bird.quack(), bird.fly() } -> std::same_as<void>;
 };
 
 auto quack_and_fly(isBirdLike auto bird) -> void {
@@ -249,7 +251,24 @@ auto quack_and_fly(isBirdLike auto bird, isBirdLike auto&& ...args) -> void {
 }
 ```
 
-I feel the above example demonstrates that you can have your cake and eat it too. It achieves the same goals as dynamic duck-typing, with negligible verbosity and all the benefits of `concept` constraints and type-safety.
+And lastly, for some final refinement, it's possible to switch from a recursive approach using two overloads, to instead use a single variadic template function using a parameter pack. For instance:
+
+```cpp
+template<typename Bird>
+concept isBirdLike = requires (Bird bird) {
+    { bird.quack(), bird.fly() } -> std::same_as<void>;
+};
+
+auto quack_and_fly(isBirdLike auto&&... birds) -> void {
+    (..., (birds.quack(), birds.fly()));
+}
+```
+
+In the above, the `(..., expr)` is a _fold expression_ that expands `expr` for each bird in the parameter pack.
+
+This approach is cleaner and ultimately generates less template code overhead than the original recursive variadic templates.
+
+In the end then, I feel the above walkthrough demonstrates that you can have your cake and eat it too. It achieves the same goals as dynamic duck-typing, with negligible verbosity and all the benefits of `concept` constraints and type-safety.
 
 > The compiler is a seatbelt, not a straightjacket
 

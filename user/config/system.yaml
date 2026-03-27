@@ -45,7 +45,7 @@ session:
 twig:
     cache: true
     debug: false
-    auto_reload: true
+    auto_reload: false
     autoescape: true
 
 assets:
@@ -68,3 +68,7 @@ strict_mode:
   yaml_compat: true
   twig_compat: true
   blueprint_compat: true
+
+images:
+  defaults:
+    loading: lazy

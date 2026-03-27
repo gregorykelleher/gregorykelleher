@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
     {% block head %}
         <meta charset="utf-8" />
-        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+        <title>{% if header.title %}{{ header.title|e }} | {% endif %}{{ site.title|e }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
@@ -12,33 +13,44 @@
             {% do assets.addJs('theme://js/kube.min.js') %}
             {% do assets.addJs('theme://js/snap.svg-min.js') %}
         {% endblock %}
-        {{ assets.js() }}
+
         {% block stylesheets %}
             {% do assets.addCss('theme://css/kube.min.css') %}
             {% do assets.addCss('theme://css/font-awesome.min.css') %}
             {% do assets.addCss('theme://css/custom.css') %}
         {% endblock %}
-        {{ assets.css() }}
 
-{% endblock head%}
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+        {# SRI hashes for fonts.googleapis.com - not supported yet :( #}
+        {# <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" integrity="sha256-5NzQbMD8jPmszd/9EgEctf2S7flBuA0mbKeQR+TiUyA= sha384-Y9O/sGKs+Av0jodd/o5FADE+4RkiJNd9MGKJsBFD+6EMPpQ7hx8wkhpIp9BmOvzL sha512-SqUBkpAF7QK0vyNI7TOS5/thzwDJX7Sus13haN2rT0eaKn/h/s5uJwzxoHS/AtrJEtztDPhEw/8i8oTUjx6MMw==" crossorigin="anonymous"> #}
+        {# <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" integrity="sha256-e5t1LfqGVLXhoGhXBNtKVwMQV9YnmesLBaBOCiuAUDI= sha384-zILoxgaabUljNcmzMnrdu0p3Bg9Y6B6D9e/DNKgfVpgz7mqz2jN5CbhhncD1rQ5z sha512-NV4zyPQp3iQOrvOMvzCVC8VJ7TTu9HAHGyeLXQOoLCuqLZvY8OTT7+X1E5nrZxsZY6pylHb0WtlWErR0CMIFDQ==" crossorigin="anonymous"> #}
+
+        {% block assets deferred %}
+            {{ assets.css()|raw }}
+            {{ assets.js()|raw }}
+        {% endblock %}
+
+    {% endblock head%}
 </head>
-<body>
+<body class="{{ page.header.body_classes }}">
 
     <div class="main-nav">
         <div class="container">
             <header class="group top-nav">
                 <nav class="navbar logo-w navbar-left" >
-                    <a class="logo" href="{{ home_url }}">{{ site.title }}</a>
+                    <a class="logo" href="{{ home_url }}">{{ site.title|e }}</a>
                 </nav>
                 <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
-                    <span class="logo">{{ site.title }}</span>
+                    <span class="logo">{{ site.title|e }}</span>
                 </div>
                 {% include 'partials/navigation.html.twig' %}
             </header>
         </div>
     </div>
 
-    <div class="intro"> 
+    <div class="intro">
         <div class="container">
             <div class="units-row">
                 <div class="unit-10">
@@ -51,43 +63,36 @@
         </div>
     </div>
 
-    {# SRI hashes for fonts.googleapis.com - not supported yet :( #}
-
-    {# <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" integrity="sha256-5NzQbMD8jPmszd/9EgEctf2S7flBuA0mbKeQR+TiUyA= sha384-Y9O/sGKs+Av0jodd/o5FADE+4RkiJNd9MGKJsBFD+6EMPpQ7hx8wkhpIp9BmOvzL sha512-SqUBkpAF7QK0vyNI7TOS5/thzwDJX7Sus13haN2rT0eaKn/h/s5uJwzxoHS/AtrJEtztDPhEw/8i8oTUjx6MMw==" crossorigin="anonymous"> #}
-
-    {# <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" integrity="sha256-e5t1LfqGVLXhoGhXBNtKVwMQV9YnmesLBaBOCiuAUDI= sha384-zILoxgaabUljNcmzMnrdu0p3Bg9Y6B6D9e/DNKgfVpgz7mqz2jN5CbhhncD1rQ5z sha512-NV4zyPQp3iQOrvOMvzCVC8VJ7TTu9HAHGyeLXQOoLCuqLZvY8OTT7+X1E5nrZxsZY6pylHb0WtlWErR0CMIFDQ==" crossorigin="anonymous"> #}
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-
     {% block body %}
         <div class="content">
             <div class="container">
                 {% block content %}{% endblock %}
-                </div>
             </div>
-        {% endblock %}
+        </div>
+    {% endblock %}
 
-        <footer>
-            <div class="container">
-                <div class="units-row">
-                    <div class="unit-50">
-                        <p class="text-centered foot-cp">
-                            <a href="{{ site.author.url }}">{{ site.author.footer }}</a>
-                        </p>
-                    </div>
-                    <div class="unit-50">
-                        <ul class="social list-flat right">
-                            {% for item in site.social %}
-                                <li><a href="{{ item.link }}"><i class="fa fa-{{ item.icon }}"></i></a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+    <footer>
+        <div class="container">
+            <div class="units-row">
+                <div class="unit-50">
                     <p class="text-centered foot-cp">
-                        <a href="{{ site.author.url2}}">{{ site.author.footer2 }}</a>
+                        <a href="{{ site.author.url }}">{{ site.author.footer }}</a>
                     </p>
                 </div>
+                <div class="unit-50">
+                    <ul class="social list-flat right">
+                        {% for item in site.social %}
+                            <li><a href="{{ item.link }}"><i class="fa fa-{{ item.icon }}"></i></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <p class="text-centered foot-cp">
+                    <a href="{{ site.author.url2}}">{{ site.author.footer2 }}</a>
+                </p>
             </div>
-        </footer>
-    </body>
-    </html>
+        </div>
+    </footer>
+
+    {{ assets.js('bottom')|raw }}
+</body>
+</html>

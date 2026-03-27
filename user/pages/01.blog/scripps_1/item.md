@@ -92,7 +92,7 @@ With that said, let me do my best in evaluating a prospective company.
 
 !!! When introducing a company, I like to start by identifying what Daniel Kahneman calls 'Attribute Substitution', a concept from 'Thinking, Fast and Slow'. The idea is simple: when faced with a hard question (what is this equity intrinsically worth?), the market often substitutes an easier one (is linear TV dying?). Figuring out where this heuristic diverges from a more informed valuation is where the opportunity lies.
 
-## E. W. Scripps Company (SSP)
+## E. W. Scripps Company (NASDAQ:SSP)
 
 ### The Market Story
 

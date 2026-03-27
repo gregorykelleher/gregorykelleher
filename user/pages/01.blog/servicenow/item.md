@@ -1,5 +1,5 @@
 ---
-title: Service Now Analysis
+title: ServiceNow Analysis
 date: 11:11 03/25/2026
 author: Gregory Kelleher
 taxonomy:
@@ -9,13 +9,13 @@ taxonomy:
 
 As the 'SaaS-pocalypse' phenomenon advances unabated, and software stocks continue their free-fall, rereading Michael Burry's early writings during the original dot-com collapse has felt less like a history lesson and more like a field-guide.
 
-Understanding how he navigated the turmoil and placed his bets offers a sharper lens on the current sell-off than most of what's being published today. 
-
-ServiceNow is one of the more interesting cases caught in the crossfire. It's down 50% from its highs on fears that AI agents will cannibalise its business. Yet it sits directly on the fault line the market is trying to price - is enterprise software the victim of AI disruption, or the vehicle for it? The business tells a different story. And Burry's framework, applied honestly, helps explain why the sell-off is both more justified and less justified than either side admits.
-
 ![servicenow.svg](servicenow.svg)
 
 ===
+
+Understanding how he navigated the turmoil and placed his bets offers a sharper lens on the current sell-off than most of what's being published today.
+
+ServiceNow is one of the more interesting cases caught in the crossfire. It's down 50% from its highs on fears that AI agents will cannibalise its business. Yet it sits directly on the fault line the market is trying to price - is enterprise software the victim of AI disruption, or the vehicle for it? The business tells a different story. And Burry's framework, applied honestly, helps explain why the sell-off is both more justified and less justified than either side admits.
 
 ### ServiceNow - (NYSE:NOW)
 

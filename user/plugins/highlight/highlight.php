@@ -51,11 +51,11 @@ class HighlightPlugin extends Plugin
         }
         $theme = $this->config->get('plugins.highlight.theme') ?: 'default';
         $this->grav['assets']->addCss('plugin://highlight/css/'.$theme.'.css');
-        $this->grav['assets']->addJs('plugin://highlight/js/highlight.pack.js');
+        $this->grav['assets']->addJs('plugin://highlight/js/highlight.pack.js', ['group' => 'bottom']);
         if ($this->config->get('plugins.highlight.lines')) {
-            $this->grav['assets']->addJs('plugin://highlight/js/highlightjs-line-numbers.min.js');
+            $this->grav['assets']->addJs('plugin://highlight/js/highlightjs-line-numbers.min.js', ['group' => 'bottom']);
             $this->grav['assets']->addCss('plugin://highlight/css/highlightjs-line-numbers.css');
         }
-        $this->grav['assets']->addInlineJs($init);
+        $this->grav['assets']->addInlineJs($init, ['group' => 'bottom']);
     }
 }

@@ -7,6 +7,9 @@
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
+        <link rel="preload" href="{{ url('theme://img/' ~ site.intro_avatar ) }}" as="image">
+        <link rel="preload" href="{{ url('theme://fonts/bunchlo.woff') }}" as="font" type="font/woff" crossorigin>
+        <link rel="preload" href="{{ url('theme://fonts/fontawesome-webfont.woff?v=4.2.0') }}" as="font" type="font/woff" crossorigin>
 
         {% block javascripts %}
             {% do assets.addJs('jquery', {group: 'bottom', priority: 101}) %}
@@ -54,7 +57,7 @@
         <div class="container">
             <div class="units-row">
                 <div class="unit-10">
-                    <img class="img-intro" src="{{ url('theme://img/' ~ site.intro_avatar ) }}" alt="">
+                    <img class="img-intro" src="{{ url('theme://img/' ~ site.intro_avatar ) }}" alt="" fetchpriority="high">
                 </div>
                 <div class="unit-90">
                     <p class="p-intro">{{ site.intro }}</p>

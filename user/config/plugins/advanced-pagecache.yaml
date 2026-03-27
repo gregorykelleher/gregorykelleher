@@ -1,0 +1,10 @@
+enabled: true
+disabled_with_params: true
+disabled_with_query: true
+disabled_on_login: true
+per_user_caching: false
+disabled_extensions: [rss,xml,json]
+whitelist: []
+blacklist:
+  - /error
+  - /login

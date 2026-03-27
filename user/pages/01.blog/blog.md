@@ -1,5 +1,5 @@
 ---
-title: Blog
+title:
 blog_url: blog
 menu: Blog
 

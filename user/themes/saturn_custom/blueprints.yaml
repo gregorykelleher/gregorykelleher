@@ -1,6 +1,8 @@
-name: Saturn
-version: 1.3.0
-description: "Saturn – Free Grav Theme, is a beautiful cosmic website template. Customize it easily and add your own creative touch. Designed by Afnizar Nur Ghifari."
+name: Saturn Custom
+slug: saturn_custom
+type: theme
+version: 1.7.1
+description: "Saturn – Free Grav Theme, customised for gregorykelleher.com. Based on Saturn by Afnizar Nur Ghifari."
 icon: group
 author:
   name: Team Grav
@@ -11,6 +13,10 @@ demo: http://demo.getgrav.org/saturn-skeleton
 keywords: saturn, theme, modern, fast, responsive, html5, css3, blog
 bugs: https://github.com/getgrav/grav-theme-saturn/issues
 license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
+  - { name: form, version: '>=2.0.2' }
 
 form:
   validation: strict

@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class Saturn extends Theme
+class SaturnCustom extends Theme
 {
 
 }

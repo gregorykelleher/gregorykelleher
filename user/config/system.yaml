@@ -14,7 +14,7 @@ languages:
     supported: [en]
     include_default_lang: false
     session_store_active: true
-    http_accept_language: true 
+    http_accept_language: true
     override_locale: false
 
 pages:
@@ -22,8 +22,8 @@ pages:
     process:
         markdown: true
         twig: false
-        markdown:
-            extra: true
+    markdown:
+        extra: true
 
 cache:
     enabled: true
@@ -38,7 +38,7 @@ session:
     enabled: true
     timeout: 1800
     name: gk-cookie
-    secure: true 
+    secure: true
     httponly: true
     split: true
 
@@ -63,3 +63,8 @@ debugger:
     twig: true
     shutdown:
         close_connection: true
+
+strict_mode:
+  yaml_compat: true
+  twig_compat: true
+  blueprint_compat: true

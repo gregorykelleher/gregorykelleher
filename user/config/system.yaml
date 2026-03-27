@@ -44,9 +44,9 @@ session:
 
 twig:
     cache: true
-    debug: true
+    debug: false
     auto_reload: true
-    autoescape: false
+    autoescape: true
 
 assets:
     css_pipeline: true

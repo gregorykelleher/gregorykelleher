@@ -1,5 +1,5 @@
 ---
-title: ServiceNow Analysis
+title: Between Burry and Munger - The Case for ServiceNow
 date: 11:11 03/25/2026
 author: Gregory Kelleher
 taxonomy:
@@ -41,7 +41,7 @@ Putting myself in Burry's shoes for a moment, I'd acknowledge that he'd probably
 
 That's understandable, his edge was forensic accounting, not technology. Back in the Dot-com Era, he could easily tell you Cisco's profits were an illusion, but his biggest winners during the bust were actually manufactured housing and building products, not tech. His returns came from playing defence, not from picking what would thrive.
 
-The question facing ServiceNow now though, isn't whether the stock is cheap enough on a financial buyer's basis; it's whether the market has fundamentally miscategorised the business. That's a technology question, and one I feel fits squarely in my own circle of competence.
+The question facing ServiceNow now though, isn't whether the stock is cheap enough on a financial buyer's basis; it's whether the market has fundamentally miscategorised the business. That's a technology question as much as a financial one, and it's where the sell-off narrative deserves the most scrutiny.
 
 Working in software gives me a different vantage point on this sell-off. I've seen trends come and go with the same fear cycle playing out. Whether IoT, containerisation or cloud adoption. The narrative is always substitutive, and the outcome is almost always additive. The new paradigm arrives, the market prices in wholesale replacement, and then the incumbents integrate it and expand their moats. That recognition is where I think the pure-quant Burry framework has a blind spot. 
 
@@ -79,7 +79,9 @@ As more departments adopt the platform, the value of the shared data model compo
 
 And crucially, this moat is widening, not eroding. Current remaining performance obligations (cRPO) grew 27% year-over-year, outpacing revenue growth of 21%, meaning that forward commitments are accelerating faster than the business is already growing. Free cash flow margins have expanded from 30% to 35% as scale economics compound. The platform is deepening its hold on existing customers while simultaneously becoming more profitable.
 
-This isn't to say the moat is invulnerable. The most credible competitive threat is Microsoft bundling a workflow engine directly into M365 at zero marginal cost. And with Power Automate already in the market, this isn't hypothetical. But enterprise workflow management requires a depth of functionality that a general-purpose tool hasn't replicated - tracking every change across an organisation, maintaining a live map of every asset and dependency, enforcing service-level commitments, and satisfying compliance requirements. Microsoft has had years to displace ServiceNow and hasn't. Coexistence remains more likely than substitution.
+This isn't to say the moat is invulnerable. The most credible competitive threat is Microsoft bundling a workflow engine directly into M365 at zero marginal cost. And with Power Automate already in the market, this isn't a mere hypothetical. Microsoft doesn't need to win on solely product depth either. M365 is already inside virtually every enterprise, so it just needs to be 'good enough' at a lower price point. For simpler workflows, it already is.
+
+But enterprise-grade workflow management operates at a level of complexity that a general-purpose tool hasn't replicated. Microsoft has had years to displace ServiceNow in these environments and hasn't. Coexistence remains more likely than substitution, but this is at least one competitive risk worth flagging.
 
 This gilded moat is the cornerstone of ServiceNow's AI strategy. A decade's worth of accumulated proprietary workflow data, e.g. approval chains, incident resolution patterns and HR case outcomes. It's the kind of training dataset no competitor could feasibly acquire by outspending them. On its own, the moat neatly explains why ServiceNow won't be displaced. More interesting to me is how management is deciding to capitalise on it, and they've already committed $11.6B to the effort so far.
 
@@ -126,7 +128,7 @@ But before that debate can be settled, there's a more fundamental question to be
 
 #### A Private Company in the Public Domain
 
-In March 2001, Burry dissected Adobe's 10-K and discovered that $357 million in stock option compensation, recognised by the IRS as real expense, never appeared on the income statement. Adjusting for it dropped operating income from $408 million to $51 million. He called companies like these _"private companies in the public domain - existing for themselves, not for their shareholder owners."_ Adobe wasn't alone either. _"Cisco, Intel, Microsoft and many of the greatest tech 'wealth creators' of the last decade"_ were reporting headline profits that masked the dilution shareholders were actually absorbing.
+In March 2001, Burry dissected Adobe's 10-K and discovered that $357 million in stock option compensation, recognised by the IRS as real expense, never appeared on the income statement. Adjusting for it dropped operating income from $408 million to $51 million. He called companies like these _"private companies in the public domain - existing for themselves, not for their shareholder owners"._ Adobe wasn't alone either. _"Cisco, Intel, Microsoft and many of the greatest tech 'wealth creators' of the last decade"_ were reporting headline profits that masked the dilution shareholders were actually absorbing.
 
 The accounting rules have changed since then. Stock-based compensation now appears on the income statement under GAAP. But the instinct to look past it hasn't. The entire SaaS industry still reports non-GAAP metrics that strip it back out, and most investors still oblige.
 
@@ -171,9 +173,9 @@ He wouldn't need to understand the AI thesis or the orchestration layer. The num
 
 For example, in the summer of 2000, with the Nasdaq in freefall, a fellow investor on the Silicon Investor message board posted that he'd bought Amazon. Burry's response was characteristically blunt:
 
-> _"Jim, that takes guts. Not to buy it. To post that you bought it. I won't buy it at all. I don't see a margin of safety, and I do believe margin of safety should apply in all cases."_
+> _"Jim, that takes guts. Not to buy it. To post that you bought it. I won't buy it at all. I don't see a margin of safety, and I do believe margin of safety should apply in all cases"._
 
-He didn't necessarily think Amazon was worthless. He acknowledged that _"visionaries can get rewarded."_ His objection was more so structural. Amazon's valuation depended on projections with _"no fundamental basis in past reality"_, the price required a growth story to play out, and the balance sheet, debt-laden and pre-profit, offered no protection if it didn't. In Burry's framework, it was a lottery ticket. Perhaps one with favourable odds, but a lottery ticket nonetheless.
+He didn't necessarily think Amazon was worthless. He acknowledged that _"visionaries can get rewarded"._ His objection was more so structural. Amazon's valuation depended on projections with _"no fundamental basis in past reality"_, the price required a growth story to play out, and the balance sheet, debt-laden and pre-profit, offered no protection if it didn't. In Burry's framework, it was a lottery ticket. Perhaps one with favourable odds, but a lottery ticket nonetheless.
 
 What's revealing to me is what Burry _did_ buy during the same period. In May 1999, he took a position in Apple at around $34, calling it _"a bona fide value stock on an enterprise value/ratio basis, generating tons of cash"_ with _"an extremely strong balance sheet, and little downside"_. He saw it as _"a huge contrarian play because a generation of security analysts has been trained to think that whatever is wrong with this world, AAPL is a part of it"_. He bought Oracle at 30x earnings around the same time, after consulting with _"some techie friends and family"_ and doing his own due diligence. He filed both under what he called _"Buffett-like tech stock long-term holds"_.
 
@@ -189,7 +191,7 @@ Burry's framework would stop here. The numbers don't clear the bar. But his fram
 
 Burry's framework excels at stripping a business back to what it actually earns for shareholders. Applied to ServiceNow, it reveals real tensions beneath the surface, and on a strict reading of his criteria, the stock simply doesn't pass at present.
 
-But there is a different school in value investing, one that evolved precisely because buying average businesses at bargain prices has a ceiling. Charlie Munger comes to mind. His most famous inversion of Graham’s teaching was that _"it is far better to buy a wonderful company at a fair price than a fair company at a wonderful price."_ The question he would ask of ServiceNow isn’t whether the stock is cheap enough. It’s whether the business is good enough that the price is secondary.
+But there is a different school in value investing, one that evolved precisely because buying average businesses at bargain prices has a ceiling. Charlie Munger comes to mind. His most famous inversion of Graham’s teaching was that _"it is far better to buy a wonderful company at a fair price than a fair company at a wonderful price"._ The question he would ask of ServiceNow isn’t whether the stock is cheap enough. It’s whether the business is good enough that the price is secondary.
 
 On its own terms, ServiceNow has never been cheaper. The trailing P/E of roughly 62x is the lowest in the company’s public history, and well below the five-year average of ~218x and the ten-year average of ~221x. The EV/FCF of 22x is similarly at an all-time low. Against its peers though, ServiceNow still commands a premium.
 

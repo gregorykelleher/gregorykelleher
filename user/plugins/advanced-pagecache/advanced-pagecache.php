@@ -76,9 +76,9 @@ class AdvancedPageCachePlugin extends Plugin
         }
 
         if ($config['per_user_caching']) {
-            $this->pagecache_key = md5('adv-pc-' . $lang . $full_route . $user["username"]);
+            $this->pagecache_key = md5('adv-pc-v2-' . $lang . $full_route . $user["username"]);
         } else {
-            $this->pagecache_key = md5('adv-pc-' . $lang . $full_route);
+            $this->pagecache_key = md5('adv-pc-v2-' . $lang . $full_route);
         }
 
         // Should run and store page
@@ -98,6 +98,15 @@ class AdvancedPageCachePlugin extends Plugin
      */
     public function onOutputGenerated()
     {
-        $this->grav['cache']->save($this->pagecache_key, $this->grav->output);
+        // Only cache successful responses. Non-200 (404, 5xx, redirects) must
+        // not be cached because the fetch path echoes the cached body and exits,
+        // which leaves PHP's default 200 response status — losing the real code.
+        // Read the status from the resolved page (set by error plugin / frontmatter),
+        // not http_response_code(), which isn't called until after this event fires.
+        $page = $this->grav['page'] ?? null;
+        $status = $page ? $page->httpResponseCode() : 200;
+        if ($status === 200) {
+            $this->grav['cache']->save($this->pagecache_key, $this->grav->output);
+        }
     }
 }

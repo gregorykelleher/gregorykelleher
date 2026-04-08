@@ -7,6 +7,7 @@
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
+        <link rel="alternate" type="application/rss+xml" title="{{ site.title|e }}" href="{{ base_url_absolute }}/blog.rss" />
         <link rel="preload" href="{{ url('theme://img/' ~ site.intro_avatar ) }}" as="image">
         <link rel="preload" href="{{ url('theme://fonts/bunchlo.woff') }}" as="font" type="font/woff" crossorigin>
         <link rel="preload" href="{{ url('theme://fonts/fontawesome-webfont.woff?v=4.2.0') }}" as="font" type="font/woff" crossorigin>

@@ -76,9 +76,9 @@ class AdvancedPageCachePlugin extends Plugin
         }
 
         if ($config['per_user_caching']) {
-            $this->pagecache_key = md5('adv-pc-v2-' . $lang . $full_route . $user["username"]);
+            $this->pagecache_key = md5('adv-pc-v3-' . $lang . $full_route . $user["username"]);
         } else {
-            $this->pagecache_key = md5('adv-pc-v2-' . $lang . $full_route);
+            $this->pagecache_key = md5('adv-pc-v3-' . $lang . $full_route);
         }
 
         // Should run and store page

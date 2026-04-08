@@ -43,6 +43,11 @@ a { font-family: "Open Sans", sans-serif }
     font-size: 20px;
     text-transform: capitalize;
 }
+/* Kube applies the bottom margin only to .navigation-toggle.navigation-toggle-show,
+   but the navigation-toggle.js widget removes the .navigation-toggle-show class
+   when the menu closes — so the gap below the header would collapse on close.
+   Pin the margin to the base class so it persists across open/close cycles. */
+.navigation-toggle { margin-bottom: 1.65em; }
 .top-nav .item-nav li.active a { color: #FF6C40 }
 .top-nav .item-nav li a {
     font-family: "Lato", sans-serif;

@@ -16,7 +16,8 @@ content:
     pagination: true
 
 feed:
-    description: Sample Blog Description
+    title: 'Gregory Kelleher'
+    description: 'Posts on programming, infrastructure, and assorted experiments by Gregory Kelleher.'
     limit: 10
 
 pagination: true

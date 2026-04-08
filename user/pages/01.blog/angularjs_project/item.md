@@ -13,7 +13,7 @@ AngularJS is something I've been wanting to try out for a very long time. Thankf
 <!-- ![knight](knight.svg) -->
 
 <svg preserveAspectRatio="xMinYMin meet" class="svg-content" viewBox="0 0 620 300" id="angularjs_project"></svg>
-<script type="text/javascript" src="/user/pages/01.blog/angularjs_project/angularjs_project.js"></script>
+<script type="text/javascript" src="/user/pages/01.blog/angularjs_project/angularjs_project.js" defer="defer"></script>
 <br>
 
 ===

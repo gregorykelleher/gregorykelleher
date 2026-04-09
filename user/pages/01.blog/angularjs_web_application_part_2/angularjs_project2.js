@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	var s = Snap("#angularjs_project_2");
 
-	var main = Snap.load("/user/pages/01.blog/angularjs_project_2/header.svg", function (loadedFragment) {
+	var main = Snap.load("/user/pages/01.blog/angularjs_web_application_part_2/header.svg", function (loadedFragment) {
 		s.append(loadedFragment);
 
 		var back = s.rect(0,0,620,300).attr({fill: "#F9F9ED"});

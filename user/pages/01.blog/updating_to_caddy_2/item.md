@@ -19,7 +19,7 @@ dominated by heavy-weight behemoths, it's a breath of fresh air to have a real a
 
 And opposed to the likes of Apache and NGINX, Caddy is above all, effortless. As complex as web servers can grow to become, this is particularly helpful.
 
-I've been hosting on Caddy for some years now without a hitch. I've even discussed it before in a [previous article](https://gregorykelleher.com/new_year). That was quite some time ago, and quite a few versions behind too. And since then, I've found myself with a growing need to update to the latest version.
+I've been hosting on Caddy for some years now without a hitch. I've even discussed it before in a [previous article](https://gregorykelleher.com/new_year_update). That was quite some time ago, and quite a few versions behind too. And since then, I've found myself with a growing need to update to the latest version.
 
 The latest version being [Caddy 2](https://caddyserver.com/v2). Version 2 is a complete overhaul of Caddy and incompatible with the first. With an entirely new
 code base written from scratch, it seeks to further enhance.

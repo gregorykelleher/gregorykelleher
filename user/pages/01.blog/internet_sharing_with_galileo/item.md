@@ -14,7 +14,7 @@ As a continuation on since my last post, I wanted to take things a little furthe
 
 ===
 
-If you haven't set up an ethernet connection to your Galileo yet or haven't the larger Linux image, I recommend you look at my previous [tutorial](http://www.gregorykelleher.com/blog/galileo_ethernet) before you start with this.
+If you haven't set up an ethernet connection to your Galileo yet or haven't the larger Linux image, I recommend you look at my previous [tutorial](https://gregorykelleher.com/ethernet_on_galileo_with_static_ip) before you start with this.
 
 ### Step 1 - Starting up the Galileo
 

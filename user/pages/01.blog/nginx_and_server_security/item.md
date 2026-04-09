@@ -15,7 +15,7 @@ My website mightn't look any different, but I've made some major modifications u
 
 ===
 
-In my last [post](https://gregorykelleher.com/digital_ocean_migration) on Nginx, I discussed how my website looked prior to transitioning to Digital Ocean. Spoiler alert: not good.
+In my last [post](https://gregorykelleher.com/migrating_to_digital_ocean) on Nginx, I discussed how my website looked prior to transitioning to Digital Ocean. Spoiler alert: not good.
 
 Moving my website across to Digital Ocean and spending the time upgrading to the latest version of Nginx means I'm well placed to begin my upgrades to my server's SSL.
 

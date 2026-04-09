@@ -62,7 +62,7 @@ The Quark D2000 is another very similar ultra low-power Quark microcontroller wi
 
 More interestingly it's included in the Intel Quark D2000 Microcontroller Development Kit, which is a small form-factor board that has Arduino headers, a USB interface (with JTAG support), flash storage, 6-axis compass/accelerometer and also a temperature sensor.
 
-!!! This board is actually the subject of the next article in this series so read [part two](http://www.gregorykelleher.com/blog/quark_issm_2) to learn more. 
+!!! This board is actually the subject of the next article in this series so read [part two](https://gregorykelleher.com/intel_quark_development_part_2) to learn more. 
 
 Again, the platform is supported by ISSM which integrates the GNU toolchain as well as the board support package (BSP) for the Intel Quark microcontroller software interface (Intel QMSI) and sample
 applications. 
@@ -151,7 +151,7 @@ The general practice is to start an OpenOCD session (with the matching configura
 
 !!!! Another alternative option available is to connect OpenOCD to GDB on port `3333` 
 
-OpenOCD is incredibly useful and makes embedded testing & flashing a breeze. I go into more detail on OpenOCD in the [Part 2](http://www.gregorykelleher.com/blog/quark_issm_2) of this tutorial if you want to learn more about it. 
+OpenOCD is incredibly useful and makes embedded testing & flashing a breeze. I go into more detail on OpenOCD in the [Part 2](https://gregorykelleher.com/intel_quark_development_part_2) of this tutorial if you want to learn more about it. 
 
 ####ISSM
 
@@ -171,7 +171,7 @@ Developing code for the Quark is much the same as writing any C software but it 
 
 Hopefully, after reading this tutorial you have a better undertanding about what the Quark processor actually is and what debugging tools are used in development. 
 
-Follow up in [Part 2](http://www.gregorykelleher.com/blog/quark_issm_2) where I delve deeper into explaining the ISSM toolchain, getting started and using OpenOCD over the terminal to flash your first image. 
+Follow up in [Part 2](https://gregorykelleher.com/intel_quark_development_part_2) where I delve deeper into explaining the ISSM toolchain, getting started and using OpenOCD over the terminal to flash your first image. 
 
 
 

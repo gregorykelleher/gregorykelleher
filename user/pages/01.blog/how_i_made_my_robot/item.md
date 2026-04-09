@@ -130,7 +130,7 @@ I felt if there was a chance of blowing another motor controller, it'd better be
 
 Once they arrived I started hooking up the SN754410 for starters. It was the simpler of the two and the cheapest. Unlike the TB6612FNG it didn't have any fancy features like a stand-by mode, built in decoupling capacitors or even a thermal shutdown circuit but it did the job nonetheless. 
 
-And it worked. I was so taken by it I wrote a [blog post](http://gregorykelleher.com/blog/motor_control) on it, as well as creating a [video](https://www.youtube.com/watch?v=vWXzXqSCBMg). Compared to the Pololu motor contoller, it was a far easier and hassle-free solution. I've included some sample code of it working with four pushbuttons [here](https://gist.github.com/Spokkam/49a6182ea3e1087f861e).
+And it worked. I was so taken by it I wrote a [blog post](https://gregorykelleher.com/primitive_motor_control_tutorial) on it, as well as creating a [video](https://www.youtube.com/watch?v=vWXzXqSCBMg). Compared to the Pololu motor contoller, it was a far easier and hassle-free solution. I've included some sample code of it working with four pushbuttons [here](https://gist.github.com/Spokkam/49a6182ea3e1087f861e).
 
 However in the end, I migrated over to the TB6612FNG simply for the added features. In practice they were much the same. Unlike the Pololu motor controller neither the TB6612FNG or the SN754410 required a serial input line. 
 

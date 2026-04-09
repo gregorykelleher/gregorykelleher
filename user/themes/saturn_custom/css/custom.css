@@ -193,6 +193,28 @@ img.img-intro {
     float: left;
     border: none;
 }
+/* Prev/Next post navigation buttons.
+   The two `.btn` siblings inside `<p class="prev-next">` were originally laid
+   out as inline-blocks separated only by markup whitespace (no explicit gap).
+   On first navigation to a post they would render touching or slightly
+   overlapping; a hard reload "fixed" it. The trigger is the FontAwesome
+   icon font: it loads with `font-display: swap`, so on first paint the
+   `<i class="fa">` arrows render in the sans-serif fallback (with one
+   set of glyph metrics), then FontAwesome swaps in (with another set)
+   and the inline-block row reflows — but font-swap reflows don't always
+   fully re-place inline-block siblings, leaving the second button at a
+   stale x-position until the next layout invalidation. On reload the
+   font is HTTP-cached, no swap happens, and the row is correct from
+   first paint.
+   Flex layout sidesteps the bug entirely: flex item positions are
+   computed atomically on every reflow pass, and `gap` gives a stable
+   spacer that doesn't depend on whitespace text nodes or font metrics.
+   `flex-wrap` lets the row break cleanly on narrow viewports. */
+.content .post p.prev-next {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+}
 .content .post h1:before {
     content: url(../img/separator.png);
     position: absolute;

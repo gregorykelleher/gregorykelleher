@@ -1,6 +1,6 @@
 ---
 title: Science Hack Day Dublin
-date: 15:33 11/20/2015
+date: 15:33 20/11/2015
 author: Gregory Kelleher
 highlight:
     theme: monokai

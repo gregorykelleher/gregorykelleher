@@ -1,6 +1,6 @@
 ---
 title: Workday - Intervarsity Hackathon
-date: 09:56 04/09/2017
+date: 09:56 09/04/2017
 taxonomy:
     category: blog
     tag: [workday, hackathon, coffeescript]

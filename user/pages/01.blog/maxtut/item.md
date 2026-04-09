@@ -1,6 +1,6 @@
 ---
 title: LED Display Driver Tutorial
-date: 15:34 4/04/2015
+date: 15:34 04/04/2015
 highlight:
     theme: monokai
 taxonomy:

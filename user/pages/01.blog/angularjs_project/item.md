@@ -1,6 +1,6 @@
 ---
 title: Building a web application with AngularJS - Part 1
-date: 16:49 11/07/2016 
+date: 16:49 07/11/2016
 highlight:
     theme: monokai
 taxonomy:

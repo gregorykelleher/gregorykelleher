@@ -1,6 +1,6 @@
 ---
 title: Migrating to Digital Ocean and upgrading NGINX
-date: 15:43 5/01/2017
+date: 15:43 01/05/2017
 author: Gregory Kelleher
 highlight:
     theme: monokai

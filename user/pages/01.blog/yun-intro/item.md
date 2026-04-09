@@ -1,6 +1,6 @@
 ---
 title: Introduction to the Yún
-date: 14:00 09/1/2015
+date: 14:00 01/09/2015
 author: Gregory Kelleher
 highlight:
     theme: monokai

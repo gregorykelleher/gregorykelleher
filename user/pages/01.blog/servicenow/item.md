@@ -1,6 +1,6 @@
 ---
 title: Between Burry and Munger - The Case for ServiceNow
-date: 11:11 03/25/2026
+date: 11:11 25/03/2026
 author: Gregory Kelleher
 taxonomy:
     category: blog

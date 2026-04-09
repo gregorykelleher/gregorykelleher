@@ -1,6 +1,6 @@
 ---
 title: Optimising NGINX and Server Security
-date: 22:33 5/06/2017
+date: 22:33 06/05/2017
 author: Gregory Kelleher
 highlight:
 	theme: monokai

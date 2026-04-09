@@ -1,6 +1,6 @@
 ---
 title: Exploring Javascript SVG Animation
-date: 11:01 05/22/2016 
+date: 11:01 22/05/2016
 highlight:
     theme: monokai
 taxonomy:

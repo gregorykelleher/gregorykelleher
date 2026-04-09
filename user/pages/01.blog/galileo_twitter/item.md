@@ -1,6 +1,6 @@
 ---
 title: Tweeting Galileo
-date: 12:16 6-12-2015
+date: 12:16 06/12/2015
 highlight:
     theme: monokai
 taxonomy:

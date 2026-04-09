@@ -1,6 +1,6 @@
 ---
 title: HomeBrew Computer Explorations
-date: 19:56 03/21/2017
+date: 19:56 21/03/2017
 taxonomy:
     category: blog
     tag: [homebrew, z80, 8088, intel, zilog]

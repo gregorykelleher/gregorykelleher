@@ -1,6 +1,6 @@
 ---
 title: Under lock and key with PGP
-date: 20:01 08/18/2017
+date: 20:01 18/08/2017
 taxonomy:
     category: blog
     tag: [pgp, gnupg, GPG, public key, cryptography, nitrokey]

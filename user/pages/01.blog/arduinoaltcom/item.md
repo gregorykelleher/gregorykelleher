@@ -1,6 +1,6 @@
 ---
 title: Inexpensive Alternatives - GY-GPS6MV2
-date: 10:18 09/14/2015
+date: 10:18 14/09/2015
 highlight:
     theme: monokai
 taxonomy:

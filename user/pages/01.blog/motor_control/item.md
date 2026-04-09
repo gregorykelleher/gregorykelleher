@@ -1,6 +1,6 @@
 ---
 title: Primitive Motor Control Tutorial
-date: 13:04 05/04/2015 
+date: 13:04 04/05/2015
 highlight:
     theme: monokai
 taxonomy:

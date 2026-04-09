@@ -1,6 +1,6 @@
 ---
 title: Unlocking the Galileo's secret serial port 
-date: 09:14 1/26/2016
+date: 09:14 26/01/2016
 highlight:
     theme: monokai
 taxonomy:

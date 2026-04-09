@@ -1,6 +1,6 @@
 ---
 title: Scripps (Part 1) - The Thesis
-date: 16:49 03/15/2026
+date: 16:49 15/03/2026
 highlight:
     theme: monokai
 taxonomy:

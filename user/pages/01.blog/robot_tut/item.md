@@ -1,6 +1,6 @@
 ---
 title: How I made my robot
-date: 9:33 07/26/2015
+date: 09:33 26/07/2015
 taxonomy:
     category: blog
     tag: [arduino, tutorial, robot]

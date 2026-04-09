@@ -1,6 +1,6 @@
 ---
 title: Quick Update
-date: 12:00 10/13/2016 
+date: 12:00 13/10/2016
 taxonomy:
     category: blog
     tag: [Update, College, Animation]

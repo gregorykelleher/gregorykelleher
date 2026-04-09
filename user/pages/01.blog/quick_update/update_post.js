@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	var s = Snap("#update_post");
 
-	var main = Snap.load("/user/pages/01.blog/update_post/update_post.svg", function (loadedFragment) {
+	var main = Snap.load("/user/pages/01.blog/quick_update/update_post.svg", function (loadedFragment) {
 		s.append(loadedFragment);
 
 		var flag = Snap.select('#flag');

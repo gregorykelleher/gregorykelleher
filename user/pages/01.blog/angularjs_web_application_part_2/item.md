@@ -11,12 +11,12 @@ taxonomy:
 As a follow-up on my previous post, I wanted to go into further detail on how the Angular application was built; right from the ground up.
 
 <svg preserveAspectRatio="xMinYMin meet" class="svg-content" viewBox="0 0 620 300" id="angularjs_project_2"></svg>
-<script type="text/javascript" src="/user/pages/01.blog/angularjs_project_2/angularjs_project2.js" defer="defer"></script>
+<script type="text/javascript" src="/user/pages/01.blog/angularjs_web_application_part_2/angularjs_project2.js" defer="defer"></script>
 <br>
 
 ===
 
-!!!! If you haven't read [Part 1](http://www.gregorykelleher.com/blog/angularjs_project), I recommend giving that a browse, as it gives some background into what I'm about to discuss. Or if you'd like, check out the complete codebase on [Github](https://github.com/gregorykelleher/MuHub_Angular_App).
+!!!! If you haven't read [Part 1](https://gregorykelleher.com/angularjs_web_application_part_1), I recommend giving that a browse, as it gives some background into what I'm about to discuss. Or if you'd like, check out the complete codebase on [Github](https://github.com/gregorykelleher/MuHub_Angular_App).
 
 Although just a quick recap, the application is called [MuHub](https://cs353-project.firebaseapp.com/#/login) and it's an online student tool for Maynooth University students. The application originated from a designated group project as part of one of my university modules.
 

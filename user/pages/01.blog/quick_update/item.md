@@ -9,12 +9,12 @@ taxonomy:
 Wow, time does fly! It's been quite awhile since my last post so I've decided to write a quick update on what I'm doing. 
 
 <svg preserveAspectRatio="xMinYMin meet" class="svg-content" viewBox="0 0 620 300" id="update_post"></svg>
-<script type="text/javascript" src="/user/pages/01.blog/update_post/update_post.js" defer="defer"></script>
+<script type="text/javascript" src="/user/pages/01.blog/quick_update/update_post.js" defer="defer"></script>
 <br>
 
 ===
 
-For starters, hovering over the illustration above will animate it. It's another great example of what's possible with Snap SVG. And if you'd like to learn more, I've written a separate tutorial [here](http://www.gregorykelleher.com/blog/snap_demo) and the code for the example is available [here](https://github.com/gregorykelleher/snap_svg_examples). 
+For starters, hovering over the illustration above will animate it. It's another great example of what's possible with Snap SVG. And if you'd like to learn more, I've written a separate tutorial [here](https://gregorykelleher.com/javascript_svg_animation) and the code for the example is available [here](https://github.com/gregorykelleher/snap_svg_examples). 
 
 I've recently updated that Github repository to contain all of my Snap SVG examples, so stay tuned for more to come!
 

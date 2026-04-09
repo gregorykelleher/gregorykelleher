@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	var s = Snap("#angularjs_project");
 
-	var main = Snap.load("/user/pages/01.blog/angularjs_project/knight.svg", function (loadedFragment) {
+	var main = Snap.load("/user/pages/01.blog/angularjs_web_application_part_1/knight.svg", function (loadedFragment) {
 		s.append(loadedFragment);
 
 		var pivot = [

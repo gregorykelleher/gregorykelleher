@@ -11,8 +11,8 @@ taxonomy:
 Click the image to animate! And no, that's not a GIF either. It's an SVG drawing being animated and manipulated with Javascript and the Snap SVG library. Read more to learn how I did this. 
 
 <svg preserveAspectRatio="xMinYMin meet" class="svg-content" viewBox="0 0 620 300" id="snap_demo"></svg>
-<script type="text/javascript" src="/user/pages/01.blog/snap_demo/snap_demo.js" defer="defer"></script>
-<script type="text/javascript" src="/user/pages/01.blog/snap_demo/anim_snap_example.js" defer="defer"></script>
+<script type="text/javascript" src="/user/pages/01.blog/javascript_svg_animation/snap_demo.js" defer="defer"></script>
+<script type="text/javascript" src="/user/pages/01.blog/javascript_svg_animation/anim_snap_example.js" defer="defer"></script>
 <br>
 
 ===

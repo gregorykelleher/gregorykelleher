@@ -180,4 +180,4 @@ Running the Nginx installation procedure again, I got green lights all the way d
 
 ![building_nginx.png](building_nginx.png?cropResize=1600,1600&format=webp&quality=82)
 
-That final installation completes my upgrade to the latest Nginx build and concludes this post. Having the most up-to-date version means I can begin enabling the latest features in Nginx. Check out my next [post](https://gregorykelleher.com/nginx_security) where I return to the Nginx configuration files and begin my updates.
+That final installation completes my upgrade to the latest Nginx build and concludes this post. Having the most up-to-date version means I can begin enabling the latest features in Nginx. Check out my next [post](https://gregorykelleher.com/nginx_and_server_security) where I return to the Nginx configuration files and begin my updates.

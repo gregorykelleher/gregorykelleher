@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	var s = Snap("#anim_example");
 	
-	var main = Snap.load("/user/pages/01.blog/snap_demo/first_example.svg", function (loadedFragment) {
+	var main = Snap.load("/user/pages/01.blog/javascript_svg_animation/first_example.svg", function (loadedFragment) {
 		s.append(loadedFragment);
 
 		var circle = Snap.select('.cls-2');	

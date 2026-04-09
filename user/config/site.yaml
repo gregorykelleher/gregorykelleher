@@ -12,14 +12,68 @@ author:
 metadata:
     description: 'Writing on technology, investing, and whatever else catches my attention'
 
-social: 
+social:
   - icon: send
-    link: "mailto:gregory@gregorykelleher.com" 
+    link: "mailto:gregory@gregorykelleher.com"
   - icon: youtube
-    link: "https://www.youtube.com/user/Spokkam/" 
+    link: "https://www.youtube.com/user/Spokkam/"
   - icon: github
-    link: "https://github.com/gregorykelleher"  
+    link: "https://github.com/gregorykelleher"
   - icon: dribbble
     link: "https://dribbble.com/GregoryKelleher"
   - icon: rss
     link: "/blog.rss"
+
+# 301 redirects for legacy blog slugs renamed 2026-04-09 so URLs match post titles.
+# Patterns are regex (Grav anchors with ^ automatically); the trailing /?$ keeps
+# them exact-match so e.g. /decision doesn't also catch /decision_theory_...,
+# and (/blog)? covers both the canonical /<slug> form and the /blog/<slug> form.
+# The [301] suffix on the target tells Grav::redirect() to use HTTP 301 (permanent)
+# instead of the default 302, so search engines transfer link equity.
+redirects:
+  '(/blog)?/arduinoaltcom/?$': '/inexpensive_alternatives[301]'
+  '(/blog)?/intel_intern/?$': '/summer_with_intel_inside[301]'
+  '(/blog)?/yun-intro/?$': '/introduction_to_the_yun[301]'
+  '(/blog)?/gnupg/?$': '/under_lock_and_key_with_pgp[301]'
+  '(/blog)?/galileo_extra_serial/?$': '/galileo_secret_serial_port[301]'
+  '(/blog)?/motor_control/?$': '/primitive_motor_control_tutorial[301]'
+  '(/blog)?/update_post/?$': '/quick_update[301]'
+  '(/blog)?/quark_issm/?$': '/intel_quark_development_part_1[301]'
+  '(/blog)?/copyright/?$': '/effects_of_convergence[301]'
+  '(/blog)?/lyonsfinished/?$': '/lyons_cafe[301]'
+  '(/blog)?/duck_typing/?$': '/static_paradigms_versus_duck_typing[301]'
+  '(/blog)?/galileo_twitter/?$': '/tweeting_galileo[301]'
+  '(/blog)?/snap_demo/?$': '/javascript_svg_animation[301]'
+  '(/blog)?/nginx_fast/?$': '/boosting_nginx_performance[301]'
+  '(/blog)?/servicenow/?$': '/the_case_for_servicenow[301]'
+  '(/blog)?/TurksCaicos/?$': '/turks_and_caicos[301]'
+  '(/blog)?/irish_programming/?$': '/programming_as_gaeilge[301]'
+  '(/blog)?/nginx_security/?$': '/nginx_and_server_security[301]'
+  '(/blog)?/maker_faire/?$': '/dublin_maker_faire_2015[301]'
+  '(/blog)?/MillhousePottery/?$': '/millhouse_pottery[301]'
+  '(/blog)?/vim_intro/?$': '/switching_to_vim[301]'
+  '(/blog)?/interview_practice_questions/?$': '/modern_cpp_project_structuring[301]'
+  '(/blog)?/galileo_ethernet/?$': '/ethernet_on_galileo_with_static_ip[301]'
+  '(/blog)?/scripps_2/?$': '/scripps_part_2_the_numbers[301]'
+  '(/blog)?/galileoIntel/?$': '/first_steps_with_intel_galileo[301]'
+  '(/blog)?/jaguar_land_rover/?$': '/new_start_at_jaguar_land_rover[301]'
+  '(/blog)?/digital_ocean_migration/?$': '/migrating_to_digital_ocean[301]'
+  '(/blog)?/quark_issm_2/?$': '/intel_quark_development_part_2[301]'
+  '(/blog)?/singleton/?$': '/singleton_design_pattern[301]'
+  '(/blog)?/angularjs_project/?$': '/angularjs_web_application_part_1[301]'
+  '(/blog)?/robot_tut/?$': '/how_i_made_my_robot[301]'
+  '(/blog)?/maxtut/?$': '/led_display_driver_tutorial[301]'
+  '(/blog)?/backup_failure/?$': '/error_files_not_found[301]'
+  '(/blog)?/decision/?$': '/decision_theory_and_software_design[301]'
+  '(/blog)?/updating_caddy/?$': '/updating_to_caddy_2[301]'
+  '(/blog)?/sps/?$': '/student_placement_system[301]'
+  '(/blog)?/sciday/?$': '/science_hack_day_dublin[301]'
+  '(/blog)?/program/?$': '/essence_of_a_good_program[301]'
+  '(/blog)?/assignment/?$': '/exploring_actionscript[301]'
+  '(/blog)?/grav-post/?$': '/web_development_tools_and_guide[301]'
+  '(/blog)?/homebrew/?$': '/homebrew_computer_explorations[301]'
+  '(/blog)?/angularjs_project_2/?$': '/angularjs_web_application_part_2[301]'
+  '(/blog)?/workday_hackathon/?$': '/workday_intervarsity_hackathon[301]'
+  '(/blog)?/scripps_1/?$': '/scripps_part_1_the_thesis[301]'
+  '(/blog)?/galileo_internet_over_eth/?$': '/internet_sharing_with_galileo[301]'
+  '(/blog)?/new_year/?$': '/new_year_update[301]'

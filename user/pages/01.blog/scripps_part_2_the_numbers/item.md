@@ -8,7 +8,7 @@ taxonomy:
     tag: [investing, broadcasting, scripps, thesis, security, analysis]
 ---
 
-In [Part 1](https://gregorykelleher.com/scripps_1), I laid out the catalyst (the 2026 U.S. midterm elections), the broadcasting industry's structural backdrop, and E.W. Scripps' operational positioning - its local station footprint, ION's must-carry reach, the OTA/sports pivot, and the secular headwinds it's running against. The operational story is decent. But none of it matters if the capital structure can't survive long enough for it to play out.
+In [Part 1](https://gregorykelleher.com/scripps_part_1_the_thesis), I laid out the catalyst (the 2026 U.S. midterm elections), the broadcasting industry's structural backdrop, and E.W. Scripps' operational positioning - its local station footprint, ION's must-carry reach, the OTA/sports pivot, and the secular headwinds it's running against. The operational story is decent. But none of it matters if the capital structure can't survive long enough for it to play out.
 
 ![scripps.svg](scripps.svg)
 

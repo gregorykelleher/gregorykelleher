@@ -17,7 +17,7 @@ In my third and final post on Nginx, I wanted to take a brief look at improving 
 
 First of all, I'd like to say this post will be shorter. My website is already optimised to a high degree, but these are web server improvements that I hadn't had access to before.
 
-In my previous [post](https://gregorykelleher.com/digital_ocean_migration) I described building Nginx from source and including additional modules.
+In my previous [post](https://gregorykelleher.com/migrating_to_digital_ocean) I described building Nginx from source and including additional modules.
 
 Two of those modules that I installed were `ngx_pagespeed` and `ngx_brotli`. I'll explain what they are now.
 

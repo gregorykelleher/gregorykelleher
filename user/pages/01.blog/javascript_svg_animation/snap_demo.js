@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	var s = Snap("#snap_demo");
 	
-	var main = Snap.load("/user/pages/01.blog/snap_demo/snap_blog_head.svg", function (loadedFragment) {
+	var main = Snap.load("/user/pages/01.blog/javascript_svg_animation/snap_blog_head.svg", function (loadedFragment) {
 		s.append(loadedFragment);
 		var left_disc = Snap.select('#left_disc');	
 		var right_disc = Snap.select('#right_disc');	

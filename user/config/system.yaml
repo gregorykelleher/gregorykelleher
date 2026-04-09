@@ -32,7 +32,10 @@ cache:
     driver: auto
     prefix: 'g'
     lifetime: 604800
-    gzip: true
+    # gzip: false (default) — leave compression to Caddy. Setting this true
+    # makes Grav call ob_gzhandler, which produces broken HTTP/2 framing on
+    # empty 304 bodies (Chrome ERR_HTTP2_PROTOCOL_ERROR on conditional GET).
+    gzip: false
 
 session:
     enabled: true

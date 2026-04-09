@@ -3,7 +3,16 @@
  *  License - http://license.afnizar.com/ (MIT License)
  */
 
-body { margin-bottom: 50px }
+body {
+    margin-bottom: 50px;
+    /* Defensive: prevent any single overflowing descendant (wide markdown
+       table, code block, image) from extending body width past the viewport.
+       Without this, an overflowing child drags the body wider than the
+       viewport and visually misaligns the nav/intro (centered to .container)
+       relative to the content column. Safe here because nothing on the site
+       uses position: sticky. */
+    overflow-x: hidden;
+}
 a { font-family: "Open Sans", sans-serif }
 .container {
     margin: auto;
@@ -164,6 +173,19 @@ img.img-intro {
     font-weight: 400;
 }
 .content .post img { margin-bottom: 20px }
+/* Markdown tables — make them horizontally scrollable on narrow viewports.
+   kube's `width: 100%; max-width: 100%` does NOT constrain a table-layout:auto
+   table whose min-content width exceeds the parent — the table still grows.
+   `display: block` turns the <table>'s outer box into a block-level scroll
+   container so the table swipes horizontally instead of overflowing the page.
+   The body's `overflow-x: hidden` is a belt-and-braces safeguard against the
+   same issue from any other wide child. */
+.content .post table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
 .content .post hr {
     content: url(../img/separator.png);
     width: 66px;

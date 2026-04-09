@@ -39,7 +39,7 @@ This golden age of computing, ushered in by the advent of the transistor and the
 
 In 1968, Robert Noyce and Gordon Moore (yes, Moore's Law) started a new company called Intel, to take advantage of the growing semiconductor market. It was there that two engineers, Ted Hoff and Stan Mazor had the intuition of fabricating a 4-bit central processing unit onto a single silicon wafer. It then fell to a process engineer, Fredrico Faggin to realise this idea, and hence the 4004 4-bit processor was born.
 
-![4004](4004.jpg)
+![4004](4004.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 The Intel 4004 was the world's first commercial micro-processor and heralded yet another epoch in computing history that continues into the present. The 4004 micro-processor was a success but was soon replaced by the improved 8-bit 8008 in 1972, which was in turn superseded by the Intel 8080 in 1974. 
 
@@ -65,7 +65,7 @@ Choosing which micro-processor to use is always going to be a tricky decision, s
 
 Then the **Intel 8080** would be a difficult choice, considering it requires three separate power supplies at +5V, -5V and +12V. Oh, and a slew of supporting interface logic ICs such as the Intel 8222 (DRAM refresh controller), 8224 (clock generator) and 8228 (system controller). Acquiring these parts is equally challenging. Expensive now just as it was then.
 
-![wozniak-jobs](wozniak_jobs.jpg)
+![wozniak-jobs](wozniak_jobs.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Perhaps do what Steve Wozniak did and opt for a much more affordable **MOS 6502** micro-processor. Running at around 1MHz with 3510 transistors on-board, there's endless possibility! When it was first introduced in 1975, it was one of the least expensive micro-processors on the market. It made a lasting impression too, causing rapid price drops from competitors and spurring on the HomeBrew revolution underway at the time.
 
@@ -73,7 +73,7 @@ Still available today, it's a very popular option with plenty of documentation a
 
 A contemporary micro-processor was the **Zilog Z80**, perhaps the most successful micro-processor of its time; if not all time. A similar 8-bit micro-processor, designed by the very same Federico Faggin from Intel. The fact that it's still sold today is testament to its longevity.
 
-![z80](z80.jpg)
+![z80](z80.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 It was first introduced in 1976, not long after the MOS 6502. Both came to dominate the nascent HomeBrew computer market, with the Z80 becoming the most commonly used CPU of all time by the early 1980s. For good reason too. The Zilog Z80 had a number of key features that put it well ahead of the pack.
 
@@ -97,7 +97,7 @@ The crucial difference was the fact that the only peripheral controller ICs avai
 
 In the end, the 8088 won out because Intel had the 8-bit peripheral ICs available in quantities that Motorola simply hadn't. Furthermore, IBM was already familiar with using Intel hardware and wanted to stick with something they knew. The Intel 8088 was their answer.
 
-![8080](8080.jpg)
+![8080](8080.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 But why did I decide on the Intel 8088? Likely because of its rich history and my Intel bias. And moreover, I wanted to work on something that was a little off the beaten track. The Intel 8088 doesn't share the same community fan-base like the Z80 or 6502 so I thought there might be some room for me to make a little dent in the HomeBrew world.
 

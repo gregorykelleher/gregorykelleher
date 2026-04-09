@@ -1,31 +1,53 @@
-# To use this file simply install caddy and run the command below from the root of your Grav site
-# Once running it will redirect http://localhost to https://localhost (new default for Caddy2)
-# More infromation here: https://caddyserver.com/docs/
+# Snapshot of /etc/caddy/Caddyfile on the herculaneum droplet, captured
+# 2026-04-09. NOT used at runtime by Caddy from this repo — production
+# reads from /etc/caddy/Caddyfile + /etc/caddy/common.conf. Kept here
+# for version control and disaster recovery only. To restore on a fresh
+# host: copy this file to /etc/caddy/Caddyfile and the sibling
+# webserver-configs/common.conf to /etc/caddy/common.conf, then
+# `systemctl reload caddy`.
 #
-# $ caddy run --config webserver-configs/Caddyfile
+# This replaces the upstream Grav default Caddyfile (which was just
+# `localhost` + `php_fastcgi 127.0.0.1:9000` and unused on this server).
 
-localhost
-encode gzip
-root * .
-file_server
+{
+	# Re-disable HTTP/3 advertising. We re-enabled it 2026-04-09 alongside
+	# stripping the over-tuned tls block, but the actual QUIC handshake still
+	# fails (ERR_QUIC_PROTOCOL_ERROR mid-handshake). Until that's diagnosed,
+	# advertising alt-svc h3 just makes Chrome attempt QUIC and fall back
+	# noisily — sometimes surfacing as ERR_HTTP2_PROTOCOL_ERROR. See
+	# improvements.md #3 for the open investigation.
+	servers {
+		protocols h1 h2
+	}
+}
 
-php_fastcgi 127.0.0.1:9000
+gregorykelleher.com {
+	root * /var/www/gregorykelleher
 
-# Begin - Security
-# deny all direct access for these folders
-rewrite /(\.git|cache|bin|logs|backups|tests)/.* /403
+	# Enable HTTP Strict Transport Security (HSTS) to force clients to always use https
+	header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
-# deny running scripts inside core system folders
-rewrite /(system|vendor)/.*\.(txt|xml|md|html|htm|shtml|shtm|yaml|yml|php|php2|php3|php4|php5|phar|phtml|pl|py|cgi|twig|sh|bat)$ /403
+	# Access logs (JSON, rotated at 10MB, keep last 5)
+	log {
+		output file /var/log/caddy/access.log {
+			roll_size 10mb
+			roll_keep 5
+			mode 644
+		}
+		format json
+	}
 
-# deny running scripts inside user folder
-rewrite /user/.*\.(txt|md|yaml|yml|php|php2|php3|php4|php5|phar|phtml|pl|py|cgi|twig|sh|bat)$ /403
+	php_fastcgi unix//run/php/php8.3-fpm.sock {
+		read_timeout 60s
+		write_timeout 60s
+	}
 
-# deny access to specific files in the root folder
-rewrite /(LICENSE\.txt|composer\.lock|composer\.json|nginx\.conf|web\.config|htaccess\.txt|\.htaccess) /403
+	file_server
 
-respond /403 403
-## End - Security
+	# import common configurations
+	import /etc/caddy/common.conf
+}
 
-# global rewrite should come last.
-try_files {path} {path}/ /index.php?_url={uri}&{query}
+www.gregorykelleher.com {
+	redir https://gregorykelleher.com{uri} 301
+}

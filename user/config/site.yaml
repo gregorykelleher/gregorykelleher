@@ -20,4 +20,6 @@ social:
   - icon: github
     link: "https://github.com/gregorykelleher"  
   - icon: dribbble
-    link: "https://dribbble.com/GregoryKelleher"   
+    link: "https://dribbble.com/GregoryKelleher"
+  - icon: rss
+    link: "/blog.rss"

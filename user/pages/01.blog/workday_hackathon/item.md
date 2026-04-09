@@ -25,7 +25,7 @@ In honesty though, I had done some light revision prior and looked over some Typ
 
 The consensus of the group was to create an RPG chatBot for Slack. How? Well, the person that shouted the loudest decided on [HuBot](https://github.com/slackapi/hubot-slack). It isn't a bad choice in fairness and you could interface with the API in either plain JavaScript or CoffeeScript. However, we overlooked a fundamental concern that compromised the team. None of us knew how to program in CoffeeScript.
 
-![workday_offices](workday_offices.jpg)
+![workday_offices](workday_offices.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 This is what really let us down in the end and something we'll know for next time. Always program in a language that you've at least some experience with! I was hopelessly lost and CoffeeScript is something you just don't pick up over the space of a few hours.
 

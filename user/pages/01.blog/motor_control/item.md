@@ -10,7 +10,7 @@ taxonomy:
 
 When it comes to controlling motors using an Arduino, there's never a shortage of options. One such way is by using a small but capable integrated circuit like the SN754410. And here's why.
 
-![a-motor-control.jpg](a-motor-control.jpg)
+![a-motor-control.jpg](a-motor-control.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 ===
 
@@ -22,7 +22,7 @@ Besides requiring slightly more know-how & a good supply of jumper wires there's
 The chip itself has sixteen pins in total with each motor wired to either side. 
 It's a fairly symmetrical layout making it reasonably straightforward to wire-up. 
 
-![pinout.png](pinout.png)
+![pinout.png](pinout.png?cropResize=1600,1600&format=webp&quality=82)
 
 Each motor has two logic pins, an Enable/Disable pin and two pins for each terminal. 
 There are four pins going directly to ground and two pins going to power, one for the external power supply and the other going to the 5V of the microcontroller. 
@@ -87,7 +87,7 @@ The diodes I’m using are IN4001 diode rectifiers and are rated for up to 50V.
 
 Luckily the datasheet comes provided with a very good schematic showing exactly where and what orientation the diodes should be placed in. 
 
-![schematic.png](schematic.png)
+![schematic.png](schematic.png?cropResize=1600,1600&format=webp&quality=82)
 
 Examining the schematic then, eight diodes are required for two motors. Firstly, four diodes must be placed over the motor terminals of each motor, connected to power in order to protect the driver from over voltage.
 
@@ -101,7 +101,7 @@ Likewise you’re also going to need another four diodes for connecting the moto
 
 !!! Sometimes it can be a little mind-numbing trying to wire the diodes correctly. It helps to just remember that the grey band on the diode indicates the cathode and they all have to face in the same direction.
 
-![diode.png](diode.png)
+![diode.png](diode.png?cropResize=1600,1600&format=webp&quality=82)
 
 Once everything's wired up correctly all that's left is to run the code and start getting things moving. I've already written some very basic sample code for controlling two motor in both directions using two pushbuttons. I've made the code available on Github [here](https://gist.github.com/Spokkam/49a6182ea3e1087f861e).
 

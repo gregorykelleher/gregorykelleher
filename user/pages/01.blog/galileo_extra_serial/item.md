@@ -74,7 +74,7 @@ Ssh into your Galileo and run the following to check your gpio arrangement:
 
 You should get something back like the following below:
 
-![gpio_arrangement.png](gpio_arrangement.png)
+![gpio_arrangement.png](gpio_arrangement.png?cropResize=1600,1600&format=webp&quality=82)
 
 Now we have to carefully switch the right switches in order to enable pins 2 & 3 for our UART port. Fortunately, inside the [MRAA library](http://iotdk.intel.com/docs/master/mraa/galileorevh.html) it tells us which "buttons to press". 
 
@@ -86,7 +86,7 @@ If you want, you can confirm it's cancelled by typing:
 
 `systemctl status serial-getty@ttyS1.service`
 
-![getty_status.png](getty_status.png)
+![getty_status.png](getty_status.png?cropResize=1600,1600&format=webp&quality=82)
 
 The easiest method to mux the pins is by making a small python program. Create a new .py file:
 
@@ -117,7 +117,7 @@ Enter the following below:
 
 ```
 
-![python_gpio.png](python_gpio.png)
+![python_gpio.png](python_gpio.png?cropResize=1600,1600&format=webp&quality=82)
 
 Great, go ahead and run it:
 
@@ -168,4 +168,4 @@ Or read using:
 
 In the photo below you can see I've my serial-enabled display hooked up to pin 3 which is transmitting the text to the display.
 
-![python_gpio.png](hello_monkeys.jpg)
+![python_gpio.png](hello_monkeys.jpg?cropResize=1600,1600&format=webp&quality=82)

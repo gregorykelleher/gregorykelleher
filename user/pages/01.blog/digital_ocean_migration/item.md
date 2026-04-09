@@ -35,7 +35,7 @@ The screenshot from my test is below, but be warned, the results aren't pretty.
 
 ! Note that the results of the following tests are actually from another domain I host since I'd already transferred gregorykelleher.com from Blacknight before I could take screenshots. Although the results below are identical since all my websites shared the exact same configuration on Blacknight.
 
-![blacknight_ssl_test.png](blacknight_ssl_test.png)
+![blacknight_ssl_test.png](blacknight_ssl_test.png?cropResize=1600,1600&format=webp&quality=82)
 
 At a glance, my website's grade was capped at a 'T' due to the _server's certificate is not being trusted_ error. This is due to the certificate provided by Blacknight being self-signed by parallels.com. Qualys SSL Lab marks it as not being trusted as it doesn't recognise it as a legitimate CA (Certificate Authority).
 
@@ -71,7 +71,7 @@ His website securityheaders.io analyses the HTTP security headers sent in a resp
 
 The results for my website hosted on Blacknight exposed the following results:
 
-![security_headers_blacknight.png](security_headers_blacknight.png)
+![security_headers_blacknight.png](security_headers_blacknight.png?cropResize=1600,1600&format=webp&quality=82)
 
 You can't sugarcoat that. It's awful. But at least there's plenty of room for improvement. Again, I'll go into more detail on what each header means when I get to them.
 
@@ -81,7 +81,7 @@ Getting up and running with Nginx is a breeze on Digital Ocean, thanks in part t
 
 For instance, you can assume I set up my SSH keys, turned off `PermitRootLogin` and `PasswordAuthentication`, configured my firewall correctly .etc.
 
-![ssh_gus.png](ssh_gus.png)
+![ssh_gus.png](ssh_gus.png?cropResize=1600,1600&format=webp&quality=82)
 
 Other such security measures that I took (that mightn't be so familiar) include installing [Fail2Ban](http://www.fail2ban.org/wiki/index.php/Main_Page) and [tripWire](https://linux.die.net/man/8/tripwire).
 
@@ -94,17 +94,17 @@ TripWire is another useful tool, technically called a _host-based intrusion dete
 
 I thought I'd also mention [Wapiti](http://wapiti.sourceforge.net/) here too. It describes itself as a _web application vulnerability scanner_ that will audit the security of your web applications. Simply out of interest, I downloaded it and ran it against my website.
 
-![wapiti_generating.png](wapiti_generating.png)
+![wapiti_generating.png](wapiti_generating.png?cropResize=1600,1600&format=webp&quality=82)
 
 It will go ahead and test each page inside my website directory, looking for XSS, SQL or file disclosure vulnerabilities and injecting payloads here and there. At the very end it will generate a report for you to browse.
 
-![wapiti.png](wapiti.png)
+![wapiti.png](wapiti.png?cropResize=1600,1600&format=webp&quality=82)
 
 You can see from above that I pass every test with only a single error. This error is an XSS vulnerability on my website's contact page, which I've since patched.
 
 But what about Nginx? Yes, that comes pre-installed on Digital Ocean's Ubuntu droplet thankfully. 
 
-![nginx_directory.png](nginx_directory.png)
+![nginx_directory.png](nginx_directory.png?cropResize=1600,1600&format=webp&quality=82)
 
 For my Nginx setup, I've separated things into different files and directories, allowing me to share configurations between different websites instead of duplicating needlessly.
 
@@ -121,7 +121,7 @@ Digital Ocean's Ubuntu droplet comes with Nginx pre-installed, however it isn't 
 
 Hence I had to use `wget` to fetch the tarball for the latest Nginx build (`nginx/1.11.13` at time of writing) as well as any additional Nginx modules I wanted to include, extracting them into a new directory `/home/gregory/nginx` for installation purposes.
 
-![nginx_folder.png](nginx_folder.png)
+![nginx_folder.png](nginx_folder.png?cropResize=1600,1600&format=webp&quality=82)
 
 !!! Apparently since version 1.9.11 of Nginx, they've introduced dynamic modules which can be optionally loaded at run-time. You can also check what modules have been built with the current Nginx installation using `Nginx -V`
 
@@ -152,13 +152,13 @@ Before building my new Nginx version then, I configured it using `./configure` i
 
 Finally, all that's left to do is to hit `make` followed by `sudo make install` to compile. Couldn't be simpler.
 
-![out_of_memory](out_of_memory.png)
+![out_of_memory](out_of_memory.png?cropResize=1600,1600&format=webp&quality=82)
 
 Oh no. That says it all. You can see from above that the installation process was terminated. That image is actually from a Digital Ocean console VNS connection. Originally I was SSH'd into the server and saw a `SIGKILL: signal 9` error which was from the Linux scheduler. The PID matched my Nginx installation process.
 
 The graphs below show the toll it took on my droplet. Notice the sharp peaks during the installation.
 
-![nginx_toll.png](nginx_toll.png)
+![nginx_toll.png](nginx_toll.png?cropResize=1600,1600&format=webp&quality=82)
 
 At this point I was a little stuck. My little droplet didn't have enough memory to install Nginx. The naïve solution would've been to upgrade to the €10 droplet with more memory but I had a different idea instead.
 
@@ -170,7 +170,7 @@ Swapping is useful in once-off cases such as mine, when the system requires more
 
 Aware of these facts, I went ahead and created a small temporary swap file on my system with the following commands.
 
-![swapping.png](swapping.png)
+![swapping.png](swapping.png?cropResize=1600,1600&format=webp&quality=82)
 
 The `dd` command with `of/swapfile` creates an empty file called `extraswap` of 512Mib. The `if=/dev/zero` indicates to read from `/dev/zero`, a special file that provides null characters to populate the file. The `bs=1M` is the rate of read and write, 1M at a time in this case.
 
@@ -178,6 +178,6 @@ You can see from the image it's warning of insecure permissions. And for good re
 
 Running the Nginx installation procedure again, I got green lights all the way down, completing my upgrade. Finally.
 
-![building_nginx.png](building_nginx.png)
+![building_nginx.png](building_nginx.png?cropResize=1600,1600&format=webp&quality=82)
 
 That final installation completes my upgrade to the latest Nginx build and concludes this post. Having the most up-to-date version means I can begin enabling the latest features in Nginx. Check out my next [post](https://gregorykelleher.com/nginx_security) where I return to the Nginx configuration files and begin my updates.

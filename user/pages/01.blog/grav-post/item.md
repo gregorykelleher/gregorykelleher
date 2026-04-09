@@ -15,7 +15,7 @@ This blog post is really for my own sanity - in order to help me track all the s
 
 ###CSS Extensions
 
-![sass.png](sass.png)
+![sass.png](sass.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -26,7 +26,7 @@ Sass is definitely growing on me. If there's any extension for css; this is the 
 
 ###CSS Frameworks
 
-![pure.png](pure.png)
+![pure.png](pure.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -36,7 +36,7 @@ These sets of frameworks are lifesavers & make designing pleasurable. Pure is pr
 
 ###Debugging
 
-![devtools.png](devtools.png)
+![devtools.png](devtools.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -46,7 +46,7 @@ Again, there are many more options similar to these, but for me I typically spen
 
 ###Syncronised Testing
 
-![browsersync.jpg](browsersync.jpg)
+![browsersync.jpg](browsersync.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -57,7 +57,7 @@ Really handy tools and an easy install using node.js. These tools simply watch y
 
 ###Node.js
 
-![nodejs.jpg](nodejs.jpg)
+![nodejs.jpg](nodejs.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -68,7 +68,7 @@ A lot of my tools hinge on node.js. It's a fantastic platform for installing a m
 
 ###Scaffolding
 
-![yeoman.png](yeoman.png)
+![yeoman.png](yeoman.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -79,7 +79,7 @@ Another 'npm' install, Yeoman is the scaffolding to your build. It's a great kic
 
 ###Package Manager
 
-![bower-logo.jpg](bower-logo.jpg)
+![bower-logo.jpg](bower-logo.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -90,7 +90,7 @@ Likewise, bower is a simple 'npm' install and is bundled with Yeoman. It's a sim
 
 ###Javascript Supersets
 
-![coffeeScript.jpg](coffeeScript.jpg)
+![coffeeScript.jpg](coffeeScript.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -101,7 +101,7 @@ Superset Javascript that compiles to plain old javascript. I certainly don't com
 
 ###Jquery plugins 
 
-![libraries.png](libraries.png)
+![libraries.png](libraries.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -112,7 +112,7 @@ You could really spend days checking out the plethora of plugins available from 
 
 ###Add-ons
 
-![emmet.jpg](emmet.jpg)
+![emmet.jpg](emmet.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -123,7 +123,7 @@ Yet more add-ons to improve your workflow. Emmet for example removes those snipp
 
 ###Templating Engines
 
-![haml.png](haml.png)
+![haml.png](haml.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -134,7 +134,7 @@ Wish I could talk more about these lot but I really haven't had enough experienc
 
 ###Task Runners
 
-![gulp.png](gulp.png)
+![gulp.png](gulp.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -147,7 +147,7 @@ Gulp & Brunch are noteworthy competitors, but I've yet to try them.
 
 ###Editors
 
-![sublime.png](sublime.png)
+![sublime.png](sublime.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -162,7 +162,7 @@ Atom I discovered because it came bundled with my GitHub developer pack. In some
 
 ###Metrics
 
-![insights.png](insights.png)
+![insights.png](insights.png?cropResize=1600,1600&format=webp&quality=82)
 
 |  |  |
 | ------:| -----------:|
@@ -223,7 +223,7 @@ Anyhow, some plugins you may want to install include the following:
 
 Ok, so I'm not going into huge detail here but people really have different practices when it comes to developing their website. Besides the basic HTML and CSS stylesheets, there's a myriad of ways you can go about building your site. 
 
-![OwlProblem.jpg](OwlProblem.jpg)
+![OwlProblem.jpg](OwlProblem.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 At the minute I'm focusing on using Grav & I occasionally begin with one of their skeletons or templates. It's just a matter of downloading what you like from their site and refitting things to fit your purpose. 
 
@@ -260,14 +260,14 @@ nserver -p 9000
 There's no shying away from the terminal. Whilst Sublime does editing, you're going to need something to issue your commands. You'll never get any of those fancy tools I mentioned by avoiding it. Most are invoked directly through shell commands.
 Trust me - you'll grow to like it. It's really the best tool for the job & you'll never find a GUI that works as well. There's a reason why it's still around.
 
-![unix.jpg](unix.jpg)
+![unix.jpg](unix.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Bonus points if you're on a Mac. The default user terminal shell is bash (derivative of the orignal Bourne shell: sh), which is often also the default on GNU/Linux installations too. Both are built upon Unix, so you'll feel right at home on either OS. 
 Anecdotally, you'll find more and more people are opting for either Mac or Linux.
 
 I choose to use [iTerm2](https://iterm2.com/shell_integration.html) for Mac but even the built-in Terminal is decent enough.
 
-![iterm.png](iterm.png)
+![iterm.png](iterm.png?cropResize=1600,1600&format=webp&quality=82)
 
 However, on windows you'll be working off MS-DOS - which I can't really speak for. 
 
@@ -279,7 +279,7 @@ Frankly, it should be a requirement to know it, since 42.9% of professional soft
 
 Another point is that Git is primarily accessed through the bash shell. See? There's no avoiding it! 
 
-![github.jpg](github.jpg)
+![github.jpg](github.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Both [Github](www.github.com) and [Bitbucket](www.bitbucket.com) (Web-based Git repository hosting services) is where you should be hosting your repositories in the cloud.
 

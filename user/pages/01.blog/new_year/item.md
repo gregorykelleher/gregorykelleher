@@ -20,7 +20,7 @@ This is possibly the biggest change I've made to how I host my website, and real
 
 [Caddy](https://caddyserver.com/) comes with the tag-line, _"Every site on HTTPS"_ and they thoroughly live up to that aim. In fact, it's automatic. Caddy is bundled as a single executable (that can be customised as much as you want) and downloaded directly onto your VPS.
 
-![caddy.png](caddy.png)
+![caddy.png](caddy.png?cropResize=1600,1600&format=webp&quality=82)
 
 So no dependencies or awkward installs, and you're almost finished before you've begun! After downloading, it's just a matter of configuring the `Caddyfile` which couldn't be simpler. The syntax is perfect in its clarity, check out just how simple it can be:
 
@@ -77,7 +77,7 @@ minify
 
 A quick scan using [Pingdom](https://tools.pingdom.com/) displays my website's reduced size and improved performance. Not too shabby.
 
-![test.png](test.png)
+![test.png](test.png?cropResize=1600,1600&format=webp&quality=82)
 
 !!! The 'B' grade is down to my lack of browser caching and HTTP expires headers which I haven't yet configured
 
@@ -87,7 +87,7 @@ That about as much as I have to say on Caddy for now. It's been a breeze to setu
 
 I don't know how this eluded me until now, but I've only recently added CAA records to my domain. Certificate Authority Authorisation (CAA) records are a new standard that allow domain owners to restrict which CAs (e.g. Let's Encrypt) are permitted to issue certificates for their domains. This helps to prevent the chance of issuing mishaps, either maliciously or accidentally.
 
-![CAA](caa.png)
+![CAA](caa.png?cropResize=1600,1600&format=webp&quality=82)
 
 [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-create-and-manage-caa-records-using-digitalocean-dns) have a handy tutorial to follow too.
 
@@ -121,7 +121,7 @@ In my case, my website doesn't load many third-party resources besides typefaces
 
 Providing multiple SHA256, SHA384 hashes didn't solve the issue either. Digging into it more, I discovered that Google Fonts is returning slightly different files optimised for your browser. Hence it hashes differently depending on what browser you're using.
 
-![google_fonts](google_fonts.png)
+![google_fonts](google_fonts.png?cropResize=1600,1600&format=webp&quality=82)
 
 Frankly, it wasn't worth much more effort and I feel the risk of Google maliciously embedding code through a font is a small enough attack surface not to be worried!
 
@@ -129,7 +129,7 @@ Frankly, it wasn't worth much more effort and I feel the risk of Google maliciou
 
 Datadog is a monitoring service for larger cloud-based web applications, tying together data from servers, databases and the like to generate a unified overview of the entire web stack. A bit overblown for a simple personal blog but it comes as a feature for Caddy and I thought to try it out. With the [Github Student Pack](https://education.github.com/pack) I also get a Pro account free for two years.
 
-![datadog](datadog.png)
+![datadog](datadog.png?cropResize=1600,1600&format=webp&quality=82)
 
 To be frank, I'm sorely underusing it and haven't had the chance to explore its full capabilities. From what I've read and learnt online, it's a very popular service so I suppose it helps to have had some exposure to it.
 
@@ -139,11 +139,11 @@ The image above is displaying the network traffic (incoming and outgoing) being 
 
 [Pi-hole](https://pi-hole.net/) describes itself as a _black hole for internet advertisements_ on your network. Essentially it maintains a blocklist of IP addresses known to host advertisements and malware (108,807 unique addresses on my last count) and then drops the bad requests before they reach your devices.
 
-![pi_hole.png](pi_hole.png)
+![pi_hole.png](pi_hole.png?cropResize=1600,1600&format=webp&quality=82)
 
 It runs as a shell-script on your Raspberry Pi which acts as a DNS server, `46.7.58.3` in my case, for your devices to connect through. So it's more or less a _network-wide_ ad-blocker, removing the need to configure individual clients.
 
-![pi_hole_dashboard.png](pi_hole_dashboard.png)
+![pi_hole_dashboard.png](pi_hole_dashboard.png?cropResize=1600,1600&format=webp&quality=82)
 
 In a lot of ways, it's better than a traditional ad-blocker considering it blocks ads _before_ they reach any of your devices. And also devices such as game consoles, smart TVs .etc that can't install extensions too easily.
 
@@ -169,4 +169,4 @@ So that pretty much concludes some of the small tweaks I've made to my site in t
 
 Lastly on a personal note, my cat passed away this week. He was a pedigree exotic shorthair cat named Sheerbliss Augustus Fergus Kelleher or 'Gus' for short. He will be sadly missed.
 
-![cat.jpg](cat.jpg)
+![cat.jpg](cat.jpg?cropResize=1600,1600&format=webp&quality=82)

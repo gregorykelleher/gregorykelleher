@@ -48,7 +48,7 @@ From there, it's a matter of building Nginx from source as I've described before
 
 You can the see the output from `nginx -v` on my server below.
 
-![nginx_v.png](nginx_v.png)
+![nginx_v.png](nginx_v.png?cropResize=1600,1600&format=webp&quality=82)
 
 Thankfully, installing Nginx is the hard part. Enabling PageSpeed is a piece of cake. I've placed my configurations within `sites-available/gregorykelleher`. Remember I've the symbolic link from this directory to `sites-enabled` for Nginx to pick up on.
 
@@ -71,8 +71,8 @@ Adding filters is as easy as `EnableFilters` followed by the name of the filter.
 
 Still, I saw a marked improvement when I went to test my site. I've a preference for GTmetrix which I find very good. My before and after results are shown below.
 
-![performance_before_pagespeed.png](performance_before_pagespeed.png)
-![performance_after_pagespeed.png](performance_after_pagespeed.png)
+![performance_before_pagespeed.png](performance_before_pagespeed.png?cropResize=1600,1600&format=webp&quality=82)
+![performance_after_pagespeed.png](performance_after_pagespeed.png?cropResize=1600,1600&format=webp&quality=82)
 
 So wow. A reduction of about 35% on the page size and a load speed of under two seconds. Pretty good. I've also cut down on the number of requests too. See for yourself [here](https://gtmetrix.com/reports/gregorykelleher.com/IHZhSgjF).
 
@@ -109,7 +109,7 @@ I then went into my `nginx.conf` file and added the following lines:
 
 After doing a `sudo service nginx reload` I was able to see the change in the response header for a resource loaded on my website. Notice the `br` listed under `content-encoding`? That's Brotli in action.
 
-![header.png](header.png)
+![header.png](header.png?cropResize=1600,1600&format=webp&quality=82)
 
 So that covers the two Nginx modules, PageSpeed and Brotli, but there were a few little tweaks of my own that I made to my website too.
 
@@ -124,7 +124,7 @@ And then, inside Grav, I installed a new plugin called [AdvancedPageCache](https
 
 This static caching has dramatically increased the performance of my website, to a noticeable degree. Below, you can see how I installed it using `bin/gpm install advanced-pagecache`.
 
-![grav_advanced_page_cache.png](grav_advanced_page_cache.png)
+![grav_advanced_page_cache.png](grav_advanced_page_cache.png?cropResize=1600,1600&format=webp&quality=82)
 
 It installs a config file `user/plugins/advanced-pagecache.yaml` that contains the default settings. I usually find myself having to disable it for when I'm debugging, but otherwise it's incredibly useful.
 

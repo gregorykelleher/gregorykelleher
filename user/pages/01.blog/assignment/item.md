@@ -86,7 +86,7 @@ With this information I set about building my own search engine, 'piggy-backing'
 
 Like before, open up Flash and create a new document. Import the Google logo svg file (easily found online) and place on the stage. Below the logo insert a textbox and change it to an input field.
 
-![stage](google_stage.png) 
+![stage](google_stage.png?cropResize=1600,1600&format=webp&quality=82) 
 
 Draw a rectangular frame around it with a blue stroke and no fill. To the right of it, draw a shape, change its name, convert to a button symbol and change the instance name accordingly.
 
@@ -158,7 +158,7 @@ private function selectInput(e:MouseEvent):void {
 ```
 Using the text Input field instance name, it sets selection to the entire search term inputted by the user - ensuring the whole input is captured. 
 
-![main_as.png](main_as.png)
+![main_as.png](main_as.png?cropResize=1600,1600&format=webp&quality=82)
 
 In terms of functionality, this is the project complete. But it's not quite _crazy_ enough just yet...
 
@@ -201,7 +201,7 @@ There's quite a bit of Trigonometry here that really isn't worth getting into an
 
 Testing it in the browser is fine enough but ultimately I wanted my Flash program to be hosted online. Therefore I exported my Flash project as a movie (.swf) and placed it inside a new directory alongside an `index.html` file.
 
-![html](html.png)
+![html](html.png?cropResize=1600,1600&format=webp&quality=82)
 
 Opening up my `index.html` I inserted the following, including proper referencing to my Flash file:
 
@@ -234,16 +234,16 @@ I then fired up a localhost server using python to try it out:
 
 `python -m SimpleHTTPServer 9000`
 
-![python_server](python_server.png)
-![python_server](google_localhost.png)
+![python_server](python_server.png?cropResize=1600,1600&format=webp&quality=82)
+![python_server](google_localhost.png?cropResize=1600,1600&format=webp&quality=82)
 
 And it worked! It also looked pretty great too. Yet I still felt it needed more _crazy_. Back inside my directory I installed something called `csshake` using `bower`.
 
-![csshake](csshake.png)
+![csshake](csshake.png?cropResize=1600,1600&format=webp&quality=82)
 
 I then updated the html by including the links to the CSS stylesheet and including the `class="shake-slow"` to the div containing my Flash program. 
 
-![csshake](crazygoogle_shake.png)
+![csshake](crazygoogle_shake.png?cropResize=1600,1600&format=webp&quality=82)
 
 ###Conclusions
 

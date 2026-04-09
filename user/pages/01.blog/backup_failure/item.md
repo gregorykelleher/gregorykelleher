@@ -18,7 +18,7 @@ In my flurry of pulls and pushes to Github, and in my imprudent manner I careles
 
 In other words, for quite a while (and if you were so acute) you might've 'chanced' upon my credentials which are like the keys to the castle, in a sense.
 
-![sftp](sftp.png)
+![sftp](sftp.png?cropResize=1600,1600&format=webp&quality=82)
 
 Anyways, this all comes back to me after someone giving me a nudge to rectify the blatant exposure. I swiftly thanked them and set about making my repository private and removing all traces of the issue. Next thing of course I changed the credentials and went about searching for 'more holes in the wall' so to speak.
 

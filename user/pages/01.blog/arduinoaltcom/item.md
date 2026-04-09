@@ -64,7 +64,7 @@ Anyhow, before I return to the _raison d'être_ behind my blog post I'll just li
 
 <br></br>
 
-![other.jpg](other.jpg)
+![other.jpg](other.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 As I mentioned, for this project I happened to require a new GPS module for my project. I decided to buy the GY-GPS6MV2 on AliExpress based on the price and also from what I read online. 
 
@@ -111,11 +111,11 @@ void setup()
 
 Having wired-up the board, changing and uploading the code, you can open the Serial monitor at **9600** to see if the GPS is working. If you're lucky, you should see a steady stream of data coming through telling you of your location. 
 
-![onewindow.png](onewindow.png)
+![onewindow.png](onewindow.png?cropResize=1600,1600&format=webp&quality=82)
 
 !!!! Note that the LED on the module is not a power LED so don't feel disheartened if it doesn't light straight away when you power your board. It's an indicator - blinking when it has a satellite lock.
 
-![farout.jpg](farout.jpg)
+![farout.jpg](farout.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 If you're unlucky like me, you might have a serial monitor filled with asterisks. Don't despair! If you're seeing the blinking light onboard, that's a good sign. If you can determine that it's receiving data, it's likely you've done something wrong on setup. 
 
@@ -135,7 +135,7 @@ If you're unlucky like me, you might have a serial monitor filled with asterisks
 
 <br></br>
 
-![code.png](code.png)
+![code.png](code.png?cropResize=1600,1600&format=webp&quality=82)
 
 In case you're wondering about the inclusion of SoftwareSerial, it's down to the Uno having only two physical ('hard') serial ports - pin 1 (TX) and pin 0 (RX). 
 

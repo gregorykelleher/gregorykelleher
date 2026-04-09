@@ -24,25 +24,25 @@ Anyhow, this post isn't about reviewing the Intel Galileo again. Yet it does pay
 
 Measuring the same footprint as a classic Arduino Leonardo, the Yún is an IoT board packed with features. Onboard, it has an USB-A host port, micro-SD card slot, micro USB (power/prog), ethernet port (as well as a built-in wifi), alongside 20 digital input/output pins (7 of which can be used as PWM outputs and 12 being analog inputs). Another (often overlooked feature) is it's UF.L connector for an antenna.
 
-![zoomout.JPG](zoomout.JPG)
+![zoomout.JPG](zoomout.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 ! Unlike other Arduino boards though, it doesn't come with a DC barrel jack. Neither does it come with a 5V regulator, so take care when powering it via the 5V or VIN pin.
 
 On the topic of processors, the Yún is very similar to the leonardo, sharing the same Atmel ATmega32U4 (running at 16MHz) microprocessor. The ATmega32U4 has built-in USB communication, eliminating the need for a secondary processor. Thus, allowing the Yún to appear to a connected computer as a mouse and keyboard, as well as to a *virtual* serial / COM port. 
 
-![linux.JPG](linux.JPG)
+![linux.JPG](linux.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 The Yún doesn't have a dedicated chip to handle serial communication, meaning that the serial port is in fact virtual - done through software. One key point to having a virtual port is that everytime you reset the 32U4 processor, the USB serial connection will be broken and re-established. 
 
 This causes any open serial connections will drop and the board will disappear from list of serial ports. This sometimes has consequences for anything to do with driver installations, uploads, and communication.
 
-![zoomin.JPG](zoomin.JPG)
+![zoomin.JPG](zoomin.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 What sets the Yún apart however, is that it also comes with the Atheros AR9331 which runs OpenWrt-Yun, the embedded Linux distribution. Thus it's really two computers in one. 
 
 !!! Note that the OpenWrt-Yun installation takes up around 9 MB of the 16 MB available on the internal flash memory. Disk space can be expanded by having an SD card inserted.
 
-![usb-micro.JPG](usb-micro.JPG)
+![usb-micro.JPG](usb-micro.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 The 32-bit CPU operates at 400MHz, and is a MIPS - a RISC (reduced instruction set) architecture processor, unlike the CISC (complex instruction set) architecture of the Quark, found on the Intel Galileo. 
 Onboard then, it has 64MB DDR2 (RAM) along with 16 MB of flash memory. It's also capable of doing full flavored TCP/IP networking over Ethernet & Wifi.
@@ -55,7 +55,7 @@ One important thing to note is that the USB host, network interfaces (wifi & eth
 
 Conveniently, the 32u4, WiFi, and AR9331 processors all have their own reset buttons. There's also plenty of onboard LED indicators - for WLAN (wifi), power, usb, RX/TX, pin 13, & WAN (ethernet).
 
-![LEDs.JPG](LEDs.JPG)
+![LEDs.JPG](LEDs.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 There's been quite a bit of discussion surrounding the PoE (power over ethernet) compatibility. In short, it *is* compatible with PoE power supply but it's necessary to have a PoE module mounted. The catch 22 is that there isn't a PoE module available just yet. 
 
@@ -65,7 +65,7 @@ There's been quite a bit of discussion surrounding the PoE (power over ethernet)
 
 Arguably, The Yún's greatest asset is its embedded linux distribution which sets it apart from other Arduino boards. It brings a whole new world of connectivity, offering a powerful networked computer with the ease of Arduino.
 
-![linux2.JPG](linux2.JPG)
+![linux2.JPG](linux2.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 The onboard linux distribution is called OpenWrt-Yun and interfaces with the ATmega32U4 through the Bridge library, making it astonishingly easy to integrate the functionality of both processors, all within your sketch. Bridge commands from the 32U4 are interpreted by python on the Open-wrt.
 
@@ -90,19 +90,19 @@ Go ahead then and connect to this network. Open a browser next and type: ``http:
 
 Hopefully, all going well, you should come to a page asking for a password. The default password is: ``arduino`` all lowercase.
 
-![yun-intro.jpg](yun-intro.jpg)
+![yun-intro.jpg](yun-intro.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 After you're in, you should reach a page showing the default configuration. This is where you'll be able to connect your Yún to your own wireless network. 
 
 The settings are fairly straightfoward. Give your Yún a name and enter in all the necessary details to allow it connect to your network. Go ahead and save/restart once you're done. It's really just that easy. 
 
-![config.jpg](config.jpg)
+![config.jpg](config.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 If you felt like it instead, you could always access the board through the console. The console creates a secure connection between the Yún and your computer via SSH. 
 
 Simply go to the menu inside Arduino and look to the Bridge example folder. Load up the YunSerialTerminal sketch via serial (not WiFi), then open the serial monitor at 115200. You can also use the serial monitor as a basic command line interface for Linux using this sketch.
 
-![openwrt.jpg](openwrt.jpg)
+![openwrt.jpg](openwrt.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Another way is by using the terminal and typing ``ssh root@youryúnsname.local``. You should be prompted for a password before you're allowed access the linux computer. 
 
@@ -110,7 +110,7 @@ Another way is by using the terminal and typing ``ssh root@youryúnsname.local``
 
 Inside the OpenWrt linux distribution you can try upgrading the linux image. First go to the download page [here](https://www.arduino.cc/en/Main/Software#toc8) and download the .zip file. Unzip the binary image file once you have it downloaded and move it onto the root directory of your SD card.
 
-![openwrt-sd.jpg](openwrt-sd.jpg)
+![openwrt-sd.jpg](openwrt-sd.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 !! Note that updating the linux image will cause you to lose all of your existing files and configurations you previously had on the flash memory of the Yún.
 
@@ -124,7 +124,7 @@ Firstly the web panel approach is the simplest and just requires you to navigate
 
 The second method is by connecting to the Yún via SSH (the approach I took) and upgrading it through the console. 
 
-![upgrade.jpg](upgrade.jpg)
+![upgrade.jpg](upgrade.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Again, do as you did before and type ``ssh root@youryúnsname.local``. Once you're in, type in: 
 
@@ -139,21 +139,21 @@ Congrats! Now that all the configuration is finished you can start playing about
 
 First thing I tried was programming through the Sublime plugin. [Stino](https://github.com/Robot-Will/Stino) if you haven't heard of it, is a plugin that enables you to program your board through the Sublime IDE. It's simply more user friendly and has more features than the default Arduino IDE. 
 
-![stino-yun.jpg](stino-yun.jpg)
+![stino-yun.jpg](stino-yun.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 With either IDE you can go straight into the Bridge example sketches _files > examples > bridge_. 
 
 The first one I tried was the **wifi-config** example. Load it to the Yún, open the serial monitor (at 115200) and you should see the configurations you set up initially. 
 
-![wifi-config.jpg](wifi-config.jpg)
+![wifi-config.jpg](wifi-config.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Next sketch I tried was to test the wifi strength. That's simply _files > examples > bridge > ShellCommands_
 
-![wifi-strength.jpg](wifi-strength.jpg)
+![wifi-strength.jpg](wifi-strength.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Or how about some ASCII art? That's _files > examples > bridge > bridge_
 
-![art.jpg](art.jpg)
+![art.jpg](art.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 ###Temboo
 
@@ -161,7 +161,7 @@ Lastly, you can also get weather reports from Yahoo through an online platform s
 
 There's a number of examples already included in the temboo folder inside Arduino: _files > examples > bridge > temboo_. 
 
-![yun-yahoo-temp.jpg](yun-yahoo-temp.jpg)
+![yun-yahoo-temp.jpg](yun-yahoo-temp.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Above is the Yahoo weather report example, feeding back data through the serial monitor. Pretty cool if you ask me. 
 
@@ -173,7 +173,7 @@ Others will always argue that other boards such as the Raspberry Pi, Beagleboard
 
 However, in my opinion the Yún offers the easiest way for a novice to enter the world of IoT. The Yún is also unique in that it is designed and build by Arduino and has the best interface with the Arduino platform. 
 
-![zoomin.JPG](zoomin.JPG)
+![zoomin.JPG](zoomin.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 There really isn't any work-arounds to consider when using it and it's designed for ease of use. The Arduino team really seemed to have known what they were doing when they built this board and the documentation, tutorials, resources .etc are spot on. 
 

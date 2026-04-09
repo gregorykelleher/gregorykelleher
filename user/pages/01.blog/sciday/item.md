@@ -19,7 +19,7 @@ Things kicked off quite early that Saturday morning, commencing with a brief int
 
 Each idea has its merit, but ultimately it's down to the interest shared by the audience that brings an idea to life. In this way, teams slowly began to form, and before long, the room had been transformed into a workshop with teams busy on crafting their creations. 
 
-![heads.jpg](heads.jpg)
+![heads.jpg](heads.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 I initially found myself working upon 'SeaBoat' - an autonomous water-craft that would communicate via LED pulses and transmit its location via GPS. While that certainly kept me occupied for much of Saturday afternoon, I soon turned my attention to helping another team on their concept for an autonomous 'SewerBot'. 
 
@@ -33,5 +33,5 @@ In fact, across the whole event I feel my greatest contribution had to have been
 
 Besides the projects I worked on, there was also a 3D pancake printer, a laser maze and a light-up Advent calendar, to name just a few.
 
-![car.jpg](car.jpg)
+![car.jpg](car.jpg?cropResize=1600,1600&format=webp&quality=82)
 

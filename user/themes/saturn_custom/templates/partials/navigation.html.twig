@@ -15,10 +15,5 @@
                 <a href="{{ mitem.link }}">{{ mitem.text }}</a>
             </li>
         {% endfor %}
-        {% if config.plugins.feed.enabled %}
-            <li>
-                <a href="{{ feed_url }}.rss">Feed</a>
-            </li>
-        {% endif %}
     </ul>
 </nav>          

@@ -1,6 +1,6 @@
 ---
 title: Switching to Vim 
-date: 21:19 06/30/2016
+date: 21:19 30/06/2016
 published: false
 taxonomy:
     category: blog

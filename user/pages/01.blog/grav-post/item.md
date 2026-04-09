@@ -1,6 +1,6 @@
 ---
 title: Web Development Tools & Guide
-date: 8:44 08/21/2015
+date: 08:44 21/08/2015
 taxonomy:
     tag: [web design, web development, tutorial]
 ---

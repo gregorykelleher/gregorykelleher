@@ -1,6 +1,6 @@
 ---
 title: Intel Quark Development & Debugging - Part 1
-date: 00:06 06/12/2016 
+date: 00:06 12/06/2016
 published: false
 taxonomy:
     category: blog

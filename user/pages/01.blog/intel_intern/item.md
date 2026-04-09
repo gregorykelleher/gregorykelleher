@@ -1,6 +1,6 @@
 ---
 title: Summer with 'Intel Inside'
-date: 14:26 05/29/2016
+date: 14:26 29/05/2016
 taxonomy:
     category: blog
     tag: [intel]

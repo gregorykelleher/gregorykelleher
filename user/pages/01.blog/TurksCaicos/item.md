@@ -1,6 +1,6 @@
 ---
 title: Turks & Caicos
-date: 18:02 02/21/2015
+date: 18:02 21/02/2015
 taxonomy:
     category: blog
     tag: [graphic design, logo, illustration]

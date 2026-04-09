@@ -1,6 +1,6 @@
 ---
 title: The Essence of a Good Program
-date: 12:23 08/13/2020
+date: 12:23 13/08/2020
 highlight:
     theme: monokai
 taxonomy:

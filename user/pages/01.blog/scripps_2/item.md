@@ -1,6 +1,6 @@
 ---
 title: Scripps (Part 2) - The Numbers
-date: 16:49 03/18/2026
+date: 16:49 18/03/2026
 highlight:
     theme: monokai
 taxonomy:

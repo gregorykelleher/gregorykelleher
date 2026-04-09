@@ -1,6 +1,6 @@
 ---
 title: Boosting NGINX Performance
-date: 18:29 5/18/2017
+date: 18:29 18/05/2017
 author: Gregory Kelleher
 highlight:
     theme: monokai

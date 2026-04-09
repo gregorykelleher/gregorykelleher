@@ -1,6 +1,6 @@
 ---
 title: Modern C++ Project Structuring
-date: 14:31 12/15/2023
+date: 14:31 15/12/2023
 highlight:
     theme: monokai
 taxonomy:

@@ -1,6 +1,6 @@
 ---
 title: Ethernet on Galileo with static IP
-date: 11:13 11/25/2015
+date: 11:13 25/11/2015
 highlight:
     theme: monokai
 taxonomy:

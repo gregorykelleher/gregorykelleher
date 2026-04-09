@@ -1,6 +1,6 @@
 ---
 title: Effects of Convergence Essay
-date: 13:07 4/9/2017
+date: 13:07 09/04/2017
 taxonomy:
     category: blog
     tag: [Copyright, Convergence, College, Essay]

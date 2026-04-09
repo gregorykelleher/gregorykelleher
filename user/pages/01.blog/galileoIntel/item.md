@@ -1,6 +1,6 @@
 ---
 title: First steps with Intel's Galileo
-date: 11:12 08/17/15
+date: 11:12 17/08/2015
 highlight:
     theme: monokai
 taxonomy:

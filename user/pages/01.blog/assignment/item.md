@@ -1,6 +1,6 @@
 ---
 title: Exploring ActionScript
-date: 19:52 03/17/2016
+date: 19:52 17/03/2016
 highlight:
     theme: monokai
 taxonomy:

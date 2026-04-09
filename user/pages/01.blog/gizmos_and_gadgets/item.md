@@ -1,6 +1,6 @@
 ---
 title: Gizmos and Gadgets
-date: 17:34 03/18/2016 
+date: 17:34 18/03/2016
 taxonomy:
     category: blog
     tag: [gizmos, gadgets, intel galileo, CTYI]

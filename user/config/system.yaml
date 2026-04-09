@@ -24,6 +24,8 @@ pages:
         twig: false
     markdown:
         extra: true
+    dateformat:
+        default: 'H:i d/m/Y'   # strict European: zero-padded HH:MM dd/mm/YYYY
 
 cache:
     enabled: true

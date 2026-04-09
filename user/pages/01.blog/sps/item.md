@@ -1,6 +1,6 @@
 ---
 title: Student Placement System
-date: 8:00 06/13/2015
+date: 08:00 13/06/2015
 taxonomy:
     category: blog
     tag: [graphic design, logo, illustration]

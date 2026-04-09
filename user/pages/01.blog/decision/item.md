@@ -1,6 +1,6 @@
 ---
 title: Decision Theory and Software Design
-date: 09:59 02/07/2021
+date: 09:59 07/02/2021
 highlight:
     theme: monokai
 taxonomy:

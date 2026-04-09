@@ -1,6 +1,6 @@
 ---
 title: Dublin Maker Faire 2015
-date: 17:29 07/25/2015
+date: 17:29 25/07/2015
 taxonomy:
     category: blog
     tag: [maker-faire, robot]

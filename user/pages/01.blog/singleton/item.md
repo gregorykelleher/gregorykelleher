@@ -1,6 +1,6 @@
 ---
 title: A Minor Treatise on the Singleton Design Pattern
-date: 15:46 08/4/2020
+date: 15:46 04/08/2020
 highlight:
     theme: monokai
 taxonomy:

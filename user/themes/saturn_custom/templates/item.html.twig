@@ -14,8 +14,33 @@
       {% if config.plugins.breadcrumbs.enabled %}
         {% include 'partials/breadcrumbs.html.twig' %}
         {% endif %}
-		
+
 			 {% include 'partials/blog_item.html.twig' with {'truncate':false,'big_header':true} %}
+
+      {# Schema.org BlogPosting JSON-LD for SEO rich-result eligibility. #}
+      {% set banner = page.media.images|first %}
+      <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": {{ page.url(true)|json_encode|raw }}
+          },
+          "headline": {{ page.title|json_encode|raw }},
+          "datePublished": {{ page.date|date('c')|json_encode|raw }},
+          "dateModified": {{ page.modified|date('c')|json_encode|raw }},
+          "author": {
+              "@type": "Person",
+              "name": {{ site.author.name|json_encode|raw }}
+          },
+          "publisher": {
+              "@type": "Person",
+              "name": {{ site.author.name|json_encode|raw }}
+          }{% if banner %},
+          "image": {{ (base_url_absolute ~ banner.url)|json_encode|raw }}{% endif %}
+      }
+      </script>
 	{% endblock %}
 
 {% endembed %}

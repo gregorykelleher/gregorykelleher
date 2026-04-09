@@ -155,7 +155,7 @@ HSTS or _HTTP Strict Transport Security_ has been enabled, enforcing the use of 
 
 The header `Strict-Transport-Security "max-age=63072000; includeSubdomains"` will specify HSTS for 2 years (63072000 seconds) and include all my sub-domains too. I've added the `preload` bit at the end to enable a browser, such as Chrome, to list my website as a HSTS host by default.
 
-![preload_chrome.png](preload_chrome.png)
+![preload_chrome.png](preload_chrome.png?cropResize=1600,1600&format=webp&quality=82)
 
 In other words, Chrome will have my website hard-coded in as being accessible over HTTPS only, even in the absence of a HSTS response header. I've added my domain to the Chrome preload list and you can find it [here](https://hstspreload.org/).
 
@@ -173,7 +173,7 @@ The last one is decidedly tricky to implement. The CSP or _Content Security Poli
 
 Okay, so great idea in theory but it's a finicky thing. It should be a good countermeasure to XSS attacks in practice, but I can't guarantee all the code that runs on my website. For instance, Snap SVG which is an external JavaScript library that I use to animate my SVG illustrations would be prohibited under CSP since it uses `Function()` to dynamically evaluate code in JavaScript.
 
-![unsafe_eval.png](unsafe_eval.png)
+![unsafe_eval.png](unsafe_eval.png?cropResize=1600,1600&format=webp&quality=82)
 
 I like having my animated illustrations so I've enabled `unsafe-eval` for scripts within the CSP header. I've also had to allow `unsafe-inline` since I use inline scripts in some places.
 
@@ -183,11 +183,11 @@ For similar reasons I'm not using SRI _Subresource Integrity_ for CSP either.
 
 If I had CSP setup properly I would score an 'A+' on [securityheaders.io](https://securityheaders.io) but instead my grade is capped at an 'A' because of these compromises.
 
-![security_header.png](security_header.png)
+![security_header.png](security_header.png?cropResize=1600,1600&format=webp&quality=82)
 
 With all these configurations done, you can view what's being sent by the server in the HTTP Response header based on Nginx's `ssl-params.conf`.
 
-![http_header.png](http_header.png)
+![http_header.png](http_header.png?cropResize=1600,1600&format=webp&quality=82)
 
 In the middle of the above image you can see the _public key pins_ for my website. This is the HPKP or _HTTP Public Key Pinning_ configuration that I skipped over when I talked about my `gregorykelleher.com.conf` configuration file.
 
@@ -215,7 +215,7 @@ In the header then I've added three fingerprints for my website, setting a max a
 
 So I think that covers the SSL configuration for my web server then. So let's switch on over to SSL Labs again and re-run the test to find out how much better it is.
 
-![ssl_labs.png](ssl_labs.png)
+![ssl_labs.png](ssl_labs.png?cropResize=1600,1600&format=webp&quality=82)
 
 That's a definite improvement and reflects the changes and improvements I've made to Nginx. You can see the results yourself [here](ssllabs.com/ssltest/analyze.html?d=gregorykelleher.com&latest).
 
@@ -235,7 +235,7 @@ Secondly, I couldn't figure out more about how to purge the `ssl_session_cache` 
 
 And finally, the issue of renewing certificates. I've done the basics and created a cron job to manage this, which works fine for ordinary certificates. However, I've got HPKP enabled and it's become something quite complex to manage. I even gave up on generating ECDSA certificates because it was too much effort.
 
-![caddy.png](caddy.png)
+![caddy.png](caddy.png?cropResize=1600,1600&format=webp&quality=82)
 
 It was at this time that I discovered [Caddy](https://caddyserver.com), an open-source web-server that looked like everything I wanted. It's just a pity I found it too late, otherwise I would've chosen it over Nginx.
 

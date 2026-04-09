@@ -19,7 +19,7 @@ And the outcome isn't half bad. It was a huge asset having some high-res photos 
 <br>
 <br>
 
-![catering-screenshot.png](catering-screenshot.png)
+![catering-screenshot.png](catering-screenshot.png?cropResize=1600,1600&format=webp&quality=82)
 
 <br>
 <br>
@@ -33,7 +33,7 @@ Actually, on that note it's worth mentioning that it's optimised for mobile & ta
 <br>
 <br>
 
-![browserlyons.png](browserlyons.png)
+![browserlyons.png](browserlyons.png?cropResize=1600,1600&format=webp&quality=82)
 
 <br>
 <br>
@@ -45,7 +45,7 @@ Thankfully, my efforts paid off & I have the results below to prove it! Not too 
 <br>
 <br>
 
-![pageinsightslyons.png](pageinsightslyons.png)
+![pageinsightslyons.png](pageinsightslyons.png?cropResize=1600,1600&format=webp&quality=82)
 
 <br>
 <br>
@@ -55,13 +55,13 @@ And if you're wondering how much of an improvement that was on the previous webs
 <br>
 <br>
 
-![page_insights.png](page_insights.png)
+![page_insights.png](page_insights.png?cropResize=1600,1600&format=webp&quality=82)
 
 <br>
 <br>
 <br>
 
-![mobile_test.png](mobile_test.png)
+![mobile_test.png](mobile_test.png?cropResize=1600,1600&format=webp&quality=82)
 
 
 

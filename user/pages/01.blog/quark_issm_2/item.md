@@ -38,7 +38,7 @@ I went over the ISSM toolchain briefly in the last tutorial, but I think it's ne
 
 After downloading from the Intel webpage and following the wizard, ISSM should install an `intel` directory on your root. Within there, you should find an `issm_2016.0.19` or similar directory which is the ISSM toolchain.   
 
-![issm_install](issm_install.png)
+![issm_install](issm_install.png?cropResize=1600,1600&format=webp&quality=82)
 
 Inside the `issm_2016.0.19` directory you'll see a number of files. Most are self explanatory and can be ignored. The ones to focus on are the `tools` and `firmware` directories. 
 
@@ -160,7 +160,7 @@ Going back to the hello_world example then and within `examples/hello_world`, I'
 
 `make SOC=quark_D2000`
 
-![making](make_example.png)
+![making](make_example.png?cropResize=1600,1600&format=webp&quality=82)
 
 On the terminal you should see a load of scrolling text as the make tool does its thing. Finally at the very bottom of the output will be the generated _.elf_ and _.bin_ files. 
 
@@ -182,7 +182,7 @@ To view the raw binary data you can run the hexdump command to output a listing 
 
 `hexdump hello_world.bin`
 
-![hexdump](hexdump.png)
+![hexdump](hexdump.png?cropResize=1600,1600&format=webp&quality=82)
 
 An ELF file is similar and also contains the binary data, but it has much more information about other things. It might have info on debugging, symbols .etc which is wrapped up in the file.
 
@@ -222,7 +222,7 @@ Going back to building the required _rom_ target, the following command must be 
 
 `make rom`
 
-![rom_build](rom_build.png)
+![rom_build](rom_build.png?cropResize=1600,1600&format=webp&quality=82)
 
 You can find the generated `quark_d2000_rom.bin` within:
 
@@ -254,7 +254,7 @@ From within `ISSM_ROOT/tools/debugger/openocd` start OpenOCD by entering the fol
 
 This command gives the instruction to start OpenOCD `bin/openocd` with the configuration file `-f` located at `scripts/board/quark_d2000_onboard.cfg`.
 
-![openocd_start](openocd_start.png)
+![openocd_start](openocd_start.png?cropResize=1600,1600&format=webp&quality=82)
 
 You should see some output from the OpenOCD daemon as it starts. On initiation OpenOCD will first start by processing the configuration file supplied and then verify a valid JTAG connection. 
 
@@ -270,7 +270,7 @@ Inside the first terminal window, OpenOCD should output that it made a successfu
 
 `Info : accepting 'telnet' connection from 4444`
 
-![telnet_started](telnet_started.png)
+![telnet_started](telnet_started.png?cropResize=1600,1600&format=webp&quality=82)
 
 Now's probably a good time to also open up a connection via USB to read the UART console serial output from the device. A UART-A cable is required for this step. 
 
@@ -315,7 +315,7 @@ bp 0x00180000 4 hw - set a hardware breakpoint
 step
 ```
 
-![open_ocd.png](open_ocd.png)
+![open_ocd.png](open_ocd.png?cropResize=1600,1600&format=webp&quality=82)
 
 You should see output from Telnet when the image is flashed: 
 
@@ -360,7 +360,7 @@ monitor load_image ISSM_ROOT/examples/hello_world/debug/quark_d2000/bin/hello_wo
 
 That's it - works much like the commands used with OpenOCD. Check the output on the terminal as before. 
 
-![gdb_start.png](gdb_start.png)
+![gdb_start.png](gdb_start.png?cropResize=1600,1600&format=webp&quality=82)
 
 ###Conclusion
 

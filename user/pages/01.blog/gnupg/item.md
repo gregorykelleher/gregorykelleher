@@ -133,7 +133,7 @@ The master key verifies ownership of your key-chain. It can also be used to add/
 
 From the original master key, I generated three sub-keys for signing, encryption and authentication respectively. These sub-keys are, in turn, associated with the master key (the primary signing key).
 
-![generated_keys.png](generated_keys.png)
+![generated_keys.png](generated_keys.png?cropResize=1600,1600&format=webp&quality=82)
 
 This newly generated key-chain (comprising of the master key and the new signing, encryption and authentication sub-keys) must be kept safe and offline. Losing this means everything. It's vital that it remains protected. In my case, I've chosen to export the master key-pair to a USB stick that I've encrypted with [VeraCrypt](https://www.veracrypt.fr/en/Home.html). I goes without saying that you should create backups too.
 
@@ -147,7 +147,7 @@ Having a ‘laptop key-chain’ has its own security vulnerabilities too. A stol
 
 For this exact reason, I bought a [NitroKey](https://www.nitrokey.com/) that would securely contain my sub-keys instead. A NitroKey looks identical to a USB key and is designed to store and protect your keys. 
 
-![nitrokey.png](nitrokey.png)
+![nitrokey.png](nitrokey.png?cropResize=1600,1600&format=webp&quality=82)
 
 The best way to think of a NitroKey is to think of it like a security token. It's a physical security device that offers hardware-based protection. In essence, it's a 21st century key for accessing an electronically restricted resource.
 
@@ -169,7 +169,7 @@ One of the first things to do is to change the Admin and User pins on the NitroK
 
 The pin setup for the NitroKey can be done over the command line with GnuPG using ` gpg --change-pin` or else with NitroKey's software. 
 
-![change_pin.png](change_pin.png)
+![change_pin.png](change_pin.png?cropResize=1600,1600&format=webp&quality=82)
 
 To change Administrator configurations for the NitroKey, enter edit mode with  `gpg --card-edit` and at the `gpg/card>` prompt, type `admin` to access these settings.
 
@@ -183,13 +183,13 @@ Phew, now's the time to test whether everything went accordingly.
 
 Removing and inserting the NitroKey again, verify that the secret keys are present with GnuPG using `gpg2 --list-secret-keys`.
 
-![list_secret_keys.png](list_secret_keys.png)
+![list_secret_keys.png](list_secret_keys.png?cropResize=1600,1600&format=webp&quality=82)
 
 !!!! Note that a `#` symbol next to `sec` means that the key doesn't exist on the device, and similarly, a `>` symbol next to `ssb` indicates that the key is a stub-key, located on the NitroKey.
 
 What's been accomplished then? To recap, the `sec#` above next to the secret master key ID indicates that the key is not present on the computer. Like I mentioned, it's been backed up to an encrypted USB drive and hidden away. And lastly, the `ssb>` next to each sub-key reveals that they’re only stubs and are actually present on the NitroKey.
 
-![card_unlocking.png](card_unlocking.png)
+![card_unlocking.png](card_unlocking.png?cropResize=1600,1600&format=webp&quality=82)
 
 That's about it for setting up GnuPG on NitroKey. Whenever a PGP operation such as encryption, authentication or signing needs to be done, GnuPG will prompt for a smart-card insertion with the corresponding ID. In the next section I discuss more on how I use my NitroKey day to day.
 
@@ -234,7 +234,7 @@ The second typical use I have for PGP is SSH server authentication. My server is
 
 GnuPG allows you to extract an SSH public key from your key-chain and export it to your server. Then I overrode the default SSH Agent on Mac with the GnuPG Agent daemon for SSH connections. 
 
-![enter_passphrase.png](enter_passphrase.png)
+![enter_passphrase.png](enter_passphrase.png?cropResize=1600,1600&format=webp&quality=82)
 
 In a nutshell, this means that the only method for anyone to log into my remote server is by physically having my NitroKey.
 
@@ -246,11 +246,11 @@ It's pretty neat and it's also a bonus that DigitalOcean supports OTP for the Ni
 
 I don't contribute much on Github but often it's important that commits are validated and contributors identifiable.
 
-![github_gpg.png](github_gpg.png)
+![github_gpg.png](github_gpg.png?cropResize=1600,1600&format=webp&quality=82)
 
 Sounds like the perfect use-case for PGP and the signing sub-key. Remember that digital signatures fall under the tenet of Non-Repudiation in Information Security. Being able to digitally sign a Git commit, merge .etc. uniquely affiliates the user to the action.
 
-![github_verification.png](github_verification.png)
+![github_verification.png](github_verification.png?cropResize=1600,1600&format=webp&quality=82)
 
 Therefore, when a commit is signed, Github will display that the commit is verifiable as shown above.
 
@@ -262,7 +262,7 @@ However, I'm left with the annoyance that I haven't had the opportunity to corre
 
 I use [ProtonMail](https://protonmail.com/) as my email service and sign my emails with my PGP Public key fingerprint but I've yet to receive anything encrypted from someone else. I realise the likelihood of that ever happening is quite slim but the geek in me would love the opportunity to use PGP over email for once.
 
-![protonmail.jpg](protonmail.jpg)
+![protonmail.jpg](protonmail.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 !!! ProtonMail is an open-source, end-to-end encrypted email service located in Switzerland. It uses its own adaptation of PGP to secure emails between ProtonMail accounts. Except support for PGP key importation is unsupported at present. Hence why I have two PGP public keys, one for ProtonMail alongside my NitroKey one.
 
@@ -272,7 +272,7 @@ Secondly, PGP doesn't support forward secrecy either. There's no practical way o
 
 Aware of these drawbacks, a nascent security service called [Keybase](https://keybase.io/) aims to improve on PGP. Realising PGP's failings on the user-friendliness front, Keybase is taking a fresh approach.
 
-![keybase_app.png](keybase_app.png)
+![keybase_app.png](keybase_app.png?cropResize=1600,1600&format=webp&quality=82)
 
 Wrapping PGP's complexity beneath a slick app, Keybase gives you all the features of PGP without the hassle. The nitty-gritty is hidden away but it's uncompromising on the functionality. 
 
@@ -282,13 +282,13 @@ What I like especially is Keybase's unique approach to verifying your online ide
 
 You can claim ownership of your online accounts and that becomes part of your Keybase chain. Facebook, Twitter, Github .etc. are all there. You can do the same for your devices too. The idea is that the more authentication information available, the more you can trust someone's identity. 
 
-![keybase_follow.png](keybase_follow.png)
+![keybase_follow.png](keybase_follow.png?cropResize=1600,1600&format=webp&quality=82)
 
 Keybase allows you to securely chat and share files with your connections on its platform with end-to-end encryption using PGP too.
 
 !!! UPDATE 05/10/17: As of yesterday, Keybase has introduced [Encrypted Git](https://keybase.io/blog/encrypted-git-for-everyone). Think of a private repository on Github, but _privater_. As in, it's fully end-to-end encrypted. 
 !!! What's more, everything is signed too. This makes complete sense since Keybase is setup with your device's private key. Likewise, fetches are cryptographically verified. It's a beautiful and effortless solution that isn't offered anywhere else.
 
-![keybase_git](keybase_git.png)
+![keybase_git](keybase_git.png?cropResize=1600,1600&format=webp&quality=82)
 
 There's no doubt it's breathing new life into PGP. Into the future I predict this will be the survival of PGP; its integration into services such as Keybase. Public-key cryptography isn't ever going to disappear, but it's clear PGP won't be the future, but likely part of it.

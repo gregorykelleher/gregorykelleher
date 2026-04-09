@@ -50,11 +50,11 @@ Note whether your previous static IP address has been properly changed.
 
 The next step is always to find out more about your network setup. In the image below, you can see my Mac is connected to WiFi with the IP address **10.0.1.12**. Clicking on _Advanced_ and going to the _TCP/IP_ tab brings up some more info. 
 
-![network_lookup.png](network_lookup.png)
+![network_lookup.png](network_lookup.png?cropResize=1600,1600&format=webp&quality=82)
 
 Looks like my router address is **10.0.1.1**, my subnet mask is **255.255.255.0** and my Mac's IP address is **10.0.1.12** of course.
 
-![network_advanced.png](network_advanced.png)
+![network_advanced.png](network_advanced.png?cropResize=1600,1600&format=webp&quality=82)
 
 You might have noticed in the first image that I've got an _Ethernet 2_ connection. That's my Galileo connected to my Mac via an ethernet cable. Below are the details of that connection. 
 
@@ -62,7 +62,7 @@ If you're unsure how I've managed to set this up, you can find out more in my pr
 
 You can see I've manually configured the connection - most importantly with the same router address. 
 
-![ethernet_2_lookup.png](ethernet_2_lookup.png)
+![ethernet_2_lookup.png](ethernet_2_lookup.png?cropResize=1600,1600&format=webp&quality=82)
 
 ### Step 3 - Internet Sharing
 
@@ -76,7 +76,7 @@ Scroll and look for **bridge100**. Note the third line down:
 
 `inet 192.168.2.1 netmask 0xffffff00 broadcast 192.168.2.255`
 
-![bridge100.png](bridge100.png)
+![bridge100.png](bridge100.png?cropResize=1600,1600&format=webp&quality=82)
 
 Bridge100 is the hidden interface that only appears when we enable internet sharing on the Mac. 
 
@@ -108,7 +108,7 @@ Remember your computer or router address? Let's ping those too:
 
 `ping 10.0.1.1`
 
-![ping_local_machine.png](ping_local_machine.png)
+![ping_local_machine.png](ping_local_machine.png?cropResize=1600,1600&format=webp&quality=82)
 
 Hopefully you should be receiving packets back. If everything's working so far, go ahead and ping Google:
 
@@ -120,17 +120,17 @@ Congrats! You now have access to the internet via internet sharing. You can doub
 
 You should see something like the following where **gmbp.local** is the name of your computer. 
 
-![gmbp_local.png](gmbp_local.png)
+![gmbp_local.png](gmbp_local.png?cropResize=1600,1600&format=webp&quality=82)
 
 If you want, go to your browser and type in your Galileo's IP address, you get something back like this:
 
-![192.168.2.2.png](192.168.2.2.png)
+![192.168.2.2.png](192.168.2.2.png?cropResize=1600,1600&format=webp&quality=82)
 
 Now's a good opportunity to update your package manager - opkg; while you've access to the internet. Type the following to do so:
 
 `opkg update` 
 
-![opkg_update.png](opkg_update.png)
+![opkg_update.png](opkg_update.png?cropResize=1600,1600&format=webp&quality=82)
 
 Next type in:
 
@@ -138,11 +138,11 @@ Next type in:
 
 You should see the DHCP IP address assigned to the Galileo alongside the Bcast or **Broadcast** address, which is **192.168.2.255**, in my case. 
 
-![Bcast_galileo.png](Bcast_galileo.png)
+![Bcast_galileo.png](Bcast_galileo.png?cropResize=1600,1600&format=webp&quality=82)
 
 Note that the Broadcast address is the same as what we saw for bridge100 earlier - **192.168.2.255**.
 
-![Bcast_mac.png](Bcast_mac.png)
+![Bcast_mac.png](Bcast_mac.png?cropResize=1600,1600&format=webp&quality=82)
 
 ### Step 5 - Setting up the Static IP address
 

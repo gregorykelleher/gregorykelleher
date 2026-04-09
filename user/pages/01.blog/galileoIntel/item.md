@@ -25,7 +25,7 @@ Other already popular & established (linux-enabled) boards such as the PcDuino o
 
 That's not to say the Intel Galileo doesn't have anything new to offer, and I certainly haven't overlooked its strongest attribute - its 32-bit Pentium-class SoC; the Quark processor, which can run up to 400MHz.
 
-![logo-closeup2.JPG](logo-closeup2.JPG)
+![logo-closeup2.JPG](logo-closeup2.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 Consequently, it's the first board released on the market built around this very special chip. Coming from the Atmega328 on my Arduino, it's a huge leap in processing power! 
 
@@ -41,19 +41,19 @@ The downside to having a CISC architecture is that any large instruction set req
 
 In addition to its processor, the Galileo also has 512 KB SCRAM built-in, 256 MB DDR3 RAM, 11KB EEPROM & a µSD card slot. So definitely no shortage of memory then...
 
-![overview2.JPG](overview2.JPG)
+![overview2.JPG](overview2.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 While that's all good news, the rest of the peripherals are a mixed bag. For starters, there's a micro USB 2.0 (client) for serial communication, but not for power. For power then, you're going to need use the 7V ~ 12V DC jack. 
 
 There's also the µSD card slot like I mentioned, to hold your linux image. That's important and in reality, it's necessary. Without it you're booting the much 'leaner' default SPI Linux image already onboard, which is a bit lacking to say the least. One of the biggest drawbacks being it won't retain your uploaded program once it losses power. 
 
-![sd.JPG](sd.JPG)
+![sd.JPG](sd.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 That said, once you've mounted the bigger linux image (Yocto), the Galileo is brimming with new features.
 
 Going back to the peripherals, the Galileo also has an ethernet port, a shield-compatible Arduino Interface, SPI Flash (for storing firmware/bootloader, along with the latest sketch), USB host and a battery terminal (to keep RTC). Although it also notably lacks bluetooth.
 
-![ethernet.JPG](ethernet.JPG)
+![ethernet.JPG](ethernet.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 !!!! On the Galileo Gen 2, almost all the Arduino IO headers are connected directly to the Quark chip, meaning the pins can now achieve 2.97MHz, making it possible to run shields and sensors that couldn't have been used before. 
 
@@ -63,13 +63,13 @@ On the back there's also a mini-PCIe connector. Huh? Yup, never seen that before
 
 In case you haven't realised it, Intel's 'IoT' board doesn't come wifi-enabled, which for me, was the biggest letdown and it means you're going to need to fork out a little more money for a PCIe card. 
 
-![side.JPG](side.JPG)
+![side.JPG](side.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 That's not all though. Another drawback for me was the decision to remove the MAX 3232 (responsible for converting the RS-232 levels), so now there's no longer any built-in circuit to convert the TTL levels. Instead, you'll have to spend some more money on an FTDI cable if you want to have access to the Linux console. 
 
 ! While this is a big drawback, there is a work-around to send Linux system calls to enable a shell prompt via the standard Galileo USB cable. Although this method is awkward & disables the ability to upload further programs through the IDE.
 
-![usb.JPG](usb.JPG)
+![usb.JPG](usb.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 As you're probably guessing, the Intel Galileo is full of little frustations, owing to its own 'idiosyncrasies'. Honestly, I've never had so many cables on my desk for one board!
 
@@ -77,7 +77,7 @@ Mentioning cables, I think it's important to note that you must plug them into t
 
 As an extra factor, you can only plug in the USB when the green LED is lit for USB on the board. This can take a bit of time to boot.
 
-![usb-lights.JPG](usb-lights.JPG)
+![usb-lights.JPG](usb-lights.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 After having played around with it, I've slowly realised why it's been overshadowed by the Edison...
 
@@ -93,7 +93,7 @@ Anyhow, I did spend the day setting this board up and truth be told, it wasn't e
 
 After I had mounted my new linux image to the µSD, I plugged my FTDI cable into the headers and opened up the terminal.
 
-![FTDI2.JPG](FTDI2.JPG)
+![FTDI2.JPG](FTDI2.JPG?cropResize=1600,1600&format=webp&quality=82)
 
  !! Make sure to check that pin 1 (usually black) of the FTDI cable connects to the GND pin on the board.
 
@@ -116,7 +116,7 @@ Inside the console then, you should be prompted with a login. Simply use 'root'.
 
 !!! Intel Quark SoC X1000 was code-named Clanton and hence the name for the prompt: root@clanton 
 
-![login.png](login.png)
+![login.png](login.png?cropResize=1600,1600&format=webp&quality=82)
 
 Feel free to look about and explore. You can even run python right from where you are. 
 
@@ -126,7 +126,7 @@ Display how you're feeling by typing:
 yes I Love Linux
 `
 
-![iLoveLinux.png](iLoveLinux.png)
+![iLoveLinux.png](iLoveLinux.png?cropResize=1600,1600&format=webp&quality=82)
 
 Or if you want to check out which board you have you can run the following command:
 
@@ -134,7 +134,7 @@ Or if you want to check out which board you have you can run the following comma
 ~$ cd /sys/devices/platform/GalileoGen2
 cat modalias platform:GalileoGen2
 `
-![platform.png](platform.png)
+![platform.png](platform.png?cropResize=1600,1600&format=webp&quality=82)
 
 Finally you can check out the busybox software utility. It provides a whole load of different commands that can be executed inside Linux. Just type 'busybox' to access them. 
 
@@ -152,7 +152,7 @@ They're really great examples because they demonstrate how you can access Linux 
 
 For example, the first sketch I uploaded shows you how to use the onboard temperature sensor to read the temperature of the Quark chip.
 
-![quarkTemp.png](quarkTemp.png)
+![quarkTemp.png](quarkTemp.png?cropResize=1600,1600&format=webp&quality=82)
 
 The bit inside the sketch that accesses the temperature sensor looks like this:
 
@@ -172,14 +172,14 @@ You can also do linux system commands to create a python script. This one writes
 
 It then executes the python script in the background, and regularly reads the contents of the logfile in the sketch while the python script is updating it.
 
-![log.png](log.png)
+![log.png](log.png?cropResize=1600,1600&format=webp&quality=82)
 Finally, this last example shows you how to print text to the Galileo's serial ports using Linux system calls.
 
 ```bash
 system("echo \"hello, world!\" > /dev/ttyGS0"); //Serial (IDE Serial Monitor)
 system("echo \"hello, world!\" > /dev/ttyS0");  //Serial1 (Arduino header UART)
 ```
-![helloWorld.png](helloWorld.png)
+![helloWorld.png](helloWorld.png?cropResize=1600,1600&format=webp&quality=82)
 
 ### Conclusion
 
@@ -197,6 +197,6 @@ In a way, the Galileo is a little bit behind the curve too, considering the tren
 
 Nevertheless, I still like the Intel Galileo & I'm not going to throw it aside any time soon! Of course I'm going to continue using it but I can still acknowledge its shortfalls. It's a very capable board & I look forward to uncovering its potential.
 
-![overview1.JPG](overview1.JPG)
+![overview1.JPG](overview1.JPG?cropResize=1600,1600&format=webp&quality=82)
 
 

@@ -166,7 +166,7 @@ Looking at the CPU usage below, you can see that Chrome Helper is hogging things
 
 Besides CPU usage, complex graphics and animations are just going to lag and misbehave, especially on smaller devices. Hence why I've disabled my animated SVG at the top of this article simply because it's so taxing on the browser.
 
-![cpu_snap](cpu_snap.png)
+![cpu_snap](cpu_snap.png?cropResize=1600,1600&format=webp&quality=82)
 
 Anyways, how do you go about animating with Snap SVG? Firstly, setup is always where you should start. Since SVG is just XML you can slot it inside your HTML no bother, but it isn't very pretty and get quite clumbersome when files get bigger. 
 
@@ -215,7 +215,7 @@ var main = Snap.load("/first_example.svg", function (loadedFragment) {
 
 Although, that didn't seem to work... Opening the Chrome Inspector, you can see there's an error: _uncaught TypeError cannot read property 'append' of null_. 
 
-![append_null_error](append_null_error.png)
+![append_null_error](append_null_error.png?cropResize=1600,1600&format=webp&quality=82)
 
 The way to get round this is to enclose the code with JQuery's **$(document).ready()**.
 

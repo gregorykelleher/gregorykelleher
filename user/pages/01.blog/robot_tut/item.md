@@ -84,7 +84,7 @@ No problem. Plugged both Xbees into the Xbee Explorer dongle and got them config
 It didn't take long to realise that I'd accidently chosen the wrong Xbees. I had wanted Xbees with a trace antenna or at least a small wire antenna but unfortunately bought a pair with no antenna whatsoever. Instead I had two XBees with a U.FL Connection.
 Thus I would have to send away again for two duck antennas and two matching interface cables. It wasn't what I'd originally planned but I supposed the extra range would be beneficial.
 
-![DSC_1226-min.jpg](DSC_1226-min.jpg)
+![DSC_1226-min.jpg](DSC_1226-min.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Another issue I had for the controller was a matter of 'aesthetics'. The awkward shape of the Libelium Xbee shield made it difficult to interface with the other shields. 
 
@@ -126,7 +126,7 @@ So with €36 down the drain and no motor controller or Xbees I was at a bit of 
 
 I felt if there was a chance of blowing another motor controller, it'd better be a cheaper one. That's partly why I decided on buying the SN754410 and the TB6612FNG motor controllers, €2 and €8 respectively. 
 
-![DSC_1227-min.jpg](DSC_1227-min.jpg)
+![DSC_1227-min.jpg](DSC_1227-min.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Once they arrived I started hooking up the SN754410 for starters. It was the simpler of the two and the cheapest. Unlike the TB6612FNG it didn't have any fancy features like a stand-by mode, built in decoupling capacitors or even a thermal shutdown circuit but it did the job nonetheless. 
 
@@ -134,7 +134,7 @@ And it worked. I was so taken by it I wrote a [blog post](http://gregorykelleher
 
 However in the end, I migrated over to the TB6612FNG simply for the added features. In practice they were much the same. Unlike the Pololu motor controller neither the TB6612FNG or the SN754410 required a serial input line. 
 
-![DSC_1054-min.jpg](DSC_1054-min.jpg)
+![DSC_1054-min.jpg](DSC_1054-min.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Instead they required only a handful of PWM pins from the Arduino as well as the common motor supply and logic supply pins. Besides the pins, I added in some flyback diodes (1N4001 diode rectifiers) as an extra precaution from back-EMF.
 
@@ -147,7 +147,7 @@ This may have been the easiest part of the project.
 
 The sensor only had three pins for power, signal and ground. The code I wrote was relatively straightforward and I linked it up to an LED I attached to the back of the robot. 
 
-![DSC_1208-min.jpg](DSC_1208-min.jpg)
+![DSC_1208-min.jpg](DSC_1208-min.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 The frequency at which the LED blinks directly correlates with the distance readings from the sensor. Thus a high frequency blink corresponds with an object in close proximity. The delay between the blinking of the LED is actually the value returned from the sensor. 
 
@@ -165,7 +165,7 @@ I came across an old Xbox 360 controller I had lying about the house and decided
 
 Once I had my new Sparkfun Xbee shield, duck antennae and the USB host shield I set about hooking things up. I immediately replaced the Libelium shield on the 'Transmitter Stack' as I called it, since it wasn't compatible with the new USB host shield. 
 
-![DSC_1289-min.jpg](DSC_1289-min.jpg)
+![DSC_1289-min.jpg](DSC_1289-min.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 ! Note if you're using the USB host shield on an Arduino Uno, it's necessary to supply an external power supply through the board's power jack to get it working. 
 
@@ -186,7 +186,7 @@ So with the new controller sorted and the Transmitter sending out serial data ov
 
 At this stage I had separate code for the motors and the servos so I decided to amalgamate the two into one 'Robot_RX' program. I then modified this code to listen for serial data over Xbee. 
 
-![DSC_1263-min.jpg](DSC_1263-min.jpg)
+![DSC_1263-min.jpg](DSC_1263-min.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 This is when things went wrong. While I could get the servos and motors running fine over Xbee separately, they didn't cooperate well together. When I ran the code they seemed to glitch and stutter. The motors refusing to move and the servos twitched constantly. 
 

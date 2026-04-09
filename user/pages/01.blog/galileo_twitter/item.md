@@ -54,7 +54,7 @@ Synchronise the hardware clock by typing:
 
 Check it again and things should be back in sync. This is enough to continue on with the project but be aware that the time won't persist if your system reboots for some reason. 
 
-![hwclock](hwclock.jpg)
+![hwclock](hwclock.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 The clock will be reset on start-up and you'll need to re-issue the command. 
 
@@ -77,7 +77,7 @@ Firstly, to install **Nano**, type the following into the terminal:
 
 `opkg install nano` 
 
-![opkg_install-nano](opkg_install-nano.jpg)
+![opkg_install-nano](opkg_install-nano.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Once that's finished install **SetupTools** by typing:
 
@@ -87,13 +87,13 @@ Next install **Pip** by typing:
 
 `easy_install pip`
 
-![opkg_install_pip.jpg](opkg_install_pip.jpg)
+![opkg_install_pip.jpg](opkg_install_pip.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Finally, using pip install **Twython**:
 
 `pip install twython`
 
-![installing_twython_2.jpg](installing_twython_2.jpg)
+![installing_twython_2.jpg](installing_twython_2.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 If you've keen eyes, you might notice in the image above that there's a warning contained in the installation:
 
@@ -101,7 +101,7 @@ If you've keen eyes, you might notice in the image above that there's a warning 
 
 Without solving this issue, when you go to tweet later you'll likely encounter an error like the one below where Twython returns a 400 (Bad Request), Bad authentication data error.
 
-![insecure_platform.jpg](insecure_platform.jpg)
+![insecure_platform.jpg](insecure_platform.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 While **urllib3** uses the library’s stock SSL module, there are several limitations which must be addressed by installing additional security; namely **PyOpenSSL**. 
 
@@ -128,13 +128,13 @@ Before you start, go into settings and make sure you've confirmed your email add
 
 Next head [here](https://apps.twitter.com/app/new) to create your app. Enter a name, description, website (anything will do) and leave the _callback URL_ field blank. 
 
-![create_app.jpg](create_app.jpg)
+![create_app.jpg](create_app.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Once you're in, you'll see the overview page for your application showing all the data you entered. The page also includes your unique **OAuth** settings data such as the Consumer API key and Access tokens.
 
 Click on the _Permissions_ tab to change the access level of the application. Change it to **read, write and access direct messages**.
 
-![permissions.jpg](permissions.jpg)
+![permissions.jpg](permissions.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Next click the _Key and Access Tokens_ tab. Click on the **Create my access token** button to generate your tokens.
 

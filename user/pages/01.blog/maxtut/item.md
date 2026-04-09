@@ -21,7 +21,7 @@ In technical terms then, the MAX7219CNG is a 4-pin SPI serial interfaced, 8-bit 
 
 ! Another LED display driver similar to the MAX7219CNG is the Austria MicroSystems AS1107. Alternatively you can use this chip instead without any modifications to your code. 
 
-![examples.jpg](examples.jpg)
+![examples.jpg](examples.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Like I’ve mentioned before, it can be used to control a 8x8 dot-matrix display, up to 64 LEDs, or like in this example, a 7-segment numeric LED display. The LED display I’ll be using is a common cathode display. 
 
@@ -32,7 +32,7 @@ A common cathode display simply means that all the cathodes (or negative termina
 
 Likewise if it were a common anode display, all the anodes (or positive terminals) of the LEDs in the display would be connected directly together to the positive power supply.
 
-![ccdisplay.jpg](ccdisplay.jpg)
+![ccdisplay.jpg](ccdisplay.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 My common cathode LED display is a 4 digit 7 segment display which is essentially 4 individual 7 segment displays combined into one package. 
 
@@ -40,14 +40,14 @@ There are twelve pins on the display with four of them being ‘COM’ or common
 
 Each of those pins are connected to the cathodes of the 8 LEDs belonging to each digit - 4 common pins for 4 digits of 8 LEDs.
 
-![schematic.jpg](schematic.jpg)
+![schematic.jpg](schematic.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 The anodes of each of the 8 LEDs in each digit are marked by 8 pins - 11, 7, 4, 2, 1, 10, 5 and 3.
 In turn, each of the 8 LEDs in each digit is labeled with letters from “A” through to “G” with the final 8th one labeled “DP” for “decimal place”.
 
 !!! For example then, applying a positive power supply to pins "11, 7 and 4” while applying a negative power supply to COM 12 would light the segments “A, B and C” of the first digit showing the number “7”.
 
-![seven.jpg](seven.jpg)
+![seven.jpg](seven.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 In summary then, there are 4 common cathode pins and 8 anode pins so to speak, giving a total of 12 pins which matches the number of pins coming out of the display.
 
@@ -55,7 +55,7 @@ Returning to the MAX7219CNG, we can start to set it up. Besides the chip itself 
 
 The capacitors are known as “decoupling” capacitors and are used to suppress noise signals introduced by the power-supply lines. It’s recommended to have both a 0.1uf & a 10uf capacitor placed as close to the power and ground pins of the chip as per usual. 
 
-![maxpinout.jpg](maxpinout.jpg)
+![maxpinout.jpg](maxpinout.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Starting with the easiest things first, both the GND pins of the chip need to be connected to the GND on the Arduino. Same goes for the power pin - connected to the 5V on the Arduino.
 

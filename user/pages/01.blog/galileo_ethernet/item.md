@@ -18,7 +18,7 @@ Anyhow, my necessity for using an ethernet cable to make a connection to the Gal
 
 What's not 100% clear in the documentation is the need to update your linux image. Previously, when I was trying to make a target connection inside Eclipse, I was getting errors all over the place. Usually something along the lines of a failure to connect SFTP subsystem. 
 
-<!-- ![sftp_connect.jpg](sftp_connect.jpg) -->
+<!-- ![sftp_connect.jpg](sftp_connect.jpg?cropResize=1600,1600&format=webp&quality=82) -->
 
 ### 1. Updating the Linux Image
 
@@ -32,7 +32,7 @@ If it returns something like what I have below, then you'll need to update.
 
 However, for what we want to do, we need the [iot-devkit image](https://software.intel.com/en-us/creating-bootable-micro-sd-card-for-intel-galileo-board). This version also includes GCC, Python, Node.js, OpenCV and most importantly, support for Eclipse.
 
-![iot_devkit_img.jpg](iot_devkit_img.jpg)
+![iot_devkit_img.jpg](iot_devkit_img.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 You can follow the directions there or read the summary below.
 
@@ -46,7 +46,7 @@ Now list all mounted drives:
 
 `diskutil list`
 
-![diskutil_yoc_img.jpg](diskutil_yoc_img.jpg)
+![diskutil_yoc_img.jpg](diskutil_yoc_img.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 You should see something like what I have above. Notice **YOCTO** is on **disk5**. We want to dismount it:
 
@@ -64,11 +64,11 @@ Note whether your image has _latest_ or a date in the _YYYYMMDDHHMM_ format. Rep
 
 You'll likely get a password prompt, enter and let it do its thing. It takes quite a while, upwards of 5 minutes in my case. Just be patient. If you're using a card reader, you'll likely see some flashing indicator lights. 
 
-![records_in_out.jpg](records_in_out.jpg)
+![records_in_out.jpg](records_in_out.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Once it's finished you'll get a message like the one above. Oh, and as a bonus, I also happened to get a pop-up. For whatever reason, my Mac doesn't seem to recognise it. 
 
-![mac_error_read_sd.jpg](mac_error_read_sd.jpg)
+![mac_error_read_sd.jpg](mac_error_read_sd.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 However if you run:
 
@@ -76,7 +76,7 @@ However if you run:
 
 again, you'll see that **Yocto** has been replaced by **Linux** - so that's a positive sign!
 
-![diskutil_linx_img.jpg](diskutil_linx_img.jpg)
+![diskutil_linx_img.jpg](diskutil_linx_img.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Go ahead and pop it into the Galileo. Plug in power and connect the FTDI cable. Run the following command:
 
@@ -86,7 +86,7 @@ You should see the connected Galileo device. Now ssh into it, including your own
 
 `screen /dev/tty.usbserial-xxxxxxxx 115200`
 
-![ftdi_connect.jpg](ftdi_connect.jpg)
+![ftdi_connect.jpg](ftdi_connect.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 The quickest way to know is by running:
 
@@ -126,7 +126,7 @@ This should list all the network configurations for the board.
 
 Ok, returning to the desktop open up your network preferences. After connecting your ethernet cable from your computer to your board, you should see a new service appear in the left-hand side of the window.
 
-![self_assigned_eth.jpg](self_assigned_eth.jpg)
+![self_assigned_eth.jpg](self_assigned_eth.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 See that? It's assigned a DHCP IP address like we mentioned previously. That's great, now to change that to a static IP address.
 
@@ -138,7 +138,7 @@ You can run this command on your computer to find out the address of your router
 
 Apply your changes and reconnect your ethernet cable and the ball should go green.
 
-![eth_unplugged_changes.jpg](eth_unplugged_changes.jpg)
+![eth_unplugged_changes.jpg](eth_unplugged_changes.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Next is to ssh back into the Galileo using the FTDI cable again and make some more changes in our configurations. Once you're in, type the command:
 
@@ -158,7 +158,7 @@ Notice the IP address has changed? Great, let's make it static now. Firstly, che
 
 `route`
 
-![eth_unplugged_changes.jpg](route.jpg)
+![eth_unplugged_changes.jpg](route.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 If the gateway is not specified, add a default route to it. Use the route command again:
 
@@ -184,7 +184,7 @@ Firstly, find out the name assigned to your ethernet cable by simply typing:
 
 It should return something like what I have below.
 
-![connmanctl_services.jpg](connmanctl_services.jpg)
+![connmanctl_services.jpg](connmanctl_services.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 The last command is quite lengthy and you might get a bit of wrap-around text. The solution around this is to type either one of the following, at least one of them should work:
 
@@ -222,7 +222,7 @@ If you do, go ahead and ping your address:
 
 You might get a message back with _request timeout_ or _no route to host_ with 100% packet loss. In that case, you're best bet is to try rebooting or sshing to see if your IP address is indeed, static.
 
-![no_eth_ping.jpg](no_eth_ping.jpg)
+![no_eth_ping.jpg](no_eth_ping.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Otherwise you might be lucky enough to have a connection. Fantastic! If you like you can ssh into the Galileo over ethernet using your IP address, by typing:
 
@@ -230,11 +230,11 @@ Otherwise you might be lucky enough to have a connection. Fantastic! If you like
 
 You can see an example below where the IP address is 169.254.6.22. 
 
-![first_time_eth_ssh.jpg](first_time_eth_ssh.jpg)
+![first_time_eth_ssh.jpg](first_time_eth_ssh.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 In my case when I tried sshing into my Galileo I got a strongly worded message, warning me of a man-in-the-middle attack. 
 
-![man-in-the-middle.jpg](man-in-the-middle.jpg)
+![man-in-the-middle.jpg](man-in-the-middle.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 It's not too hard to fix this. Simply following the instructions, you can type:
 
@@ -258,19 +258,19 @@ Then have another go at sshing into the Galileo. It should work for you this tim
 
 Now for the grand finalé - using Eclipse. Open up your pre-installed Eclipse and look to the lower left. Add a connection and click 'ok' on the pop-up without a password. All working, you should make a connection.
 
-![eclipse_connecting.jpg](eclipse_connecting.jpg)
+![eclipse_connecting.jpg](eclipse_connecting.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 You might need to update and synchronise the libraries. If so, go ahead. It'll only take a minute.
 
-![lib_sync.jpg](lib_sync.jpg)
+![lib_sync.jpg](lib_sync.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 You can even launch the terminal from within Eclipse, which is a useful feature.
 
-![eclipse_terminal.jpg](eclipse_terminal.jpg)
+![eclipse_terminal.jpg](eclipse_terminal.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 Run the blink test to see if things are in order:
 
-![blink_eth.jpg](blink_eth.jpg)
+![blink_eth.jpg](blink_eth.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 
 

@@ -74,7 +74,7 @@ Here are just a few of the most convienent I've adopted:
 
 There's also a bunch of shortcut commands I'm using with the mapleader `<leader>` which I've configured for `,` in my setup. 
 
-![vim_overview](vim_overview.png)
+![vim_overview](vim_overview.png?cropResize=1600,1600&format=webp&quality=82)
 
 ###Setting up FTP for Web Development - Case Study
 
@@ -126,7 +126,7 @@ Firstly, you're going to want to change the privileges for `.sync` before you ca
 chmod +x .sync
 `
 
-![chmod](chmod.png)
+![chmod](chmod.png?cropResize=1600,1600&format=webp&quality=82)
 
 Another semi-obvious thing (if you've even glanced at the script) is to install [ncftpget](http://www.ncftp.com/ncftp/doc/ncftpput.html) which is the internet file transfer program used by the script.
 
@@ -137,7 +137,7 @@ brew install ncftp
 `
 
 
-![ncftp](ncftp_install.png)
+![ncftp](ncftp_install.png?cropResize=1600,1600&format=webp&quality=82)
 
 
 After that quick setup, you should have a handy way of FTP'ing your files on the go. 

@@ -43,7 +43,7 @@ It's fair to say the Material Framework was used extensively throughout the appl
 
 Unfortunately it's still in development for Angular v2, hence why we stuck with Angular v1. We figured working with tools that are still under active development could potentially lead to trouble. The sort of trouble that only rears its head halfway through development...
 
-![map](map.png)
+![map](map.png?cropResize=1600,1600&format=webp&quality=82)
 
 The above image is the landing page for the application upon login. Immediately one can discern that we chose a card-based layout with tab navigation - a very typical Material UI design.
 
@@ -55,7 +55,7 @@ This is just a minor insight into Angular Material, but I'll touch upon it more 
 
 ###Firebase
 
-![firebase](firebase_logo.png)
+![firebase](firebase_logo.png?cropResize=1600,1600&format=webp&quality=82)
 
 Firebase was chosen as the backend database for the application. It was my first experience with a non-relational database based on JSON but I slowly built up speed with it.
 
@@ -67,7 +67,7 @@ Simple commands such as `firebase init` would generate the necessary `.firebaser
 
 Then with the project intialised, you can get going with `firebase serve` to throw up a local server or even `firebase deploy` to deploy remotely on Firebase servers.
 
-![firebase](firebase_data.png)
+![firebase](firebase_data.png?cropResize=1600,1600&format=webp&quality=82)
 
 Above you can get an idea about how data is structured in a hierarchical way as a tree of JSON objects. Unlike say, a SQL database, there's no tables or columns in sight!
 
@@ -75,7 +75,7 @@ This was a complete flip on what I knew about databases so I had to change my th
 
 For example, I soon ran up against the issue of repeatedly nesting data down a rabbit-hole of nodes. This is a bad idea because when Firebase fetches the data at the specified location, it will also retrieve all of its child nodes. Not great in terms of efficiency then.
 
-![data_structuring](data_structuring.png)
+![data_structuring](data_structuring.png?cropResize=1600,1600&format=webp&quality=82)
 
 To counter this, I kept the data structure as flat as possible (denormalisation) in order to avoid constantly iterating down, through node and node. See the image above for context.
 
@@ -124,7 +124,7 @@ Data.child('users').child($scope.current_user_id).once('value', function(item) .
 
 Putting it all together, I can write a few lines of code to gather all the users in my data minus the current user. I can then use this example for displaying all the contactable users the current user has access to. Since it wouldn't make sense to be able to contact yourself, I remove the current user from the list.
 
-![student](student.png)
+![student](student.png?cropResize=1600,1600&format=webp&quality=82)
 
 ```js
 
@@ -207,7 +207,7 @@ The landing page for the application is the dashboard which is dominated by an e
 
 The search bar at the bottom of the list will also filter through the locations to display the location relevant to the query.
 
-![search_locations](search_locations.png)
+![search_locations](search_locations.png?cropResize=1600,1600&format=webp&quality=82)
 
 The map functionality is handled by `NgMaps` which is a special directive injected into the Angular app as a dependency.
 
@@ -234,7 +234,7 @@ In the `dashboard.html` view you can see the center I've set for the map as well
 
 The `<marker></marker` tag is generated when a location in the list is clicked. Its position (longitude and latitude) is provided by the Angular expression: `{{location.coords.lat}},{{location.coords.lng}}`.
 
-![marker](marker.png)
+![marker](marker.png?cropResize=1600,1600&format=webp&quality=82)
 
 And then, when the marker is displayed on the map, an info window appears above the marker showing the location's info. That data is again imparted from the Angular controller.
 
@@ -275,7 +275,7 @@ For quite a short and simplistic piece of code I feel it works pretty great. It'
 
 The application has many more features than I have time to discuss in depth, but I'll quickly run through everything worth mentioning.
 
-![login](login.png)
+![login](login.png?cropResize=1600,1600&format=webp&quality=82)
 
 ####Login
 
@@ -283,7 +283,7 @@ The login page is the first page the user views upon launching the application. 
 
 An additional feature I added to allow anyone to view the app was to include a *Guest* login that didn't require the user to be registered.
 
-![logout](logout.png)
+![logout](logout.png?cropResize=1600,1600&format=webp&quality=82)
 
 Once the user is logged in, their name is also displayed in the upper menu alongside the option of signing out.
 
@@ -302,7 +302,7 @@ $scope.logout = function() {
 
 In the snippet of code above you can see that I'm using `firebase.auth().signOut()` to sign the current user out. UI-Router like I've shown before, handles the state change and brings the user back to the login page. I've also made a handy `toast` factory to display a message to the user.
 
-![messaging](messaging.png)
+![messaging](messaging.png?cropResize=1600,1600&format=webp&quality=82)
 
 ###Messaging
 
@@ -312,7 +312,7 @@ In hindsight, it would have been useful having used something like [FireChat](ht
 
 It works and messages are updated and sent in real-time. Perhaps there's a better way but it's still impressive having built it from the ground up. All the data is held in Firebase of course.
 
-![messaging_guest](messaging_guest.png)
+![messaging_guest](messaging_guest.png?cropResize=1600,1600&format=webp&quality=82)
 
 Lastly, when I added the guest feature I wanted to disallow guests from being able to message registered users. Without being registered, a prompt dialog appears for the user.
 
@@ -321,11 +321,11 @@ Lastly, when I added the guest feature I wanted to disallow guests from being ab
 
 Another feature I worked on was integrating a to-do list where users could add and delete reminders. it's fairly simplistic of course but it ties in quite well.
 
-![todo_list](todo_list.png)
+![todo_list](todo_list.png?cropResize=1600,1600&format=webp&quality=82)
 
 In the lower right-hand corner there's a fab button which displays actions upon hover. For instance, only if a list item is selected will the bin icon appear in the menu.
 
-![new_todo](new_todo.png)
+![new_todo](new_todo.png?cropResize=1600,1600&format=webp&quality=82)
 
 Adding new items is also handled with a prompt dialog provided by the Angular Material framework.
 
@@ -333,7 +333,7 @@ Adding new items is also handled with a prompt dialog provided by the Angular Ma
 
 Finally there's the weather card. It displays up-to-date weather data using the [Apixu](https://www.apixu.com/) API. Believe it or not, I had to try several weather APIs before settling on Apixu.
 
-![weather](weather.png)
+![weather](weather.png?cropResize=1600,1600&format=webp&quality=82)
 
 Many API's are served over HTTP rather than HTTPS and Angular doesn't particulary like 'mixed content' as I found, refusing to serve. Therefore I had quite a bit of hassle finding a suitable API until Apixu.
 

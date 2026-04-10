@@ -35,7 +35,6 @@
 
         {% block assets deferred %}
             {{ assets.css()|raw }}
-            {{ assets.js()|raw }}
         {% endblock %}
 
     {% endblock head%}
@@ -99,6 +98,6 @@
         </div>
     </footer>
 
-    {{ assets.js('bottom')|raw }}
+    {{ assets.js('bottom')|replace({'<script src=': '<script defer="defer" src='})|raw }}
 </body>
 </html>

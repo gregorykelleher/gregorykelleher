@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [angular, web development, project, workflow]
+    tag: [angular, web development, git, project management, npm]
 ---
     
 AngularJS is something I've been wanting to try out for a very long time. Thankfully, college offered me the golden opportunity in the form of a group project. Here's my take on how the project's going and what I've gotten done so far.

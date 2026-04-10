@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, intel, iot, tutorial]
+    tag: [arduino, intel, iot, tutorial, networking]
 ---
 
 As a continuation on since my last post, I wanted to take things a little further and enable WiFi sharing on my Mac over ethernet. In turn, allowing my Galileo to access the internet. Do it yourself in just five steps.

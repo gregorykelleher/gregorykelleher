@@ -3,7 +3,7 @@ title: Cultural Identity Essay
 date: 19:36 06/02/2017
 taxonomy:
     category: blog
-    tag: [Essay, College, Culture]
+    tag: [essay, culture, identity, politics, social media]
 ---
 
 With a mere few weeks left of my time at college, I've been doing some Spring cleaning and discovered an essay I'd written two years ago that I'd like to share.

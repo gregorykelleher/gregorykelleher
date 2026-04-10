@@ -6,7 +6,7 @@ highlight:
 	theme: monokai
 taxonomy:
 	category: blog
-	tag: [digitalocean, nginx, server, security]
+	tag: [digitalocean, nginx, server, security, ssl]
 ---
 
 My website mightn't look any different, but I've made some major modifications under the hood. Optimising Nginx and boosting my security has put this website on the cutting edge of today's web.

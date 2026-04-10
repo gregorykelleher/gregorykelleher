@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, intel, iot, tutorial]
+    tag: [arduino, intel, iot, tutorial, serial port]
 ---
 
 Since I haven't blogged for some time and I'm only getting back to working with the Intel Galileo again, I've decided to write up a quick tutorial to make up for lost time. In this tutorial I'll address a key drawback to the Intel Galileo and a handy solution to remedy. 

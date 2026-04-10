@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, motor control, tutorial]
+    tag: [arduino, motor control, tutorial, electronics, h-bridge]
 ---
 
 When it comes to controlling motors using an Arduino, there's never a shortage of options. One such way is by using a small but capable integrated circuit like the SN754410. And here's why.

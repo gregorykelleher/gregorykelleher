@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [Programming]
+    tag: [programming, code quality, clean code, readability, software design]
 ---
 
 I decided to do a short write-up about my approach to writing a good program. I'd recently finished reading Clean Code by "Uncle Bob" and I felt evangelised to put what I learnt into action.

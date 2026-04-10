@@ -4,7 +4,7 @@ date: 11:11 16/03/2015
 author: Gregory Kelleher
 taxonomy:
     category: blog
-    tag: [graphic design, logo, illustration]
+    tag: [graphic design, logo, illustration, vector art, portfolio]
 ---
 
 I thought I'd share a simple sample logo I made for a company awhile ago. It's a vector drawing I've hand-drawn in illustrator.  

@@ -4,7 +4,7 @@ date: 21:36 12/09/2018
 published: false
 taxonomy:
     category: blog
-    tag: [jaguar land rover, vehicle engineering]
+    tag: [jaguar land rover, vehicle engineering, career, software engineering, automotive]
 ---
 
 Just a quick post to mention my new start as a graduate software engineer as part of Vehicle Engineering at Jaguar Land Rover Ltd. 

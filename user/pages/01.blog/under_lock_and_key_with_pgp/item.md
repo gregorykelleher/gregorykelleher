@@ -3,7 +3,7 @@ title: Under lock and key with PGP
 date: 20:01 18/08/2017
 taxonomy:
     category: blog
-    tag: [pgp, gnupg, GPG, public key, cryptography, nitrokey]
+    tag: [pgp, gnupg, cryptography, nitrokey, information security]
 ---
 
 Given my newfound interest in Computer Security, I took to scrutinising my own habits and explored ways in which I could improve upon my own everyday practices. Pretty Good Privacy or PGP is one such outcome that came from my findings.

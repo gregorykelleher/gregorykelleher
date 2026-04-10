@@ -3,7 +3,7 @@ title: Error - files not found
 date: 21:32 09/02/2017
 taxonomy:
     category: blog
-    tag: [update, error, deletion]
+    tag: [github, security, data loss, backup, lessons learned]
 ---
 
 Well, this ain't good. Note to self, back-up. Then back-up your back-up :(

@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, intel, iot, tutorial]
+    tag: [arduino, intel, iot, tutorial, networking]
 ---
 
 Since I've decided to migrate over to Eclipse in order to program my Galileo, I've needed a persistent IP address in order to make a target connection. Since I couldn't find much in the way of instructions online, I decided on writing my own tutorial to guide others through the process, step by step.

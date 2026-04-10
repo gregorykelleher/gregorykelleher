@@ -188,7 +188,7 @@ img.img-intro {
     -webkit-overflow-scrolling: touch;
 }
 .content .post hr {
-    content: url(../img/separator.png);
+    content: url(../img/separator.webp);
     width: 66px;
     height: 7px;
     float: left;
@@ -217,7 +217,7 @@ img.img-intro {
     gap: 0.75em;
 }
 .content .post h1:before {
-    content: url(../img/separator.png);
+    content: url(../img/separator.webp);
     position: absolute;
     top: -35px;
     left: 1px;
@@ -265,7 +265,7 @@ a.read-more:hover {
 	border-bottom: 1px dotted #ccc
 }
 .foot-post:before {
-    content: url(../img/separator.png);
+    content: url(../img/separator.webp);
     position: absolute;
     top: -40px;
     left: 1px;

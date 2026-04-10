@@ -8,6 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
         <link rel="alternate" type="application/rss+xml" title="{{ site.title|e }}" href="{{ base_url_absolute }}/blog.rss" />
+
+        {# Inline critical CSS so the browser can paint above-the-fold content
+           immediately without waiting for the external stylesheet #}
+        <style>{{ source('theme://css/critical.css')|replace({"\n": " "}) }}</style>
+
         <link rel="preload" href="{{ url('theme://img/' ~ site.intro_avatar ) }}" as="image">
         <link rel="preload" href="{{ url('theme://img/regular.webp') }}" as="image" media="(max-width: 1280px)" fetchpriority="high">
         <link rel="preload" href="{{ url('theme://img/large.webp') }}" as="image" media="(min-width: 1281px)" fetchpriority="high">
@@ -33,8 +38,11 @@
 
         {# SRI hashes for fonts.googleapis.com - not supported yet :( #}
 
+        {# Load the full stylesheet async — critical CSS above covers first paint #}
         {% block assets deferred %}
-            {{ assets.css()|raw }}
+            {% set css_link = assets.css() %}
+            {{ css_link|replace({"rel=\"stylesheet\"": "rel=\"stylesheet\" media=\"print\" onload=\"this.media='all'\""})|raw }}
+            <noscript>{{ css_link|raw }}</noscript>
         {% endblock %}
 
     {% endblock head%}

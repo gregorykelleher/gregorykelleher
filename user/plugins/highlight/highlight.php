@@ -45,10 +45,6 @@ class HighlightPlugin extends Plugin
      */
     public function onTwigSiteVariables()
     {
-        $init = "document.addEventListener('DOMContentLoaded',function(){if(typeof hljs.highlightAll==='function'){hljs.highlightAll();}else{hljs.initHighlightingOnLoad();}});\n";
-        if ($this->config->get('plugins.highlight.lines')) {
-            $init .= "hljs.initLineNumbersOnLoad();\n";
-        }
         $theme = $this->config->get('plugins.highlight.theme') ?: 'default';
         $this->grav['assets']->addCss('plugin://highlight/css/'.$theme.'.css');
         $this->grav['assets']->addJs('plugin://highlight/js/highlight.pack.js', ['group' => 'bottom']);
@@ -56,6 +52,6 @@ class HighlightPlugin extends Plugin
             $this->grav['assets']->addJs('plugin://highlight/js/highlightjs-line-numbers.min.js', ['group' => 'bottom']);
             $this->grav['assets']->addCss('plugin://highlight/css/highlightjs-line-numbers.css');
         }
-        $this->grav['assets']->addInlineJs($init, ['group' => 'bottom']);
+        $this->grav['assets']->addJs('plugin://highlight/js/highlight-init.js', ['group' => 'bottom']);
     }
 }

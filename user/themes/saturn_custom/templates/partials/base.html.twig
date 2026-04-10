@@ -16,6 +16,8 @@
         <link rel="preload" href="{{ url('theme://img/' ~ site.intro_avatar ) }}" as="image">
         <link rel="preload" href="{{ url('theme://img/regular.webp') }}" as="image" media="(max-width: 1280px)" fetchpriority="high">
         <link rel="preload" href="{{ url('theme://img/large.webp') }}" as="image" media="(min-width: 1281px)" fetchpriority="high">
+        <link rel="preload" href="{{ url('theme://fonts/lato-400-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ url('theme://fonts/open-sans-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="{{ url('theme://fonts/bunchlo.woff') }}" as="font" type="font/woff" crossorigin>
         <link rel="preload" href="{{ url('theme://fonts/fontawesome-webfont.woff?v=4.2.0') }}" as="font" type="font/woff" crossorigin>
 
@@ -26,17 +28,13 @@
         {% endblock %}
 
         {% block stylesheets %}
+            {% do assets.addCss('theme://css/fonts.css', {priority: 110}) %}
             {% do assets.addCss('theme://css/kube.min.css') %}
             {% do assets.addCss('theme://css/font-awesome.min.css') %}
             {% do assets.addCss('theme://css/custom.css') %}
         {% endblock %}
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-        <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"></noscript>
-
-        {# SRI hashes for fonts.googleapis.com - not supported yet :( #}
+        {# Fonts self-hosted — no external Google Fonts dependency #}
 
         {# Load the full stylesheet async — critical CSS above covers first paint #}
         {% block assets deferred %}

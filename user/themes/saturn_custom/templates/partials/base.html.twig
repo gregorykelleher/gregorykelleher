@@ -11,7 +11,7 @@
 
         {# Inline critical CSS so the browser can paint above-the-fold content
            immediately without waiting for the external stylesheet #}
-        <style>{{ source('theme://css/critical.css')|replace({"\n": " "}) }}</style>
+        <style>{{ source('partials/critical.css')|replace({"\n": " "}) }}</style>
 
         <link rel="preload" href="{{ url('theme://img/' ~ site.intro_avatar ) }}" as="image">
         <link rel="preload" href="{{ url('theme://img/regular.webp') }}" as="image" media="(max-width: 1280px)" fetchpriority="high">

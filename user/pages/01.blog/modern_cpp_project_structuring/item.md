@@ -16,27 +16,27 @@ For no particular reason whatsoever, I recently found myself dusting off an old 
 
 ### Preamble
 
-I don't intend on writing a prescriptive argument on the absolute best possible configuration for a prospective new project. Rather, I just wanted to share some loose advice that I've collected, and demonstrate its application in context. As part of this walkthrough, there are three major components to this project that I'd like to focus upon in detail:
+I don't intend on writing a prescriptive argument on the absolute best possible configuration for a prospective new project. Rather, I just wanted to share some loose advice that I've collected, and demonstrate its application in context. As part of this walkthrough, there are three major components to this project that I'd like to focus upon in detail: **CMake**, **Conan** and **CTest**.
 
 #### CMake
 
-Anyone's that worked in C++ for long enough is painfully aware of the 'intractability' that legacy C++ projects can so often exhibit. Time and time again, the culprit is intransigent CMake that stiffles any chance of initiating any meaningful change, without upsetting the apple cart.
+Anyone who's worked in C++ for long enough is painfully aware of the intractability that legacy C++ projects can so often exhibit. Time and time again, the culprit is brittle CMake that resists any meaningful change.
 
-The inconvenient truth is the fact that CMake, is indeed, complex and difficult. This succinctly explains why it so often goes awry. That said, Modern CMake has come a long way in addressing these criticisms and provides entirely new features and paradigms for writing efficient, readable and maintainable CMake.
+CMake is complex and difficult, which succinctly explains why it so often goes awry. That said, Modern CMake has come a long way in addressing these criticisms and provides entirely new features and paradigms for writing efficient, readable and maintainable CMake.
 
 This article isn't an exposition on _how_ to write Modern CMake per se, but as I delve deeper, I hope to highlight CMake best practices and how I've sought to incorporate them into my project's build system.
 
 #### Conan
 
-For the uninitiated, [Conan](https://conan.io/) is a package manager for C/C++ projects. Just as anyone is familiar with using `pip` to install third-party dependencies for their Python projects, Conan aims to do the very same for C/C++. Anecdotally, I haven't ever encountered it used seriously in production environments, but with the latest release, I hope it'll finally gain some traction going forward.
+[Conan](https://conan.io/) is a package manager for C/C++ projects. Just as `pip` installs third-party dependencies for Python projects, Conan does the very same for C/C++. Anecdotally, I haven't encountered it used seriously in many production environments yet, but with the latest release, I hope it'll gain traction going forward.
 
-I've assimilated Conan into this project to highlight its use case for managing and installing external dependencies such as [Google Test](https://github.com/google/googletest).
+I've incorporated Conan into this project to highlight its use case for managing and installing external dependencies such as [Google Test](https://github.com/google/googletest).
 
-!!! _It's worth noting that the recent major release of Conan V2 is a complete re-architecture that differs significantly to previous versions. It does a great deal in simplifying the API and improving overall useability, however it's important to be mindful that most online documentation still serves versions prior to Conan V2, and hence is at best out-of-date, or at worst, incompatible. Thankfully, the latest Conan V2 examples [here](https://github.com/conan-io/examples2) have proven to be very informative_
+!!! _The recent major release of Conan V2 is a complete re-architecture that differs significantly from previous versions. It simplifies the API and improves overall usability, however most online documentation at the time of writing still targets V1, and is at best out-of-date, or at worst, incompatible. Thankfully, the Conan V2 examples [here](https://github.com/conan-io/examples2) have proven to be very informative_
 
 #### CTest
 
-Despite being part and parcel of the CMake distribution, it's always been a great surprise to me how often this little tool is overlooked and ignored. For all intents and purposes, CTest is simply a convenient test runner to execute test suites, but I'd also contest that that limited definition downplays its utility in facilitating the creation of more complex tests.
+Despite being part and parcel of the CMake distribution, CTest is surprisingly often overlooked. It's a convenient test runner to execute test suites, but that limited definition downplays its utility in facilitating more complex test orchestration.
 
 Unfortunately, this project is far too simplistic to illustrate the full capabilities of CTest, but perhaps I'll explore them further in a later article.
 
@@ -72,13 +72,13 @@ The overall structure I chose for the project is customary. It consists of the u
 
 Within `src` I envision to have numerous subdirectories for each individual software component, which in turn will be wrapped up as a CMake target. I've chosen then to closely encapsulate any associated headers within their respective subdirectories, rather than abstract all headers into a root `include` directory.
 
-This isn't a classical approach, but I have little reason to share these headers across any other libraries or targets in the project, so it makes little sense to fragment my code without any sound rationality behind that decision.
+This isn't a classical approach, but I have little reason to share these headers across any other libraries or targets in the project, so it makes little sense to fragment my code without good reason.
 
 ### Root CMakeLists.txt
 
 As the root `CMakeLists.txt` is the first port of call for a new user, first impressions count. It defines the project's fundamentals, its metadata and any high-level configuration. I like to keep this file succinct and targeted. Anything falling outside of its purview can be abstracted away elsewhere (namely the `cmake` subdirectory).
 
-Indeed, in my `CMakeLists.txt` I include three such CMake files, namely:
+My `CMakeLists.txt` includes three CMake files:
 
 ```makefile
 # Set standard project settings
@@ -108,9 +108,9 @@ else()
 endif()
 ```
 
-The intention of using `ccache` is in speeding up the build time by caching compilation results. Its mechanism is elementary to follow; it mitigates redudant compilation requests, by inspecting whether cached object files can be rendered in lieu of re-compilation.
+The intention of using `ccache` is in speeding up the build time by caching compilation results; skipping re-compilation when a cached object file already matches the inputs.
 
-Further along, I also choose to allow for the express inclusion of interprocedural optimisation (IPO) techniques if available for the compiler:
+Further along, I also include interprocedural optimisation (IPO) if the compiler supports it:
 
 ```makefile
 # Include Interprocedural Optimisation
@@ -122,13 +122,13 @@ if(result)
     message("using interprocedural optimisation")
     set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
 else()
-    message(SEND_ERROR "IPO not available: ${output}")
+    message(STATUS "IPO not available: ${output}")
 endif()
 ```
 
-For the uninitiated, IPO is a collection of compiler optimisation techniques used to improve performance on a project wide basis. It optimises code using a variety of approaches, such as inlining functions, dead code elimination (DCE), reducing redundancy, reordering routines for better locality .etc.
+IPO is a collection of compiler optimisation techniques used to improve performance on a project-wide basis. It optimises code using a variety of approaches, such as inlining functions, dead code elimination (DCE), reducing redundancy, reordering routines for better locality, etc.
 
-Next up I include yet another file, called `GenerateAndInstallConfig.cmake` which does exactly what it says on the tin. It's purpose is to generate and install the standard package configuration files for the project by leveraging a very useful module called `CMakePackageConfigHelpers` to provide the necessary utilities. Creating such files ensures the project can be seamlessly integrated as a dependency in external projects via the `find_package()` command:
+Next up I include another file, `GenerateAndInstallConfig.cmake`, which does exactly what it says on the tin. Its purpose is to generate and install the standard package configuration files for the project by leveraging the `CMakePackageConfigHelpers` module. Creating such files ensures the project can be seamlessly integrated as a dependency in external projects via the `find_package()` command:
 
 ```makefile
 # Include package configuration helper module
@@ -183,7 +183,7 @@ install(FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
 )
 ```
 
-Finally then, I configure CPack; the package tool provided by CMake. Since I've installation rules already defined inside my build tree (i.e. `INSTALL_*` for my targets), the project has packaging support via CPack inherently.
+Finally, I configure CPack - the packaging tool provided by CMake. Since I've already defined installation rules in the build tree (i.e. `INSTALL_*` for my targets), the project has packaging support via CPack inherently.
 
 When CPack is invoked then, it will find these installation directives specified in the project, and automatically generate the distribution packages required.
 
@@ -229,7 +229,7 @@ set_project_warnings(ProjectOptions)
 
 ### StaticAnalysers.cmake
 
-And finally, this is yet another simple CMake file that adds the common static anaylsis tools, `clang-tidy` and `cppcheck` to the project:
+And finally, this is another simple CMake file that adds the common static analysis tools, `clang-tidy` and `cppcheck` to the project:
 
 ```makefile
 # Include clang-tidy if available
@@ -238,7 +238,7 @@ if(CLANGTIDY)
     message("using clang-tidy")
     set(CMAKE_CXX_CLANG_TIDY ${CLANGTIDY})
 else()
-    message(SEND_ERROR "clang-tidy not available")
+    message(STATUS "clang-tidy not available")
 endif()
 
 # Include cppcheck if available
@@ -247,9 +247,13 @@ if(CPPCHECK)
     message("using cppcheck")
     set(CMAKE_CXX_CPPCHECK ${CPPCHECK})
 else()
-    message(SEND_ERROR "cppcheck not available")
+    message(STATUS "cppcheck not available")
 endif()
 ```
+
+Note that `CMAKE_CXX_CLANG_TIDY` and `CMAKE_CXX_CPPCHECK` are set globally here, which means they'll run on every C++ target in the build, including third-party dependencies pulled in via Conan.
+
+For a project this size that's fine, but in a larger codebase you'd want to attach these as per-target properties instead (e.g. `set_target_properties(Anagram PROPERTIES CXX_CLANG_TIDY "${CLANGTIDY}")`) to avoid noise from code you don't control.
 
 ### Source Code
 
@@ -285,7 +289,7 @@ install(EXPORT AnagramExportSet
 )
 ```
 
-This is none too dissimilar to any prior CMake syntax I've introduced thus far. It defines the `Anagram` library and links to the `ProjectOptions` interface library that I've previously described in depth.
+This looks much like the CMake we've already seen. It defines the `Anagram` library and links to the `ProjectOptions` interface library described earlier.
 
 The `target_include_directories()` command may look slightly unusual to some, as it configures the include directories for the `Anagram` target for both the build _and_ installation processes:
 
@@ -297,7 +301,7 @@ target_include_directories(Anagram PUBLIC
 )
 ```
 
-The syntax is a little obscure, but it's not too difficult to dicipher. To put simply, during build time, the `Anagram` target will include files from the build interface (i.e. `${CMAKE_CURRENT_SOURCE_DIR}/include>` subdirectory). However, during installation, the headers from the local `include` subdirectory will be placed in the installation include directory. This ensures they're accessible to reference in other projects when using the `Anagram` as an installed library elsewhere.
+The syntax is a little obscure, but not too difficult to decipher. During build time, the `Anagram` target will include files from the build interface (i.e. the `${CMAKE_CURRENT_SOURCE_DIR}/include` subdirectory). During installation, the headers from the local `include` subdirectory will be placed in the installation include directory. This ensures they're accessible in other projects when consuming `Anagram` as an installed library.
 
 Another CMake nugget that might be unfamiliar is the inclusion of the `GNUInstallDirs` module:
 
@@ -338,7 +342,7 @@ In short then, it's simply a more robust and consistent method of ensuring that 
 
 So with all the configuration and build stuff out of the way, it should now be possible to write some unit tests to validate the codebase.
 
-As is conventional, I have a `test` subdirectory at the base of the project to encase all said tests. The base `CMakelists.txt` for the `test` subdirectory is straightfoward too:
+As is conventional, I have a `test` subdirectory at the base of the project to contain all tests. The base `CMakeLists.txt` for the `test` subdirectory is straightforward:
 
 ```makefile
 # Locate Google Test
@@ -358,7 +362,7 @@ For starters, the `find_package(GTest REQUIRED)` command is used to locate and c
 
 One such definition is the new `gtest_discover_tests()` command that's introduced by this module. Typically, new tests would previously have been registered using `add_test()` or `gtest_add_tests()`.
 
-The latest `gtest_discover_tests()` differs slightly from `gtest_add_tests()` in that it automatically discovers tests using CTest by requesting the compiled test binaries to enumerate their tests. This strategy is more robust and offers imporved handling of parameterised tests. Since test discovery occurs at build time, it also removes the need for CMake to be re-run when tests are changed.
+The latest `gtest_discover_tests()` differs slightly from `gtest_add_tests()` in that it automatically discovers tests using CTest by requesting the compiled test binaries to enumerate their tests. This strategy is more robust and offers improved handling of parameterised tests. Since test discovery occurs at build time, it also removes the need for CMake to be re-run when tests are changed.
 
 The use of `gtest_discover_tests()` is evident in `test/anagram/CMakeLists.txt` for example:
 
@@ -396,7 +400,7 @@ Test project /Users/gregorykelleher/Documents/interview_practice_questions/build
 Total Tests: 8
 ```
 
-!!! For those unaware, it's also possible to run tests in parallel using `ctest -j N` where `N` is the desired number of threads
+!!! _It's also possible to run tests in parallel using `ctest -j N` where `N` is the desired number of threads_
 
 ### Conan
 
@@ -481,8 +485,6 @@ It's really as easy as that. Conan is a game-changer when it comes to setting up
 
 ### Conclusion
 
-Hopefully this post has gone some way in demonstrating my approach in defining a useful template for C++ project structuring. I've navigated a whole host of different topics, and in reflection now, it's really quite overwhelming for a beginner. That said, when embraced properly, CMake, Conan and CTest can vastly enhance a project, taming complexity and fostering maintainability.
+That's a lot of ground to cover for what is, at heart, a single-library project with a handful of unit tests. The learning curve is real; CMake's generator expressions alone are enough to send someone back to hand-written Makefiles. But the upfront cost buys you something concrete; a project where adding a new library is a copy-paste of one `CMakeLists.txt`, dependencies are declared in one place, and tests run with a single `ctest` invocation.
 
-It does take some strategic orchestration of tooling to craft such a development environment, but it pays dividends in the long run. A scalable and efficient project with readable configurations sets a stable foundation on which to build a codebase.
-
-In essence then, while the initial learning curve may be rather steep, the rewards justify the investments made in my opinion. Adopting these modern tools can truly evelate a project's trajectory and set it down a course of future success.
+If nothing else, I hope this walkthrough makes the individual pieces less intimidating. None of them are particularly complex in isolation - the difficulty is in knowing they exist and how they fit together.

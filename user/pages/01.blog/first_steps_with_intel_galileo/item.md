@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, intel, IOT]
+    tag: [arduino, intel, iot, galileo, embedded systems]
 ---
 
 Yesterday, I finally had the chance to set up my new Intel Galileo (Gen 2). Not an easy task as I found out!

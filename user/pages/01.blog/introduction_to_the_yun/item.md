@@ -6,7 +6,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, intel, IOT]
+    tag: [arduino, iot, openwrt, embedded linux, wifi]
 ---
 
 A few days back I had my first look at the Intel Galileo. Since then, I've had time to cast my eye over another remarkable IoT board - the Arduino Yún.

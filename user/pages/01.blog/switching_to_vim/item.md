@@ -4,7 +4,7 @@ date: 21:19 30/06/2016
 published: false
 taxonomy:
     category: blog
-    tag: [vim, tutorial, editor]
+    tag: [vim, tutorial, editor, productivity, web development]
 highlight:
     theme: monokai
 ---

@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, intel, iot, tutorial]
+    tag: [arduino, intel, iot, tutorial, python]
 ---
 
 Since I've recently succeeded in getting my Galileo online, I've wasted no time in pressing it to its full potential as an IoT board. In this tutorial I'm recasting the Galileo as a Twitter-Bot to post my tweets to the world!

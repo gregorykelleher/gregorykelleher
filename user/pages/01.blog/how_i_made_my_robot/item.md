@@ -3,7 +3,7 @@ title: How I made my robot
 date: 09:33 26/07/2015
 taxonomy:
     category: blog
-    tag: [arduino, tutorial, robot]
+    tag: [arduino, tutorial, robotics, electronics, wireless]
 
 ---
 

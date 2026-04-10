@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [decision theory, heurisics, software design]
+    tag: [decision theory, heuristics, software design, cognitive bias, programming]
 ---
 
 For a discipline supposedly rooted in rationale and logic, it's surprising there isn't a greater emphasis placed on decision theory. All too often, critical decisions are led by heuristics rather than formal methods.

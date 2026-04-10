@@ -3,7 +3,7 @@ title: Workday - Intervarsity Hackathon
 date: 09:56 09/04/2017
 taxonomy:
     category: blog
-    tag: [workday, hackathon, coffeescript]
+    tag: [workday, hackathon, coffeescript, chatbot, slack]
 ---
 
 Phew! That was fun. Yesterday I was at the DIT Comp SOC hackathon held at the Workday offices in Dublin. It was an all round great experience that I wanted to share.

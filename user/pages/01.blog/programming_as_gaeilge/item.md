@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [Gaeilge, Programming, Syntax, Semantics, Grammar]
+    tag: [gaeilge, programming, syntax, semantics, grammar]
 ---
 
 This might appear a little left-field, but it's always surprised me how the morphology of the Irish language lends itself to programming constructs.

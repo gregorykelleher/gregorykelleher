@@ -3,7 +3,7 @@ title: Quick Update
 date: 12:00 13/10/2016
 taxonomy:
     category: blog
-    tag: [Update, College, Animation]
+    tag: [update, college, animation, svg, github]
 ---
 
 Wow, time does fly! It's been quite awhile since my last post so I've decided to write a quick update on what I'm doing. 

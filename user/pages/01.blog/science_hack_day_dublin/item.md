@@ -6,7 +6,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [hackathon, Dublin, Science, maker]
+    tag: [hackathon, dublin, science, maker, robotics]
 ---
 
 Every year a cohort of makers, tinkerers and like-minded individuals descend upon UCD's campus for Science Hack day Dublin, a 36hr hackathon with creativity and a love of science at its heart. This year, I had the chance to join in on the fun.

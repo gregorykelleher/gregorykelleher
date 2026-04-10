@@ -6,7 +6,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [digitalocean, nginx, server, upgrade]
+    tag: [digitalocean, nginx, server, migration, security]
 ---
 
 It's about time. I've finally pulled the trigger and moved across to a new VPS. Read about my transition to Digital Ocean and how I've upgraded to the latest Nginx build.

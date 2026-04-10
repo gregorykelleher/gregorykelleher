@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [assignment, actionscript, animation, multimedia]
+    tag: [actionscript, flash, animation, multimedia, programming]
 ---
 
 As part of my first assignment for **Media Programming**, I was tasked with creating a Flash tutorial of an Actionscript technique. What follows below are the steps I took in building it.

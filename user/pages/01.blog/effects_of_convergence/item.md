@@ -3,7 +3,7 @@ title: Effects of Convergence Essay
 date: 13:07 09/04/2017
 taxonomy:
     category: blog
-    tag: [Copyright, Convergence, College, Essay]
+    tag: [copyright, convergence, essay, digital rights, open access]
 ---
 
 Just another essay I managed to dig up during my searches. I enjoyed reading it again and it's worth sharing.

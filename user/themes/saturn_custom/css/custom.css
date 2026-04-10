@@ -173,6 +173,7 @@ img.img-intro {
     font-weight: 400;
 }
 .content .post img { margin-bottom: 20px }
+.content .post img[src$=".svg"] { width: 100%; aspect-ratio: 620 / 300 }
 /* Markdown tables — make them horizontally scrollable on narrow viewports.
    kube's `width: 100%; max-width: 100%` does NOT constrain a table-layout:auto
    table whose min-content width exceeds the parent — the table still grows.

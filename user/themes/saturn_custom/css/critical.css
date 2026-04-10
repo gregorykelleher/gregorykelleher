@@ -1,0 +1,56 @@
+/* Critical above-the-fold CSS — inlined in <head> to eliminate render-blocking stylesheet round-trip */
+*,*:before,*:after{box-sizing:border-box}
+html,body,div,p,a,img,ul,li,h1,nav,header,footer,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{font-family:"Helvetica Neue",Helvetica,Tahoma,sans-serif;font-size:.9375em;line-height:1.65em;background:#fff;color:#222;margin-bottom:50px;overflow-x:hidden}
+a{font-family:"Open Sans",sans-serif}
+img{max-width:100%;height:auto;vertical-align:middle}
+h1{font-family:"Helvetica Neue",Helvetica,Tahoma,sans-serif;font-weight:bold;color:#000;text-rendering:optimizeLegibility;margin:0 0 .5em 0;font-size:2.25em;line-height:1.1}
+hr{display:block;height:1px;border:0;border-top:1px solid #ddd}
+p,ul,ol{line-height:1.65em}
+p,ul,ol,hr{margin-bottom:1.65em}
+article,footer,header,nav,section{display:block}
+.group:after,.units-row:after,.navbar:after{content:"";display:table;clear:both}
+.units-row{margin-bottom:1.65em}
+.unit-10{width:10%}.unit-50{width:50%}.unit-90{width:90%}.unit-100{width:100%}
+.units-row .unit-90,.units-row .unit-50,.units-row .unit-10{float:left;margin-left:3%}
+.units-row .unit-90:first-child,.units-row .unit-50:first-child,.units-row .unit-10:first-child{margin-left:0}
+.units-row .unit-90{width:89.7%}.units-row .unit-50{width:48.5%}
+.navbar{font-size:105%;margin-bottom:1.65em}
+.navbar.navbar-left{float:left}.navbar.navbar-right{float:right}
+.navbar ul{list-style:none;margin:0}
+.navbar li{float:left;margin-right:1.65em}
+.navbar.navbar-right li{margin-left:0;margin-right:0}
+.navbar a,.navbar span{display:block;text-decoration:none}
+.navbar li,.navbar.navbar-right li{margin-left:0;margin-right:0}
+.navigation-toggle{display:none}
+.list-flat{margin-left:0;list-style:none}
+.text-centered{text-align:center}
+.right{float:right}
+.container{margin:auto;max-width:662px;padding:0 20px}
+.main-nav{padding-top:30px;padding-bottom:25px;background-color:#FFF;box-shadow:0 1px 5px rgba(0,0,0,0.1);z-index:10;position:relative}
+.group.top-nav{margin-bottom:-20px}
+.group.top-nav nav a{text-decoration:none}
+.top-nav a.logo,.logo{font-family:'Open Sans',sans-serif;font-weight:700;font-size:27px;color:#000;letter-spacing:-2px}
+.navigation-toggle .logo{font-size:20px;text-transform:capitalize}
+.navigation-toggle{margin-bottom:1.65em}
+.top-nav .item-nav li.active a{color:#FF6C40}
+.top-nav .item-nav li a{font-family:"Lato",sans-serif;font-size:15px;font-weight:500;color:#A4A4A4}
+@media screen and (max-width:1280px){.intro{width:100%;height:272px;padding-top:117px;background:#F7F7F7 url(/user/themes/saturn_custom/img/regular.webp) center 35% no-repeat}}
+@media screen and (min-width:1281px){.intro{width:100%;height:272px;padding-top:117px;background:#F7F7F7 url(/user/themes/saturn_custom/img/large.webp) center 35% no-repeat}}
+@font-face{font-family:"Bunchló";font-style:normal;font-display:swap;src:url("/user/themes/saturn_custom/fonts/bunchlo.woff") format('woff')}
+p.p-intro{color:#E85F37;font-family:"Bunchló";font-size:13px;letter-spacing:2px;font-weight:700;text-transform:uppercase;padding:10px 25px;background-color:#FFF;border:1px solid #DC5227;border-radius:5px;box-shadow:inset 0 -3px 0 #ffcfbc;position:relative}
+p.p-intro:after{content:'';position:absolute;border-style:solid;border-width:9px 9px 9px 0;border-color:transparent #FFF;display:block;width:0;z-index:1;left:-9px;top:12px}
+p.p-intro:before{content:'';position:absolute;border-style:solid;border-width:11px 10px 11px 0;border-color:transparent #DC5227;display:block;width:0;z-index:1;left:-10px;top:10px}
+img.img-intro{border-radius:100px;width:47px;background-color:#EF3A3A;border:1px solid #DC5227}
+.content{padding-top:75px}
+.post{margin-bottom:80px}
+.content .post a{text-decoration:none}
+.content .post h1{color:#000;font-family:"Lato",sans-serif;font-size:22px;font-weight:400;position:relative}
+.content .post p{color:#535353;font-family:"Open Sans",sans-serif;font-size:15px;font-weight:400}
+.content .post img{margin-bottom:20px}
+.content .post img[src$=".svg"]{width:100%;aspect-ratio:620/300}
+.content .post hr{content:url(/user/themes/saturn_custom/img/separator.webp);width:66px;height:7px;float:left;border:none}
+.content .post h1:before{content:url(/user/themes/saturn_custom/img/separator.webp);position:absolute;top:-35px;left:1px}
+.in-content{margin-top:55px}
+@media only screen and (max-width:767px){.intro{padding-top:50px}img.img-intro{display:block;margin-left:auto;margin-right:auto}.logo-w{display:none}.main-nav{padding-top:20px;padding-bottom:20px}}

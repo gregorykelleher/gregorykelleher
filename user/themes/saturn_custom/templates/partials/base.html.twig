@@ -20,9 +20,9 @@
         <link rel="preload" href="{{ url('theme://fonts/fontawesome-webfont.woff?v=4.2.0') }}" as="font" type="font/woff" crossorigin>
 
         {% block javascripts %}
-            {% do assets.addJs('jquery', {group: 'bottom', priority: 101}) %}
-            {% do assets.addJs('theme://js/kube.min.js', {group: 'bottom'}) %}
-            {% do assets.addJs('theme://js/snap.svg-min.js', {group: 'bottom'}) %}
+            {% do assets.addJs('jquery', {priority: 101}) %}
+            {% do assets.addJs('theme://js/kube.min.js') %}
+            {% do assets.addJs('theme://js/snap.svg-min.js') %}
         {% endblock %}
 
         {% block stylesheets %}
@@ -43,6 +43,7 @@
             {% set css_link = assets.css() %}
             {{ css_link|replace({"rel=\"stylesheet\"": "rel=\"stylesheet\" media=\"print\" onload=\"this.media='all'\""})|raw }}
             <noscript>{{ css_link|raw }}</noscript>
+            {{ assets.js()|replace({'<script src=': '<script defer="defer" src='})|raw }}
         {% endblock %}
 
     {% endblock head%}

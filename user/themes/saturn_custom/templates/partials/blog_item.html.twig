@@ -13,10 +13,10 @@
                 {% endif %}
                 {% elseif truncate and page.summary != page.content %}
                 {{ page.summary|raw }}
-                <a class="read-more" href="{{ page.url }}">Read more about {{ page.title }}</a>
+                <a class="read-more" href="{{ page.url }}">Read more</a>
                 {% elseif truncate %}
                 {{ page.content|truncate(550)|raw }}
-                <a class="read-more" href="{{ page.url }}">Read more about {{ page.title }}</a>
+                <a class="read-more" href="{{ page.url }}">Read more</a>
                 {% else %}
                 {{ page.content|raw }}
                 {% set show_prev_next = true %}

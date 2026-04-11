@@ -12,7 +12,7 @@ Given my newfound interest in Computer Security, I took to scrutinising my own h
 
 ===
 
-PGP is an old, if not venerable piece of software dating back to the early 90’s. Renowned for its longevity and esoteric subculture, PGP has withstood the test of time and still remains relevant today. PGP provides the means to fulfil the four fundamental tenets of Information Security: 
+PGP is an old, if not venerable piece of software dating back to the early 90s. Renowned for its longevity and esoteric subculture, PGP has withstood the test of time and still remains relevant today. PGP provides the means to fulfil the four fundamental tenets of Information Security: 
 
 * Authentication
 * Integrity
@@ -21,13 +21,13 @@ PGP is an old, if not venerable piece of software dating back to the early 90’
 
 These principles derive from the well-known CIA Triad of Confidentiality, Integrity and Availability. Not to be confused with the Central Intelligence Agency, CIA. Yet from my own reading, I've found the previous four principles to be just as prevalent. 
 
-But before diving into PGP, it's wise to pause and consider the desired end goal. Summed up in a word, it's privacy. Pretty Good Privacy in fact. Hence the name. 
+But before diving into PGP, it's wise to pause and consider the desired end goal. Summed up in a word, it's privacy. Pretty Good Privacy, in fact; hence the name. 
 
 Understanding the key concepts below is critical in realising how privacy is achieved.
 
 ### Authentication
 
-Easiest one first. You need to trust that you’re communicating with Alice. Or else any data received has little validity and could come from someone you don't trust, say for example, Eve. 
+You need to trust that you’re communicating with Alice, or else any data received has little validity and could come from someone you don’t trust, say for example, Eve. 
 
 So the identity of the recipient and sender must be established before communications. Authentication is the verification of that identity; acquired by providing the correct credentials.
 
@@ -43,9 +43,9 @@ In straightforward terms, multi-factor authentication information usually consis
 
 Of course, it's easy to spot that some of the above are more secure than others. The ideal scenario would surely be to have a combination of all three.
 
-Ideal, yes. Practical? Not quite. The crux of cryptography is convenience. Cryptography is intrinsically difficult and can add significant complexity. This in turn, often goes against the grain of usability.
+Ideal, yes. Practical? Not quite. The crux of cryptography is convenience. Cryptography is intrinsically difficult and can add significant complexity. This, in turn, often goes against the grain of usability.
 
-In reality, most users opt for convenience. Instead choosing to askew well-intentioned authentication measures for short-term ease. This sacrifice in security has long-term repercussions since authentication has been diminished. 
+In reality, most users opt for convenience, instead choosing to eschew well-intentioned authentication measures for short-term ease. This sacrifice in security has long-term repercussions since authentication has been diminished. 
 
 It's beneficial to keep this concept in mind. Cryptography is only as good as it is convenient. As a point of fact, it's one of PGP's oft-cited failings. But more on that later.
 
@@ -63,9 +63,9 @@ When people give a definition for privacy, they’re thinking confidentiality. T
 
 On that point, it's wise to bring up the matter of semantics and the issue of privacy being conflated with secrecy.
 
-The intertwined relationship of the two is difficult to separate. In simple terms, the definition of secrecy is what we know onto ourselves. Privacy enables us to keep what's secret, secret.
+The intertwined relationship of the two is difficult to separate. In simple terms, the definition of secrecy is what we know unto ourselves. Privacy enables us to keep what's secret, secret.
 
-The two are not synonymous but are aligned. The subtle distinction or overlap between the two lends the popular adage:
+The two are not synonymous but are aligned. The subtle distinction or overlap between the two lends itself to the popular adage:
 
 > “when I withhold information, it's privacy; when you withhold information, it's secrecy”.
 
@@ -77,27 +77,29 @@ Confidentiality in the context of cryptography is achieved through encryption. I
 
 ### Non-Repudiation
 
-Non-repudiation is the guarantee that neither the sender or receiver can disclaim that data has been sent or received upon a successful transaction.
+Non-repudiation is the guarantee that neither the sender nor the receiver can disclaim that data has been sent or received upon a successful transaction.
 
 This concept is important for the internet, especially in financial or e-commerce applications. Non-repudiation is essential in ensuring the user has made a valid transaction request. It also guarantees that the user can't refute their actions in the future.
 
 Non-repudiation is usually achieved by using a digital signature that's tied to a unique user. This ensures that the data (e.g. financial statement, contract, email) has been electronically signed by the purported user.
 
-Like the section on authentication, a digital signature alone isn't always secure. Multi-factor methods of gathering user authentication information may be necessary. This of course, has the effect of making repudiation more difficult.
+Like the section on authentication, a digital signature alone isn't always secure. Multi-factor methods of gathering user authentication information may be necessary. This, of course, has the effect of making repudiation more difficult.
+
+Taken together, these four tenets form the requirements for any system that claims to provide privacy. No single tenet is sufficient in isolation; authentication without confidentiality is verification in the open, and confidentiality without integrity is trust in data that may have been tampered with. The question, then, is whether a single system can satisfy all four simultaneously.
 
 ### Pretty Good Privacy
 
-And finally, we've arrived at PGP. Outlining the key concepts above gives an indication of what PGP is designed to do. PGP is privacy for the internet. Authentication, Confidentiality, Integrity and Non-repudiation condensed into a single software package. It's a neat idea but I'm aware that it's something that also scores quite high on the nerdiness barometer.
+PGP is one such attempt. Authentication, confidentiality, integrity and non-repudiation condensed into a single software package. It's a neat idea, if admittedly a niche one.
 
-The history of PGP began in the early 1990's with Phil Zimmermann, who created the first version of PGP as an open-source encryption program. The early history of PGP is an important one in the history of modern cryptography and I recommend reading about the early [Crypto Wars](https://en.wikipedia.org/wiki/Crypto_Wars) to learn more.
+The history of PGP began in the early 1990s with Phil Zimmermann, who created the first version of PGP as an open-source encryption program. The early history of PGP is significant in the context of modern cryptography and I recommend reading about the [Crypto Wars](https://en.wikipedia.org/wiki/Crypto_Wars) to learn more.
 
 The most common open-source offering for PGP today is [GNU Privacy Guard](https://gnupg.org/) (GnuPG or GPG) as part of the GNU Project. GnuPG exists as a software suite that provides PGP functionalities.
 
-So what is GnuPG anyways? It's easiest to think of GnuPG as being a key manager that provides a special key-chain. This key-chain in turn provides encryption/decryption, digital signatures and authentication using PGP.
+So what is GnuPG anyway? It's easiest to think of GnuPG as being a key manager that provides a special key-chain. This key-chain in turn provides encryption/decryption, digital signatures and authentication using PGP.
 
 The very first thing to do is generate the two most important keys, the Public and Private key-pair. Every PGP functionality hinges on these two distinct keys. Any sub-keys will also be generated from this key-pair.
 
-If this sounds familiar, yes, this is Public Key Cryptography. Sometimes known as Asymmetric Cryptography. If it doesn't, you've been introduced to a fundamental cryptographic system that is the backbone of the modern internet.
+If this sounds familiar, yes, this is Public Key Cryptography. Sometimes known as Asymmetric Cryptography. If it doesn't sound familiar, you've been introduced to a fundamental cryptographic system that is the backbone of the modern internet.
 
 Every transaction or secure connection online using today's internet standards is underpinned by Public Key Cryptography. The perfect example is the Transport Security Layer (TLS) that I frequently mention in my blog. Not forgetting to mention Bitcoin, SSH or Off-the-Record messaging (OTR) too.
 
@@ -105,7 +107,7 @@ It helps to have a good understanding of Public Key Cryptography before delving 
 
 Since this isn't a post on Public Key Cryptography, I'm moving on and assuming a basic understanding of the concept.
 
-After using GnuPG to generate the public and private key-pair, the two keys are used in unison to encrypt/decrypt, authenticate, digitally sign .etc.
+After using GnuPG to generate the public and private key-pair, the two keys are used in unison to encrypt/decrypt, authenticate, digitally sign etc.
 
 For instance, someone using GnuPG could encrypt something using your public key. The only person able to decrypt is you, since you own the corresponding private key. Hence GnuPG is a secure means of protecting the contents of emails, files and documents.
 
@@ -119,11 +121,11 @@ The private key must be kept ultimately secure. Whereas the public key allows ot
 
 So how do you secure your private key? It helps to be a little paranoid here. Typically, the user would generate their key-chain on their laptop and leave it at that. Unless the private key is protected with a pass-phrase, it's sitting on the laptop in the clear.
 
-So protecting your key-chain is tied to how well you protect your laptop. For example, if your laptop were stolen by someone ‘tech-savvy’ enough, the thief would have full access to your GnuPG key-chain. They could steal your identity, impersonate and decrypt anything past or present. Essentially it's the _coup de grâce_ for your key-chain.
+So protecting your key-chain is tied to how well you protect your laptop. For example, if your laptop were stolen by someone ‘tech-savvy’ enough, the thief would have full access to your GnuPG key-chain. They could steal your identity, impersonate you, and decrypt anything past or present. Essentially it's the _coup de grâce_ for your key-chain.
 
 The answer to this obstacle is not having your private key on your laptop at all. GnuPG allows you to create sub-keys, special keys derived from your master key. It mitigates some of the risk but won't prevent someone from decrypting your data if they have the right sub-key.
 
-Sub-keys are bound to the master key but are independent to it. The neat feature of sub-keys is the fact they can be revoked without affecting the master key-pair.
+Sub-keys are bound to the master key but are independent of it. The neat feature of sub-keys is the fact they can be revoked without affecting the master key-pair.
 
 !!! By default, GnuPG uses a primary signing key as the master key. This key is the public key and it's used for identity. It also generates an encryption sub-key automatically. This encryption sub-key is the private half of what's referred to as the Master Key-pair.
 
@@ -135,9 +137,9 @@ From the original master key, I generated three sub-keys for signing, encryption
 
 ![generated_keys.png](generated_keys.png?cropResize=1600,1600&format=webp&quality=82)
 
-This newly generated key-chain (comprising of the master key and the new signing, encryption and authentication sub-keys) must be kept safe and offline. Losing this means everything. It's vital that it remains protected. In my case, I've chosen to export the master key-pair to a USB stick that I've encrypted with [VeraCrypt](https://www.veracrypt.fr/en/Home.html). I goes without saying that you should create backups too.
+This newly generated key-chain (comprising the master key and the new signing, encryption and authentication sub-keys) must be kept safe and offline. Losing this means everything. It's vital that it remains protected. In my case, I've chosen to export the master key-pair to a USB stick that I've encrypted with [VeraCrypt](https://www.veracrypt.fr/en/Home.html). It goes without saying that you should create backups too.
 
-The next step most would take would be to discard the master key from their laptop. This leaves you with only the new signing, encryption and authentication sub-keys. This ‘handicapped’ key-chain is often referred to as a laptop key-chain.
+The next step is to discard the master key from their laptop. This leaves you with only the new signing, encryption and authentication sub-keys. This ‘handicapped’ key-chain is often referred to as a laptop key-chain.
 
 I also decided to create a revocation certificate for my keys in case they were ever lost or compromised. It's worth taking the extra step of printing the revocation certificate out too.
 
@@ -173,13 +175,13 @@ The pin setup for the NitroKey can be done over the command line with GnuPG usin
 
 To change Administrator configurations for the NitroKey, enter edit mode with  `gpg --card-edit` and at the `gpg/card>` prompt, type `admin` to access these settings.
 
-After changing the pins and card settings, I transferred my sub-keys from my computer to the NitroKey. It's important to note that this is a one way operation so again, backups are vital.
+After changing the pins and card settings, I transferred my sub-keys from my computer to the NitroKey. It's important to note that this is a one-way operation so again, backups are vital.
 
 Transfer is done using the `keytocard` command. GnuPG will give you a key slot option for storage. I did this for each of my keys in turn. At this point, no keys should remain on your computer. All the secret sub-keys `ssb` will be fully transferred to the NitroKey.
 
 All being correct and with backups in place, the secret master key `sec` can now be removed safely with the GnuPG command, `gpg2 --delete-secret-keys $KEYID`.
 
-Phew, now's the time to test whether everything went accordingly.
+With the transfer complete, it's time to verify that everything is in order.
 
 Removing and inserting the NitroKey again, verify that the secret keys are present with GnuPG using `gpg2 --list-secret-keys`.
 
@@ -191,46 +193,47 @@ What's been accomplished then? To recap, the `sec#` above next to the secret mas
 
 ![card_unlocking.png](card_unlocking.png?cropResize=1600,1600&format=webp&quality=82)
 
-That's about it for setting up GnuPG on NitroKey. Whenever a PGP operation such as encryption, authentication or signing needs to be done, GnuPG will prompt for a smart-card insertion with the corresponding ID. In the next section I discuss more on how I use my NitroKey day to day.
+That's about it for setting up GnuPG on NitroKey. Whenever a PGP operation such as encryption, authentication or signing needs to be done, GnuPG will prompt for a smart-card insertion with the corresponding ID. In the next section I elaborate on how I use my NitroKey day to day.
 
 ### Use Cases for GnuPG
 
-GnuPG has improved my own security to a large degree. I use it frequent enough that it was worth the initial effort of setup too. Although I rarely use GnuPG for secure communications because others don't use GnuPG.
+GnuPG has improved my own security to a large degree. I use it frequently enough that it was worth the initial effort of setup, although I rarely use GnuPG for secure communications because others don't use GnuPG.
 
-I’ll elaborate on that later but it's one of PGP's often-mentioned faults. Despite that fact, I've examples below of how I use each of my sub-keys for everyday tasks.
+I’ll elaborate on that later but it's one of PGP's often-mentioned faults. Despite that fact, I have examples below of how I use each of my sub-keys for everyday tasks.
 
-### Password Manager - Encryption/Decryption
+#### Password Manager - Encryption/Decryption
 
 These days, most people are at least familiar with the idea of password managers. Two common examples are [LastPass](https://www.lastpass.com/) or [1Password](https://1password.com/). Remember one master password and you have access to your vault. I was using LastPass before GnuPG actually.
 
 However, I was never confident in whether their main selling point was really the ‘convenience’ or the ‘security’ of having an online password manager. 
 
-These services are better for storing passwords than stickie notes sure, but it's also vital to enable the additional security features that they provide such as password generation, two-factor authentication .etc. to ensure full security. In spite of that, many of these said features are premium only and you end up paying for your
-security.
+These services are better for storing passwords than sticky notes, sure, but it's also vital to enable the additional security features that they provide such as password generation, two-factor authentication etc. to ensure full security. In spite of that, many of these said features are premium only and you end up paying for your security.
 
-Online password managers are adequate if used intelligently and to their full potential like I described. Although they pose their own inherent risks too. 
+Online password managers are adequate if used intelligently and to their full potential like I described, although they pose their own inherent risks too. 
 
-Firstly, the fact that you’re placing your full trust in a company to hold all the keys to your digital life. Not only Google and Facebook accounts, but possibly bank account details or personal documents.
+First, you’re placing your full trust in a company to hold all the keys to your digital life. Not only Google and Facebook accounts, but possibly bank account details or personal documents.
 
 Provided you trust the company, you’re pooling your most critical data with everyone else on their server. It's an obvious target and any successful breach would prove catastrophic.
 
 !! For instance, LastPass was [hacked](https://www.wired.com/2015/06/hack-brief-password-manager-lastpass-got-breached-hard/) in 2015. Email addresses, password hints, and encrypted master passwords were exposed. More recently, a [vulnerability](https://www.theguardian.com/technology/2016/jan/18/phishing-attack-steal-lastpass-password-manager-details) in the login page of their app that made phishing attacks possible was discovered.
 
-It was reading the news surrounding LastPass that prompted me to switch to GnuPG. Behind the scenes, everyone's using public-key and symmetric cryptography anyways. So why not be responsible for your own security?
+!!! UPDATE 2022: LastPass suffered a [far more severe breach](https://en.wikipedia.org/wiki/LastPass#2022_breach) in 2022, where attackers exfiltrated entire encrypted password vaults along with unencrypted metadata including URLs. The encrypted vaults remain vulnerable to offline brute-force attacks in perpetuity. This is precisely the catastrophic scenario described above.
+
+It was reading the news surrounding LastPass that prompted me to switch to GnuPG. Behind the scenes, everyone's using public-key and symmetric cryptography anyway. So why not be responsible for your own security?
 
 Currently I'm using a CLI password manager called [Pass](https://www.passwordstore.org/) on my local machine. Data is encrypted using my GnuPG encryption sub-key and stored using Pass in a special directory named `~/.password-store`. Since my sub-keys exist only on my NitroKey, decryption requires its physical presence.
  
-Another neat feature to Pass is the ability of Git integration. This is especially useful in tracking changes and maintaining backups. 
+Another neat feature of Pass is the ability of Git integration. This is especially useful in tracking changes and maintaining backups. 
 
 !! This isn't an invitation to push your encrypted Pass directory to Github as a public repository! One downside to Pass is how it shows hierarchical directory listings in the clear. 
 !! 
-!! This has the consequence of revealing the ‘metadata’ behind entries. It's not a security flaw per say, but it'd be an improvement if entry names could be hidden from view.
+!! This has the consequence of revealing the ‘metadata’ behind entries. It's not a security flaw per se, but it'd be an improvement if entry names could be hidden from view.
 
 That's all there is to Pass. It's fundamentally simple and it's the most common use I have for GnuPG. I've found it to be incredibly useful and I'd recommend it. There's also quite a few extensions for Pass too, such as add-on OTP support.
 
-### SSH - Authentication
+#### SSH - Authentication
 
-The second typical use I have for PGP is SSH server authentication. My server is hosted on DigitalOcean and I use SSH to login. With GnuPG, I can use the authentication key I've present on my NitroKey for SSH connections.
+The second typical use I have for PGP is SSH server authentication. My server is hosted on DigitalOcean and I use SSH to login. With GnuPG, I can use the authentication key present on my NitroKey for SSH connections.
 
 GnuPG allows you to extract an SSH public key from your key-chain and export it to your server. Then I overrode the default SSH Agent on Mac with the GnuPG Agent daemon for SSH connections. 
 
@@ -240,55 +243,44 @@ In a nutshell, this means that the only method for anyone to log into my remote 
 
 !!! Setting up the GnuPG Agent is a little tricky. The newest version of GnuPG, GPG 2.1 is also slightly different. [This](https://incenp.org/notes/2015/gnupg-for-ssh-authentication.html) is a tutorial for the latest version of GnuPG.
 
-It's pretty neat and it's also a bonus that DigitalOcean supports OTP for the NitroKey.
+It's also a bonus that DigitalOcean supports OTP for the NitroKey.
 
-### Github - Signature
+#### Github - Signature
 
 I don't contribute much on Github but often it's important that commits are validated and contributors identifiable.
 
 ![github_gpg.png](github_gpg.png?cropResize=1600,1600&format=webp&quality=82)
 
-Sounds like the perfect use-case for PGP and the signing sub-key. Remember that digital signatures fall under the tenet of Non-Repudiation in Information Security. Being able to digitally sign a Git commit, merge .etc. uniquely affiliates the user to the action.
+This is the perfect use-case for PGP and the signing sub-key. Remember that digital signatures fall under the tenet of Non-Repudiation in Information Security. Being able to digitally sign a Git commit, merge etc. uniquely affiliates the user to the action.
 
 ![github_verification.png](github_verification.png?cropResize=1600,1600&format=webp&quality=82)
 
 Therefore, when a commit is signed, Github will display that the commit is verifiable as shown above.
 
-### Conclusions
+### Conclusion
 
-The examples for GnuPG I've listed above are especially useful to me and I use them everyday. The OTP functionality of the NitroKey is fantastic when it's supported. I've it setup with all my online accounts where it's available. 
+The use cases I’ve outlined, password management, SSH authentication and commit signing, are where PGP delivers tangible value. Each maps directly to one of the four tenets introduced at the outset: the NitroKey provides multi-factor authentication, Pass ensures confidentiality through encryption, and signed commits establish non-repudiation. The OTP functionality of the NitroKey complements these further, and I have it set up with all my online accounts where it’s supported.
 
-However, I'm left with the annoyance that I haven't had the opportunity to correspond with others using PGP. The original intention of PGP was to enable secure end-to-end encrypted communications. But I haven't been able to avail of this yet; down to the fact that others don't use PGP.
-
-I use [ProtonMail](https://protonmail.com/) as my email service and sign my emails with my PGP Public key fingerprint but I've yet to receive anything encrypted from someone else. I realise the likelihood of that ever happening is quite slim but the geek in me would love the opportunity to use PGP over email for once.
+However, PGP’s original ambition was broader than personal tooling. It was designed to enable secure end-to-end encrypted communications. In practice, I have yet to avail of this; I use [ProtonMail](https://protonmail.com/) and sign my emails with my PGP public key fingerprint, but I’ve never received anything encrypted from someone else. The reason is straightforward: others don’t use PGP.
 
 ![protonmail.jpg](protonmail.jpg?cropResize=1600,1600&format=webp&quality=82)
 
 !!! ProtonMail is an open-source, end-to-end encrypted email service located in Switzerland. It uses its own adaptation of PGP to secure emails between ProtonMail accounts. Except support for PGP key importation is unsupported at present. Hence why I have two PGP public keys, one for ProtonMail alongside my NitroKey one.
 
-There's also a few downsides to using PGP for email anyways. PGP for email satisfies integrity, confidentiality and non-repudiation, but it falls down in one regard. It doesn't protect the ‘metadata’ belonging to the email or hide the correspondents. This is an important privacy concern since even the information about the email can be as valuable as the contents.
+This points to PGP’s fundamental limitation. It satisfies integrity, confidentiality and non-repudiation for email, but it falls down in two regards. First, it doesn’t protect the metadata belonging to the email or hide the correspondents. This is a significant privacy concern, since even the information _about_ an email can be as valuable as its contents. Second, PGP doesn’t support forward secrecy. There is no practical way of refreshing the encryption sub-key for different messages, so if keys were ever compromised, an attacker could decrypt every email from the first to the last.
 
-Secondly, PGP doesn't support forward secrecy either. There's no practical way of refreshing your encryption sub-key for different messages. Hence if your keys were ever compromised, an attacker could decrypt all your emails from the very first time you used PGP to the present.
+These are not incidental shortcomings. They reflect the tension identified at the start of this post: cryptography is only as good as it is convenient. PGP satisfies the four tenets in principle, but its complexity undermines adoption, and without adoption, the tenets that depend on both parties, confidentiality and non-repudiation in particular, go unfulfilled.
 
-Aware of these drawbacks, a nascent security service called [Keybase](https://keybase.io/) aims to improve on PGP. Realising PGP's failings on the user-friendliness front, Keybase is taking a fresh approach.
+Services like [Keybase](https://keybase.io/) represent one attempt to address this. By wrapping PGP’s complexity beneath a more accessible interface, Keybase aims to lower the barrier without compromising the underlying cryptographic guarantees.
 
 ![keybase_app.png](keybase_app.png?cropResize=1600,1600&format=webp&quality=82)
 
-Wrapping PGP's complexity beneath a slick app, Keybase gives you all the features of PGP without the hassle. The nitty-gritty is hidden away but it's uncompromising on the functionality. 
-
-PGP is messy, archaic and technically difficult. It's been almost three decades and it's not getting anymore popular. Keybase is what the future should be and I'm looking forward to it.
-
-What I like especially is Keybase's unique approach to verifying your online identity. Besides your PGP public key, Keybase also allows you to verify yourself in all manners of ways. 
-
-You can claim ownership of your online accounts and that becomes part of your Keybase chain. Facebook, Twitter, Github .etc. are all there. You can do the same for your devices too. The idea is that the more authentication information available, the more you can trust someone's identity. 
+What distinguishes Keybase is its approach to identity verification. Beyond your PGP public key, Keybase allows you to claim ownership of online accounts (Github, Twitter, etc.) and devices, building a chain of authentication evidence. The more corroborating information available, the more confidence can be placed in someone’s identity.
 
 ![keybase_follow.png](keybase_follow.png?cropResize=1600,1600&format=webp&quality=82)
 
-Keybase allows you to securely chat and share files with your connections on its platform with end-to-end encryption using PGP too.
-
-!!! UPDATE 05/10/17: As of yesterday, Keybase has introduced [Encrypted Git](https://keybase.io/blog/encrypted-git-for-everyone). Think of a private repository on Github, but _privater_. As in, it's fully end-to-end encrypted. 
-!!! What's more, everything is signed too. This makes complete sense since Keybase is setup with your device's private key. Likewise, fetches are cryptographically verified. It's a beautiful and effortless solution that isn't offered anywhere else.
+!!! UPDATE 05/10/17: Keybase has introduced [Encrypted Git](https://keybase.io/blog/encrypted-git-for-everyone), offering fully end-to-end encrypted repositories with cryptographically verified fetches. Since Keybase is configured with your device’s private key, everything is signed by default.
 
 ![keybase_git](keybase_git.png?cropResize=1600,1600&format=webp&quality=82)
 
-There's no doubt it's breathing new life into PGP. Into the future I predict this will be the survival of PGP; its integration into services such as Keybase. Public-key cryptography isn't ever going to disappear, but it's clear PGP won't be the future, but likely part of it.
+Public-key cryptography is not going to disappear. But PGP in its current form is unlikely to achieve the mass adoption its tenets require. Its survival will depend on integration into services that abstract its complexity away from the end user, whilst preserving the guarantees that made it worth using in the first place.

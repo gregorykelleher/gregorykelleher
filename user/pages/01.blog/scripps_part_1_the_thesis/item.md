@@ -261,4 +261,4 @@ Scripps owns more broadcast spectrum than any peer, reaches 38% of U.S. TV house
 
 The question isn't whether Scripps is a good business in the traditional sense. It's whether the cash flows, the catalyst, and the repositioning create enough runway to outrun the structural decline, and whether the current price adequately compensates for the risk that they don't.
 
-In [Part 2](/blog/broadcasting-pt2), I'll dig into the capital structure, valuation, ownership signals, and whether this actually makes sense as a trade.
+In [Part 2](https://gregorykelleher.com/scripps_part_2_the_numbers), I'll dig into the capital structure, valuation, ownership signals, and whether this actually makes sense as a trade.

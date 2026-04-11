@@ -9,6 +9,7 @@ taxonomy:
 Wow, time does fly! It's been quite awhile since my last post so I've decided to write a quick update on what I'm doing. 
 
 <svg preserveAspectRatio="xMinYMin meet" class="svg-content" viewBox="0 0 620 300" id="update_post"></svg>
+<script type="text/javascript" src="/user/themes/saturn_custom/js/snap.svg-min.js" defer="defer"></script>
 <script type="text/javascript" src="/user/pages/01.blog/quick_update/update_post.js" defer="defer"></script>
 <br>
 

@@ -14,13 +14,13 @@ Having recently returned to dynamically-typed languages, I've found myself stumb
 
 ===
 
-###What is Duck-Typing anyways?
+### What is Duck-Typing anyway?
 
-Python is an example of a strongly, dynamically typed language. Type _constraints_ are not checked at compile time, however poorly-defined _operations_ (e.g. conversions) are caught at run-time.
+Python is an example of a strongly, dynamically typed language. Type _constraints_ are not checked at compile time; however, poorly-defined _operations_ (e.g. conversions) are caught at run-time.
 
 Duck-typing leverages this property of Python; determining the "suitability" of an object by its operations.
 
-Hence the example of the "Duck" object and its associated `quack()` and `fly()` operations. Any object bearing the same operations or properties of a duck, must surely then be a duck,
+Hence the example of the "Duck" object and its associated `quack()` and `fly()` operations. Any object bearing the same operations or properties of a duck must surely then be a duck:
 
 > "If it walks like a duck and it quacks like a duck, then it must be a duck"
 
@@ -53,11 +53,11 @@ AttributeError: 'Whale' object has no attribute 'fly'
 
 !!! As I'd describe it, it's _"validation by observation"_ occurring at run-time, with an emphasis on behaviour. Versus my familiarity of _validation by compilation_ with an emphasis on type constraints
 
-My gripe with duck-tying is that it's a guideline principle. Albeit a simple one, that isn't a guarantee that the programmer will always follow it. It's harder to circumvent a compiler than a code-reviewer.
+My gripe with duck-typing is that it's a guideline principle, and a simple one at that, but it isn't a guarantee that the programmer will always follow it. It's harder to circumvent a compiler than a code-reviewer.
 
-###LBYL vs EAFP
+### LBYL vs EAFP
 
-A naïve programmer like myself unfamiliar with idiomatic Python, is likely to lean on the principles of LBYL, _"Look before you leap"_ to manually catch any run-time errors. This usually results in code that looks like the following:
+A naïve programmer like myself unfamiliar with idiomatic Python is likely to lean on the principles of LBYL, _"Look before you leap"_ to manually catch any run-time errors. This usually results in code that looks like the following:
 
 ```Python
 if "key" in my_dictionary:
@@ -73,13 +73,13 @@ except KeyError:
     pass
 ```
 
-Coming from C/C++, exceptions are well, exceptional. C doesn't even have them.
+Coming from C/C++, exceptions are, well, exceptional. C doesn't even have them.
 
 It follows then, that I wouldn't be predisposed to using exception-handling in the above manner. On the contrary, my familiarity would be in minimising potential runtime errors to the fullest extent possible. So the use of try/catch blocks would be a careful consideration in my experience.
 
 Of course, it's never possible to fully ensure complete runtime correctness. But from my background writing embedded software, there was always a stricter emphasis for using pre/post condition assertions (i.e. GSL `Expects()` and `Ensures()`) rather than exceptions.
 
-Moreover, there were never many opportunities to recover from a failed condition at runtime anyways. So it wasn't always possible to use an exception to continue program execution from a catch handler.
+Moreover, there were never many opportunities to recover from a failed condition at runtime anyway. So it wasn't always possible to use an exception to continue program execution from a catch handler.
 
 To reinterpret the above Python example in C++:
 
@@ -97,7 +97,9 @@ This coincidentally also satisfies Python's own mantra of _"explicit is better t
 
 !!! As a note on performance, LBYL means an extra operation will _always_ occur to validate the condition. However, with EAFP an extra operation will only _sometimes_ occur, i.e. on failure of the condition
 
-###Duck Typing vs Static Paradigms
+The distinction between LBYL and EAFP is really a microcosm of the broader tension between static and dynamic paradigms; where should validation occur and who bears the responsibility for it? With that framing in mind, let's return to the duck-typing example.
+
+### Duck Typing vs Static Paradigms
 
 Revisiting the Duck example from earlier:
 
@@ -153,7 +155,7 @@ auto quack_and_fly(Bird bird) -> void {
 }
 ```
 
-We can actually go one further and define a variadic template to take in an arbitary number of arguments:
+We can actually go one further and define a variadic template to take in an arbitrary number of arguments:
 
 ```cpp
 template<typename Bird, typename... Args>
@@ -164,7 +166,7 @@ auto quack_and_fly(Bird bird, Args&& ...args) -> void {
 }
 ```
 
-!!! This function is recursive; the overload processes the first bird, and then calls `quack_and_fly()` again for the remaining birds. The `std::forward<decltype(args)>(args)...` is used for perfect forwarding, preserving value categories (lvalues vs. rvalues) of the arguments passed in
+!!! This function is recursive; the overload processes the first bird, and then calls `quack_and_fly()` again for the remaining birds. The single-parameter overload defined above serves as the base case when the parameter pack is empty. The `std::forward<Args>(args)...` is used for perfect forwarding, preserving value categories (lvalues vs. rvalues) of the arguments passed in
 
 And so then in `main()` you could use the interface like so:
 
@@ -175,7 +177,7 @@ int main()
 }
 ```
 
-Which naturally results with:
+Which naturally results in:
 
 ```bash
 duck quacking
@@ -188,7 +190,7 @@ It's worth mentioning that we could also introduce a new C++20 feature, called a
 
 It's ideal for this scenario, if we consider `quack_and_fly()` to be our interface ([I.9](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#i9-if-an-interface-is-a-template-document-its-parameters-using-concepts)). Using a `concept` we can also express and evaluate our interface's requirements at compile-time.
 
-Somewhat homologous to how a try/catch block is used for dynamic evaluation of requirements at runtime in the earlier Python duck-typing example.
+This is somewhat homologous to how a try/catch block is used for dynamic evaluation of requirements at runtime in the earlier Python duck-typing example.
 
 Of course, for this example we'd like to place constraints on our interface, namely only allowing argument types that provide `quack()` and `fly()` member functions.
 
@@ -203,7 +205,8 @@ struct Penguin
 
 template<typename Bird>
 concept isBirdLike = requires (Bird bird) {
-    { bird.quack(), bird.fly() } -> std::same_as<void>;
+    { bird.quack() } -> std::same_as<void>;
+    { bird.fly() } -> std::same_as<void>;
 };
 
 template<isBirdLike Bird, typename... Args>
@@ -236,7 +239,8 @@ With C++20 we can avoid any explicit template boilerplating, by instead leveragi
 ```cpp
 template<typename Bird>
 concept isBirdLike = requires (Bird bird) {
-    { bird.quack(), bird.fly() } -> std::same_as<void>;
+    { bird.quack() } -> std::same_as<void>;
+    { bird.fly() } -> std::same_as<void>;
 };
 
 auto quack_and_fly(isBirdLike auto bird) -> void {
@@ -256,7 +260,8 @@ And lastly, for some final refinement, it's possible to switch from a recursive 
 ```cpp
 template<typename Bird>
 concept isBirdLike = requires (Bird bird) {
-    { bird.quack(), bird.fly() } -> std::same_as<void>;
+    { bird.quack() } -> std::same_as<void>;
+    { bird.fly() } -> std::same_as<void>;
 };
 
 auto quack_and_fly(isBirdLike auto&&... birds) -> void {
@@ -272,10 +277,28 @@ In the end then, I feel the above walkthrough demonstrates that you can have you
 
 > The compiler is a seatbelt, not a straightjacket
 
-I'd rather it did the heavy lifting of resolving bindings at compile time. Rather than burden myself with the cognitive load of manually validating object runtime behaviour.
+I'd rather it did the heavy lifting of resolving bindings at compile time, rather than burden myself with the cognitive load of manually validating object runtime behaviour.
 
-That all said, from my own subjective standpoint, I feel neither the static abbreviated function template technique, nor the dynamic duck-typing approach is intrinsically self-documenting though. Rather it feels as though I'm intentionally concealing the types for the sake of brevity.
+### Convergence
 
-Yes, in an idealised world with rigorous code reviews, disciplined test-driven development and meticulous pipeline automation, maybe that wouldn't be such a problem. 
+It's worth noting that Python itself has been moving in this direction. [PEP 544](https://peps.python.org/pep-0544/) introduced `Protocol` in Python 3.8, which enables structural subtyping; essentially static duck-typing, checked by tools like [mypy](https://mypy-lang.org/) at analysis time rather than at runtime:
 
-Despite its flexibility and convenience though, I can't feel convinced that duck-typing is advantageous where scalability and maintainability is a priority. Yet I also feel I've demonstrated readily enough how C++ can accomplish much the same using compile-time polymorphism with the express advantage that type-checking affords.
+```Python
+from typing import Protocol
+
+class BirdLike(Protocol):
+    def quack(self) -> None: ...
+    def fly(self) -> None: ...
+
+def quack_and_fly(bird: BirdLike) -> None:
+    bird.quack()
+    bird.fly()
+```
+
+This is the direct Python equivalent of a C++ `concept`. Any class that implements `quack()` and `fly()` satisfies `BirdLike` without explicitly inheriting from it, just as any type that satisfies `isBirdLike` can be passed to our constrained template. The validation happens before the code runs, not during.
+
+The fact that Python's own ecosystem has introduced a mechanism for static interface validation suggests that the trade-off isn't really between flexibility and safety, but between validating early and validating late.
+
+### Conclusion
+
+Neither approach is intrinsically self-documenting; both the abbreviated function template and dynamic duck-typing conceal types for the sake of brevity. But the static approach catches violations before the code ever runs. In a codebase that must scale and be maintained, that distinction is the one that matters.

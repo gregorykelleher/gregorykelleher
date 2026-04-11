@@ -8,25 +8,25 @@ taxonomy:
     tag: [programming, code quality, clean code, readability, software design]
 ---
 
-I decided to do a short write-up about my approach to writing a good program. I'd recently finished reading Clean Code by "Uncle Bob" and I felt evangelised to put what I learnt into action.
+A walkthrough of my approach to writing a good program, informed by Clean Code and A Philosophy of Software Design. The premise is simple, the structure of a program should be driven by its public interface, not its implementation.
 
 ![program.svg](program.svg)
 
 ===
 
-###Introduction
+### Introduction
 
-I don't intend on describing the utmost perfect program. Neither am I out to write a great program, nor a bad one. Rather just a good program. 
+I don't intend to describe the utmost perfect program. Neither am I out to write a great program, nor a bad one. Rather just a good program. 
 
-Usually when we're under the constraints of deadlines at work, it's rare to have the time to deliver an idealised solution anyways.
+Usually when we're under the constraints of deadlines at work, it's rare to have the time to deliver an idealised solution anyway.
 
-For that reason, I'm not going to delve into time-complexity or justify early optimisation here. Nevertheless, I do place a strict importance on providing a flexible and readable solution. If indeed the time comes when the program needs to be optimised or extended in the future.
+For that reason, I'm not going to delve into time-complexity or justify early optimisation here. Nevertheless, I do place a strict importance on providing a flexible and readable solution, if indeed the time comes when the program needs to be optimised or extended in the future.
 
 To quote Harold Abelson here,
 
 > “Programs must be written for people to read, and only incidentally for machines to execute”
 
-###Problem Statement
+### Problem Statement
 
 To provide a use case for the program, I thought building a simple CSV reader would fit the bill.
 
@@ -64,19 +64,19 @@ Thankfully, for this simple example, we can come up with a straightforward answe
 
 ! In the real world however, it's usually not this simple. Evidenced by the experience of almost every developer that's ever cried about a "lack of requirements"
 
-Note how the program requirement is _just_ vague enough to give some scope of flexibility. Yet still provides a direct aim for the program.
+Note how the program requirement is _just_ vague enough to give some scope of flexibility, yet still provides a direct aim for the program.
 
-###Defining the Public Interface
+### Defining the Public Interface
 
 For me, it helps to visualise the program as a tool for a potential client. It might be a standalone program right now, but as a project grows, this `csv_reader` program might become reorganised into a component of a much larger piece of software.
 
 A future client won't necessarily care about how `csv_reader` actually works. Their only interest is including a hypothetical `csv_reader.h` file into their program and calling some function that returns the data from the input.
 
-Hence why I like to start from the opposite end. Looking at what the _output_ of `csv_reader` might eventually resemble. Rather than immediately delving into parsing the _input_.
+Hence why I like to start from the opposite end, looking at what the _output_ of `csv_reader` might eventually resemble, rather than immediately delving into parsing the _input_.
 
 This is contrary to what I frequently find when integrating others' software. Usually there's a span of time where I'm scanning through a header file, struggling to locate _that_ function that I want to use. 
 
-> Oh, and I need to instantiate this object beforehand? Oh right, of course. And I also need to cast before I can pass that as a parameter, gotcha .etc.
+> Oh, and I need to instantiate this object beforehand? Oh right, of course. And I also need to cast before I can pass that as a parameter, gotcha etc.
 
 To avoid potential internal monologue like above, it's crucial to pay attention to the client interface, right from the outset.
 
@@ -90,7 +90,7 @@ Taking inspiration from the requirement, here's what this could look like:
 auto const messages{ extract_messages(input) };
 ```
 
-Ground-breaking I know. This may look trivial, but that's the point. It _should_ be trivial. Simplicity is the ultimate sophistication. Writing in this manner could be described as [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming), where the "what" takes precendence over the "how".
+Ground-breaking, I know. This may look trivial, but that's the point. It _should_ be trivial. Simplicity is the ultimate sophistication. Writing in this manner could be described as [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming), where the "what" takes precedence over the "how".
 
 I can subscribe to this dogma; I find it easier to read expressions than follow control flow. In fact, Dijkstra has a quote on this, which fits quite nicely:
 
@@ -98,7 +98,7 @@ I can subscribe to this dogma; I find it easier to read expressions than follow 
 
 > For that reason we should do (as wise programmers aware of our limitations) our utmost to shorten the conceptual gap between the static program and the dynamic process, to make the correspondence between the program (spread out in text space) and the process (spread out in time) as trivial as possible"
 
-Anyhow, now begs the question; what are we returning from `extract_messages()`? What type does `messages` hold?
+Anyhow, this begs the question; what are we returning from `extract_messages()`? What type does `messages` hold?
 
 Looking at the `sample_input.csv` each line could represent a `message` containing the data for each of the three fields:
 
@@ -117,7 +117,7 @@ struct Message
 }
 ```
 
-It follows then, that `extract_messages()` would return an `std::vector` of messages. So we can begin to put together a signature for our API:
+It follows then that `extract_messages()` would return an `std::vector` of messages. So we can begin to put together a signature for our API:
 
 ```cpp
 // csv_reader.h
@@ -168,13 +168,13 @@ int main()
 }
 ```
 
-###Implementing the Program Logic
+### Implementing the Program Logic
 
 And now for the meat of the matter - the implementation. We have a defined input and a defined output, so we can commence on building out the program's internal logic.
 
 Since this is a simple program, there's little need in taking a class-oriented approach here. I think this is well suited to a procedural rendition. The logical steps taken in parsing lend themselves to this interpretation.
 
-A useful thinking strategy is spelling out in plain English what the program has to accomplish, and listing each step in sequence. From each step, a function declaration can usually be gleamed.
+A useful thinking strategy is spelling out in plain English what the program has to accomplish, and listing each step in sequence. From each step, a function declaration can usually be gleaned.
 
 To elaborate on the technique with our program:
 
@@ -187,13 +187,13 @@ To elaborate on the technique with our program:
 
 So six steps and potentially six functions. I find this is a good way of "eye-balling" how the end program could manifest. Listing what the program has to do has also revealed to us the procedure of execution.
 
-This bears a resemblance to what is called _The Stepdown Rule_ in Clean Code. Our program's code should read like a top-down narrative, where every function is followed by those functions at the next level of abstraction descendingly.
+This bears a resemblance to what is called _The Stepdown Rule_ in Clean Code. Our program's code should read like a top-down narrative, where every function is followed by those functions at the next level of abstraction in descending order.
 
 Our example `csv_reader` program is convenient for highlighting this rule, but it can oftentimes be difficult to follow with something more complex. On the whole though, it's the most enlightening thing I've learnt from the book.
 
 !!!! Whether a `message` or a `field` within a `message`, there's a common theme of extract, check and get. We should try and hold ourselves to this when building the program.
 
-####Extract Messages
+#### Extract Messages
 
 Starting from the top down this time, let's have a go at writing the definition for the public `extract_messages()` function:
 
@@ -219,7 +219,7 @@ std::vector<Message> extract_messages(T &input_stream)
 }
 ```
 
-The first three functions we hypthosised above are evident here:
+The first three functions we hypothesised above are evident here:
 
 | Step  	| Purpose 						 	| function 			   |
 | --------- | --------------------------------- | -------------------- |
@@ -227,7 +227,7 @@ The first three functions we hypthosised above are evident here:
 | 2   		| Check if the message is valid     | `is_message_valid()` |
 | 3   		| Get the message 				 	| `get_message()` 	   |
 
-That's half the program complete already! Well almost.
+That's half the program complete already! Well, almost.
 
 From the definition of `extract_messages()` and its name alone, its intent is obvious. 
 
@@ -239,9 +239,9 @@ One of the most important take-aways from Clean Code is that functions should al
 
 I could easily include the `is_message_valid()` logic within `extract_messages()` in the definition above. Yet I choose to wrap this logic in its own function. This also helps to maintain the logic at the right level of abstraction.
 
-!!! Similiar to classes, functions work best if they follow a _single responsibility principle_, i.e. doing one thing and doing it well
+!!! Similar to classes, functions work best if they follow a _single responsibility principle_, i.e. doing one thing and doing it well
 
-####Check Message Validity and Get the Message
+#### Check Message Validity and Get the Message
 
 ```cpp
 // csv_reader.cpp
@@ -259,17 +259,17 @@ static Message get_message(std::string const &line)
 }
 ```
 
-The next two functions are again, small. They each take a single argument (i.e. they're _unary_). It may sound like a small thing to note, but limiting the number of arguments to a function improves testability.
+The next two functions are, again, small. They each take a single argument (i.e. they're _unary_). It may sound like a small thing to note, but limiting the number of arguments to a function improves testability.
 
 The more arguments to a function, the greater the difficulty in writing the test cases to ensure all the various combinations of arguments work in tandem.
 
-Furthermore, both can be described as being _pure functions_. A pure function is simply a function that, given the same imput, should always produce the same output. In a word, _deterministic_.
+Furthermore, both can be described as being _pure functions_. A pure function is simply a function that, given the same input, should always produce the same output. In a word, _deterministic_.
 
 By definition then, pure functions do not cause side effects. Their predictable nature and transparency make them ideal building blocks for our programs, hence why we should favour them whenever possible.
 
 !! Truth be told, I do use GSL precondition assertions within, which in turn will terminate the program given an invalid case (i.e. side-effect). So strictly speaking, these functions aren't entirely kosher. Alas this is unavoidable when interacting with file I/O
 
-For example, in the `get_message()` function, I'm able to "daisy-chain" my pure functions to express a composition. Where the return of `get_fields()` can be _composed_ using the return of `extract_fields()` as its inline argument.
+For example, in the `get_message()` function, I'm able to "daisy-chain" my pure functions to express a composition, where the return of `get_fields()` can be _composed_ using the return of `extract_fields()` as its inline argument.
 
 So rather than having a monolithic function taking multiple arguments, this approach works on evaluating a sequence of nesting functions instead, each with a singular argument.
 
@@ -283,7 +283,7 @@ This fits quite neatly with John Ousterhout's advocacy for _deep classes_ in his
 
 ![classes](classes.svg)
 
-A class, or indeed, a namespace or module, consist of two parts, an _interface_ and _implementation_.
+A class, or indeed, a namespace or module, consists of two parts, an _interface_ and _implementation_.
 
 An interface describing _"what"_ a class has to do, and the implementation describing _"how"_ it does it.
 
@@ -291,9 +291,9 @@ In designing a good class, we want to minimise the complexity of the interface (
 
 A deep class therefore, is a class that embraces those qualities, with a concise interface abstracting deep internal functionality.
 
-It can be said then, that `csv_reader` matches this description thus far; with a singular `extract_messages()` public interface hiding the actual implementation of extraction.
+It can be said then that `csv_reader` matches this description thus far; with a singular `extract_messages()` public interface hiding the actual implementation of extraction.
 
-####Check Field Validity and Get the Field
+#### Check Field Validity and Get the Field
 
 Now onto the final half of the implementation; getting the data within the fields:
 
@@ -353,11 +353,11 @@ static bool are_fields_valid(std::vector<std::string> const &fields)
 }
 ```
 
-And that's the entirety of the implementation covered. I hope it's provided some clarity to how a program can be written with thought and consideration. It's flexible, open to extension and most importantly provides a succinct interface for the client.
+And that's the entirety of the implementation covered. I hope it's provided some clarity on how a program can be written with thought and consideration. It's flexible, open to extension and most importantly provides a succinct interface for the client.
 
-####Unit Testing
+#### Unit Testing
 
-Finally, everyone's favourite part - unit testing. Frequently this is where code can become undone. Maybe you uncover dead code or discover branches that could never be hit .etc. Unit testing (done well) tests the behaviour of our functionality.
+Finally, everyone's favourite part - unit testing. Frequently this is where code can become undone. Maybe you uncover dead code or discover branches that could never be hit etc. Unit testing (done well) tests the behaviour of our functionality.
 
 It needn't be exhaustive but it should be thorough.
 
@@ -412,13 +412,13 @@ Likewise, we should also test with an `invalid_file.csv` to ensure `EXPECT_NE(me
 
 What about all our other functions to test then? Remember we're only including whatever's in `csv_reader.h` which only constitutes the single public `extract_messages()` function.
 
-Therefore, we only have a single point of access to the program via `extract_messages()` to test all the statically defined helper functions in the `csv_reader.h` file. Tricky...
+Therefore, we only have a single point of access to the program via `extract_messages()` to test all the statically defined helper functions in the `csv_reader.cpp` file. Tricky...
 
 We could cheat and include `csv_reader.cpp` in our `csv_reader.h.cpp` unit test file. That way, everything would be part of the same translation unit. Not a great solution and feels a little dirty.
 
-This is why I templated `extract_messages()` in hindsight of this limitation. I understood that a single entry to the program could prove troublesome.
+This is why I templated `extract_messages()` in anticipation of this limitation. I understood that a single point of entry to the program could prove troublesome.
 
-What's more, if `extract_messages()` were defined solely for a `std::ifstream` type parameter, I'd have to create multiple input test files for each test case. This obviously hampers the extensiblity of the unit test, and discourages others to add new test cases.
+What's more, if `extract_messages()` were defined solely for a `std::ifstream` type parameter, I'd have to create multiple input test files for each test case. This obviously hampers the extensibility of the unit test, and discourages others to add new test cases.
 
 ```cpp
 TEST(test_extract_messages, handles_missing_line)
@@ -441,9 +441,9 @@ TEST(test_extract_messages, handles_missing_line)
 With `extract_messages()` templated for `std::istringstream` types, we can define the file test data inline, inside the test case. No need to create a file, and much easier to see what's under test.
 
 
-###Conclusion
+### Conclusion
 
-I hope this walkthrough provided an insight into how I strategise and implement a solution in code. From reading, I'd say it's apparent my own mantra leans towards building robust and readable code. Likely stemming from my experience working on embedded and safety-critical applications.
+The thread running through all of this is that the public interface should drive everything else. Starting from the output shaped the API. The stepdown rule dictated the internal structure. Keeping functions pure and unary made composition possible. And the decision to template the input, the one apparent departure from simplicity, paid for itself in testability.
 
-
+None of these are novel ideas individually. But applied together, with discipline, they compound. A program written this way is readable not because it has comments explaining what it does, but because its structure already tells you.
 

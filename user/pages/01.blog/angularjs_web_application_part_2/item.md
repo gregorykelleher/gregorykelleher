@@ -11,6 +11,7 @@ taxonomy:
 As a follow-up on my previous post, I wanted to go into further detail on how the Angular application was built; right from the ground up.
 
 <svg preserveAspectRatio="xMinYMin meet" class="svg-content" viewBox="0 0 620 300" id="angularjs_project_2"></svg>
+<script type="text/javascript" src="/user/themes/saturn_custom/js/snap.svg-min.js" defer="defer"></script>
 <script type="text/javascript" src="/user/pages/01.blog/angularjs_web_application_part_2/angularjs_project2.js" defer="defer"></script>
 <br>
 

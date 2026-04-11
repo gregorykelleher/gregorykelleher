@@ -13,6 +13,7 @@ AngularJS is something I've been wanting to try out for a very long time. Thankf
 <!-- ![knight](knight.svg) -->
 
 <svg preserveAspectRatio="xMinYMin meet" class="svg-content" viewBox="0 0 620 300" id="angularjs_project"></svg>
+<script type="text/javascript" src="/user/themes/saturn_custom/js/snap.svg-min.js" defer="defer"></script>
 <script type="text/javascript" src="/user/pages/01.blog/angularjs_web_application_part_1/angularjs_project.js" defer="defer"></script>
 <br>
 

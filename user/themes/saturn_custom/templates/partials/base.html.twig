@@ -7,6 +7,21 @@
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
+        <link rel="canonical" href="{{ page.url(true) }}" />
+
+        {# Open Graph and Twitter Card tags for social sharing previews #}
+        {% set og_desc = page.summary|striptags|trim|slice(0, 200) %}
+        {% if not og_desc %}{% set og_desc = site.metadata.description %}{% endif %}
+        <meta property="og:title" content="{{ page.title|e }}" />
+        <meta property="og:type" content="{% if page.template == 'item' %}article{% else %}website{% endif %}" />
+        <meta property="og:url" content="{{ page.url(true) }}" />
+        <meta property="og:site_name" content="{{ site.title|e }}" />
+        <meta property="og:description" content="{{ og_desc|e }}" />
+        {% set og_image = page.media.images|first %}
+        {% if og_image %}
+        <meta property="og:image" content="{{ base_url_absolute ~ og_image.url }}" />
+        {% endif %}
+        <meta name="twitter:card" content="summary" />
         <link rel="alternate" type="application/rss+xml" title="{{ site.title|e }}" href="{{ base_url_absolute }}/blog.rss" />
 
         {# Inline critical CSS so the browser can paint above-the-fold content

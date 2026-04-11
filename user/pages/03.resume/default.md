@@ -7,16 +7,22 @@ My name's Gregory Kelleher. Originally I'm from Ireland but I'm now working as a
 
 I've been lucky to have experience in a range of software domains spanning Automotive, IoT, Cloud to AI Accelerators. Accordingly, I've built a proven track record contributing to high-profile projects across both Research and Production.
 
-I'm well-versed in C++17 and Modern CMake, and have a keen interest in doing technical presentations in my spare time..
+I'm well-versed in C++17 and Modern CMake, and have a keen interest in doing technical presentations in my spare time.
 
 ---
 <br></br>
 
-##Experience
+## Experience
+
+**MED-EL GmbH**
+
+_Software Engineer • July 2024 - Present_
+
+Developing the Hear-Care mobile application using C# with .NET MAUI
 
 **Qualcomm Technologies, Inc.**
 
-_Software Engineer • January 2021 - May 2024_
+_Software Engineer • January 2022 - May 2024_
 
 Member of Qualcomm’s high-calibre Corporate R&D team, designing and developing middleware for state-of-the-art Cloud AI inference accelerator
 
@@ -46,13 +52,13 @@ Initiated and successfully deployed the AWS CDK IaC framework, significantly imp
 
 _Automotive Software Engineer • August 2018 - January 2021_
 
-Over 2 years of experience delivering robust software at the highest ISO 26262 ASIL-D rated safety-critical requirements; in research and production settings
+Over 2 years of experience delivering robust software at the highest ISO 26262 ASIL-D rated safety-critical requirements, in research and production settings
 
 Continuous contributions to the BSP for the new Land Rover Defender (L663)
 
 Built extensive experience with latest automotive virtualisation technologies
 
-Heavily involved in the design and development of the off-boarding agent for the Land Rover Defender, with the goal to provide SOTA capabilities to enable Level 2 grade ADAS diagnostics
+Heavily involved in the design and development of the off-boarding agent for the Land Rover Defender, with the goal to provide software-over-the-air (SOTA) capabilities to enable Level 2 grade ADAS diagnostics
 
 Long-term commitment writing bespoke software to evaluate experimental EVA architecture proposals
 
@@ -62,7 +68,7 @@ Maintained and enhanced cross-team GitLab CI/CD pipeline at scale
 
 **Intel Research & Development Ireland Ltd**
 
-_Software Engineer • Feb 2017 - Aug 2017, May 2016 - Sept 2016_
+_Software Engineer • February 2017 - August 2017, May 2016 - September 2016_
 
 Contributed to latest firmware for Quark SoC Atlas Peak BSP and built proficiencies with dynamic testing analysis for SoCs
 
@@ -71,7 +77,7 @@ Delivered research project on IoT security, showcasing 'Zero-Touch' Secure Devic
 ---
 <br></br>
 
-##Proficiencies
+## Proficiencies
 
 **Systems/Application Programming and Scripting**
 
@@ -95,7 +101,7 @@ Delivered research project on IoT security, showcasing 'Zero-Touch' Secure Devic
 ---
 <br></br>
 
-##Education
+## Education
 
 **Maynooth University** • B.Sc. Computer Science and Software Engineering • 2014 - 2018
 

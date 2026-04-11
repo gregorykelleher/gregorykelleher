@@ -6,7 +6,7 @@ taxonomy:
     tag: [copyright, convergence, essay, digital rights, open access]
 ---
 
-Just another essay I managed to dig up during my searches. I enjoyed reading it again and it's worth sharing.
+A college essay examining how media convergence has strained the foundations of copyright law, from the Google Books ruling and the SOPA protests to the unresolved question of content ownership on platforms like Instagram.
 
 ![copyright](copyright.svg)
 
@@ -20,8 +20,8 @@ Just another essay I managed to dig up during my searches. I enjoyed reading it 
 
 ### Assignment - Effects of Convergence
 
-Copyright is a noble ideal. In its truest form it aspires to promote and foster the creation of new bodies of work, whilst granting legal protection to original authors & creators. 
-The significance of copyright law has not been lost in our digital age, however its founding aspirations have diverged from its original purpose and it’s maladjusted in a pivotal time for media convergence.
+Copyright is a noble ideal. In its truest form it aspires to promote and foster the creation of new bodies of work, whilst granting legal protection to original authors and creators. 
+The significance of copyright law has not been lost in our digital age; however, its founding aspirations have diverged from its original purpose and it is maladjusted in a pivotal time for media convergence.
 
 The misalignment of copyright law has been proven historically through the research of Paul J. Heald (2013), who studied the repercussions of myopic copyright protections and its deleterious effects on the availability of 20th century books. 
 His findings reveal a curtailment of publications from the enactment of copyright protections in 1923 that only served to suppress the market for books. In his own words he writes,
@@ -34,11 +34,11 @@ Hence the exigency for the present. If these are the dramatic consequences of dr
 Unsurprisingly, one doesn’t have to look far to find a parallel contemporary illustration. In 2004, Google began scanning books - both copyrighted and uncopyrighted alike, building an online catalogue available for the public good.
 Google’s intention of creating a digital platform for a prodigious archive of human literature is a prime example of where technological convergence facilitates this requisite.
 
-In this manifestation, Google circumvented the established distribution network of publishers and authors, offering over 25 million unique publications from a single platform (Heyman, 2015). In turn actively expanding this vast repository of content to new audiences and channels.
+In this manifestation, Google circumvented the established distribution network of publishers and authors, offering over 25 million unique publications from a single platform (Heyman, 2015), in turn actively expanding this vast repository of content to new audiences and channels.
 
-This of course was not without its critics, with the Authors Guild suing Google in 2005 on the allegation of violating its member’s copyright. A striking example of contemporary convergence threatening the established order.
+This of course was not without its critics, with the Authors Guild suing Google in 2005 on the allegation of violating its members’ copyright. A striking example of contemporary convergence threatening the established order.
 
-In the landmark case, Google was deemed legal in a decisive ruling, that found Google’s venture to be fair use. And in the words of the presiding judge, Denny Chin (2013), _'transformative'_, because, _'words in books are being used in a way they have not been used before'_ (_Authors Guild Inc._ v Google Inc., 2013).
+In the landmark case, Google was deemed legal in a decisive ruling that found Google’s venture to be fair use. And in the words of the presiding judge, Denny Chin (2013), _'transformative'_, because, _'words in books are being used in a way they have not been used before'_ (_Authors Guild Inc._ v Google Inc., 2013).
 
 In veiled terms, he’s describing the profound and transformative impact convergence is having on the expansion of content. In his decision, he also writes, 
 
@@ -53,7 +53,7 @@ In the words of one of its founders, Lawrence Lessig (2004),
 
 > _'Overregulation stifles creativity. It smothers innovation. It gives dinosaurs a veto over the future. It wastes the extraordinary opportunity for a democratic creativity that digital technology enables.'_
 
-Lessig (2004) also maintains that today’s culture has become subjugated to traditional content distributors (or _'prohibitionists'_ in the words of Henry Jenkins [2006]) which desire to maintain and strengthen their monopolies on cultural products, and that Creative Commons role is in providing alternatives to these restrictions.
+Lessig (2004) also maintains that today’s culture has become subjugated to traditional content distributors (or _'prohibitionists'_ in the words of Henry Jenkins [2006]) which desire to maintain and strengthen their monopolies on cultural products, and that Creative Commons' role is in providing alternatives to these restrictions.
 
 These prohibitionists according to Henry Jenkins (2006) only wish to strengthen their grip on content, intransigent to the shifting sands of convergence and the growing participatory culture associated with it.
 
@@ -69,7 +69,7 @@ Open Access is an online repository for the publication of research output, free
 > 'What if everyone in the world were in your lab – a ‘hive mind’ of sorts, but composed of countless creative intellects rather than mindless worker ants, and one in which resources, reagents and effort could be shared, along with ideas, in a manner not dictated by institutional and geographical constraints?
 
 The spectacular growth of Open Access since the advent of the web can be attributed to two pivotal events.
-The first being _'digitisation'_ and its impact on communication channels. With global reach and scope, new means of collaboration we’re now possible to achieve.
+The first being _'digitisation'_ and its impact on communication channels. With global reach and scope, new means of collaboration were now possible to achieve.
 
 As Robert J. Simpson (2009) remarked on the Internet and Open Access,
 
@@ -83,7 +83,7 @@ Another leading flaw in this model is the ratcheting prices of journal subscript
 
 These distributive models are relics of pre-convergence. Academic Journals do not produce the material, nor do they write the papers or even employ the reviewers. They simply hold monopolistic sway over scientific research which is counter to the scientific culture of discovery and proliferation of knowledge.
 
-In a system where the government funds scientific research through taxpayer’s money, and scientists conduct research and write papers, there is little rationale for the gratuitous distributive restrictions enforced by Academic Journals.
+In a system where the government funds scientific research through taxpayers’ money, and scientists conduct research and write papers, there is little rationale for the gratuitous distributive restrictions enforced by Academic Journals.
 Yet, it’s only through the direct influence of convergence that copyright freedom advocacy has come to challenge this obsolescent model.
 
 And in truth, the strongest proponents of copyright freedoms are the products of convergence and participatory culture themselves. Key organisations and communities in the Copyleft movement such as Wikipedia, Mozilla and others have their own stake in the copyright reform debate.
@@ -107,25 +107,25 @@ The RIAA (Recording Industry Association of America) also claimed in a statement
 
 There’s an element of irony in their statements, considering these are so often the victims of the same allegations by their opponents belonging to the Copyleft movement. Nevertheless, it doesn’t make them wrong. They are simply witness to their own diminishing role in persuading public opinion, as the powers of their once dominant industry have begun to wane under the pressures of convergence.
 
-Although it’s common for these established media companies to be unaccommodating on copyright or the ideas of participatory culture, it’s becoming harder for them to ignore their customers evolving demands. The prohibitionist stance is losing ground to the more nascent _'collaborationist'_ approach, adopted especially by new start-ups and multimedia companies (Jenkins, 2006).
+Although it’s common for these established media companies to be unaccommodating on copyright or the ideas of participatory culture, it’s becoming harder for them to ignore their customers' evolving demands. The prohibitionist stance is losing ground to the more nascent _'collaborationist'_ approach, adopted especially by new start-ups and multimedia companies (Jenkins, 2006).
 
 As Henry Jenkins (2006) writes on this phenomenon,
 
 > _'new media companies are experimenting with new approaches which see fans as important collaborators in the production of content and as grassroots intermediaries helping to promote the franchise.'_
 
-These companies are choosing to recognise and embrace the unique relationship they have with their customers, leveraging their influence to publicise and spread their brand. In this symbiotic relationship of sorts, customers are reciprocated with early access to new content, extra privileges and increased exposure .etc.
+These companies are choosing to recognise and embrace the unique relationship they have with their customers, leveraging their influence to publicise and spread their brand. In this symbiotic relationship of sorts, customers are reciprocated with early access to new content, extra privileges and increased exposure etc.
 
 One notable example of a company pivoting towards a collaborationist approach is GoPro Inc. The popular camera maker is a favourite amongst bmxers, surfers, skydivers and those with a passion for extreme sports. This promising customer base with its massive volume of user generated content is a strong asset for GoPro with untapped potential, offering a way for the company to distance itself from simply being a ‘hardware’ company and diversify its business model.
 
 Furthermore, GoPro is acutely aware of the demise of the once dominant Kodak company and its ill-famed unwillingness in adapting to the convergence of digital and analog film (Hiltzik, 2011).
 
-GoPro however has spelt out its ambitions in becoming a multimedia company, making the intuitive leap from physical products to digital content (GoPro Inc., 2014). In this age of social and technological convergence, GoPro is well placed to take full advantage of these newly-defined channels for content distribution, transforming its audience into its very own distribution network.
+GoPro, however, has spelt out its ambitions in becoming a multimedia company, making the intuitive leap from physical products to digital content (GoPro Inc., 2014). In this age of social and technological convergence, GoPro is well placed to take full advantage of these newly-defined channels for content distribution, transforming its audience into its very own distribution network.
 
 Another more subtle reason for GoPro’s transition towards embracing convergence is that it understands the threat posed by it. GoPro is primarily a camera company of course, but it cannot deny that most people today carry smartphones with embedded megapixel cameras.
 
 Hence instead of smartphones being a competitor to their cameras, GoPro views them as being complementary, since users can access the GoPro app and use their phones as remote controls for their GoPro cameras for instance (GoPro Inc., 2014).
 
-Besides the highlighted marketing partnerships, sponsored and professional content, GoPro is also actively involving more user-based content within its publishing model - usually without user permissions. This isn’t uncustomary for companies today but it does bear the question - what does the user earn in this relationship - and how does it affect copyright?
+Besides the highlighted marketing partnerships, sponsored and professional content, GoPro is also actively involving more user-based content within its publishing model - usually without user permissions. This isn’t uncustomary for companies today but it does raise the question - what does the user earn in this relationship - and how does it affect copyright?
 
 Users today are unwittingly or unwillingly part of a company’s distribution platform and must come to terms with their personal rights over their own content. A company such as GoPro could be portrayed as empowering the user through content exposure or in fact, exploiting the user’s content for their own advantage. 
 
@@ -138,19 +138,19 @@ This issue of content ownership is more nuanced still when content itself is gen
 Take Instagram for example. While it doesn’t claim ownership of any content users post, under its very broad terms and conditions, the user is giving Instagram the right to use any of their photos for free, for any purpose, anywhere in the world. 
 Instagram can also grant those rights to a third party (Deosaran, 2015). These rules are important to consider when one acknowledges that Instagram has over 400 million users and over 40 billion images (Instagram, 2016).
 
-However, much of the criticism surrounding Instagram’s copyright culture isn’t targeted at its policies but rather the behaviour of its users. Increasing backlash from users over image theft & copyright infringement has lead Instagram into clarifying its terms of services (Holpuch, 2012). Yet critics still claim that Instagram isn’t doing enough to protect user property. 
+However, much of the criticism surrounding Instagram’s copyright culture isn’t targeted at its policies but rather the behaviour of its users. Increasing backlash from users over image theft and copyright infringement have led Instagram into clarifying its terms of services (Holpuch, 2012). Yet critics still claim that Instagram isn’t doing enough to protect user property. 
 
 In a time when user-generated and non-professional content is fast becoming a crucial part of the overall media mix, it’s no longer acceptable for it to suffer from a lack of strong copyright controls. This urgent issue over content ownership is a prime example of where convergence can in fact complicate the matter of copyright.
 
-Perhaps the worst manifestation and most stinging example of this growing issue is the reappropriation of Instagram users’ photos by the controversial artist Richard Prince. His recent exhibition - 'New Portraits' comprises entirely of Instagram photos belonging to others. 
+Perhaps the worst manifestation and most stinging example of this growing issue is the reappropriation of Instagram users’ photos by the controversial artist Richard Prince. His recent exhibition - 'New Portraits' consists entirely of Instagram photos belonging to others. 
 
 If this is provoking in itself, it must hurt to know that some of his pieces sold for $90,000 at art fairs (Contrera, 2015). Richard Prince was able to take people’s photographs without their permission, blow them up, exhibit them in a public place without credit and then make a profit on the back of it. All without much fear of repercussion.
 
-Such is the state of copyright today. Recalling that one of the most important tenets of copyright law being the element of commercial gain, $90,000 is hard to justify in this circumstance. Not unexpectedly, he’s been sued numerous times for copyright infringement in the past but the complex issue of ‘fair use’ and appropriation mean prosecution has always been of remote concern.
+Such is the state of copyright today. Recalling that commercial gain is one of the most important considerations in copyright law, $90,000 is hard to justify in this circumstance. Not unexpectedly, he’s been sued numerous times for copyright infringement in the past but the complex issue of ‘fair use’ and appropriation mean prosecution has always been of remote concern.
 
 It’s remarkable to think that even in our age of convergence, the underpinning principles of copyright law have remained much as they were originally envisioned. Such was its significance then (as is now), that copyright law is enshrined in the U.S constitution, _'to promote the progress of science and useful arts by securing for limited times to authors the exclusive right to their respective writings'_ (U.S Constitution, 1789).
 
-However the ideals of copyright law have remained unchanged through history, our relationship with copyright has only become more complex with growing convergence in our digital age. As consumers and creators, we cannot lose sight of our copyright rights and its societal worth. Now more than ever, and amidst growing governmental and corporate pressure on copyright law, users must stand for a return to copyright’s core values. 
+While the ideals of copyright law have remained unchanged throughout history, our relationship with copyright has only become more complex with growing convergence in our digital age. As consumers and creators, we cannot lose sight of our copyright rights and its societal worth. Now more than ever, and amidst growing governmental and corporate pressure on copyright law, users must stand for a return to copyright’s core values. 
 
 In a historical era for copyright, the laws being signed today in response to convergence will shape and define our views on copyright in times ahead. Hence the growing imperative to pivot and adapt copyright, ensuring the protection of consumers and creators in the digital future to come.
 
@@ -198,7 +198,7 @@ Holpuch, A. (2012) ‘Instagram reassures users over terms of service after mass
 Available [here](https://www.theguardian.com/technology/2012/dec/18/instagram-issues-statement-terms-of-service)
 (accessed 24 February 2016).
 
-Instagram (2016) Instragram Press [online]. 
+Instagram (2016) Instagram Press [online]. 
 Available [here](https://www.instagram.com/press/?hl=en)
 (accessed 24 February 2016).
 

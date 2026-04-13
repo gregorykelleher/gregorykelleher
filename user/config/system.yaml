@@ -24,6 +24,7 @@ pages:
         twig: false
     markdown:
         extra: true
+    url_taxonomy_filters: false
     dateformat:
         default: 'H:i d/m/Y'   # strict European: zero-padded HH:MM dd/mm/YYYY
 

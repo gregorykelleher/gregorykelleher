@@ -1,6 +1,6 @@
 ---
 title: Graphic Packaging - Boring Until It Isn't
-date: 16:30 03/30/2026
+date: 16:30 30/03/2026
 author: Gregory Kelleher
 taxonomy:
     category: blog
@@ -8,8 +8,6 @@ taxonomy:
 ---
 
 My previous article balanced on the cutting edge of technology. This one sits on the edge of a cardboard box. On face value, Graphic Packaging Holding Company (NYSE:GPK) isn't glamorous, but then again, neither is the inside of a cereal box. But somebody still had to make it. As the world's largest producer of paperboard packaging, GPK probably did too.
-
-In an era where narrative commands a premium, companies are valued not just on what they earn, but also upon the story they inhabit. ServiceNow draws lavish attention being at the forefront of AI and the future of enterprise automation, whereas GPK inhabits a story about boxes? If the market has priced them accordingly, why do I find GPK so much more compelling?
 
 ![gpk.svg](gpk.svg)
 
@@ -174,7 +172,7 @@ It is worth pausing on how unusual that posture is. The market read the amendmen
 
 The arithmetic from there is unusually mechanical. Management's normalised FY2026 EBITDA guidance, stripping out the temporary impact of a deliberate inventory drawdown, sits between $1.2B and $1.4B. I'm using the lower end of that range, $1.2B, which assumes no volume recovery and no benefit from the demand-dependent half of Waco's EBITDA target. CEO Rietbroek has guided $500M of debt paydown in FY2026; I assume the same pace continues into FY2027.
 
-!!! **A note on the two leverage figures.** GPK's net leverage is quoted two ways: **3.8x** in the press release ($5.31B of net debt divided by $1.395B of headline Adjusted EBITDA) and **3.63x** in the 10-K (same calculation, but using a bank-defined EBITDA of ~$1.469B that includes a few add-backs the credit agreement permits). Both are real, and the 3.63x is what the lenders monitor for compliance. I'm using the 3.8x throughout the scenarios below to stay on the most conservative side.
+!! **A note on the two leverage figures.** GPK's net leverage is quoted two ways: **3.8x** in the press release ($5.31B of net debt divided by $1.395B of headline Adjusted EBITDA) and **3.63x** in the 10-K (same calculation, but using a bank-defined EBITDA of ~$1.469B that includes a few add-backs the credit agreement permits). Both are real, and the 3.63x is what the lenders monitor for compliance. I'm using the 3.8x throughout the scenarios below to stay on the most conservative side.
 
 The path from here writes itself:
 

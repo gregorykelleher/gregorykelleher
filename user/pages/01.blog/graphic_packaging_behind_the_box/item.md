@@ -150,7 +150,9 @@ What makes this inflection different from most is that it asks almost nothing of
 
 The cash flow, compelling as it is, is just one lens on the business. The balance sheet makes the same argument, and arrives at the same conclusion.
 
-If we look over GPK's asset replacement value, adding up all the property, plant, and equipment (five U.S. mills, over 100 converting plants spanning 26 countries, _including_ the brand-new Waco facility), the company carries a replacement cost that dwarfs the $2.73B equity market capitalisation. The stock trades at 0.82x price-to-book. At that multiple, the market is paying virtually nothing for anything beyond the physical assets; the customer relationships with PepsiCo, Coca-Cola, Nestlé and the rest of the consumer-staples roster, the 3,100 patents, the vertical integration, the switching costs of a supplier physically embedded in its customers' production lines. All of it is priced at next to nothing.
+If we look over GPK's asset replacement value, adding up all the property, plant, and equipment (five U.S. mills, over 100 converting plants spanning 26 countries, _including_ the brand-new Waco facility), the company carries a replacement cost that dwarfs the $2.73B equity market capitalisation. The stock trades at 0.82x price-to-book, valuing the entire company below its own accounting equity and discounting the customer relationships with PepsiCo, Coca-Cola, Nestlé and the rest of the consumer-staples roster, the 3,100 patents, the vertical integration, the switching costs of a supplier physically embedded in its customers' production lines.
+
+! **A note on the P/B figure.** Roughly $2.7B of the ~$3.3B book value is goodwill and intangibles from prior acquisitions; tangible equity is only ~$600M, putting price-to-tangible-book (TBV) closer to 4.5x. The sub-1x P/B does not mean the physical assets come free. It means the market has marked the acquired franchise down to less than what was paid to assemble it.
 
 The market structure GPK operates also tells the same story. In coated unbleached kraft (CUK), the market is effectively a duopoly, with GPK at roughly 60% and Smurfit WestRock at roughly 40%, and no new capacity announced anywhere in the grade. Smurfit WestRock, post-merger, is de-emphasising folding carton and consumer packaging in favour of corrugated, making it a less aggressive competitor in GPK's core markets. The duopoly structure remains intact.
 
@@ -162,7 +164,7 @@ Then there are tariffs, which cut in GPK's favour. The current US tariff regime 
 
 GPK is on the right side of this. Approximately 70% of its manufacturing base is domestic, its fibre is domestically sourced, and the vertical integration from mill to carton means the tariff falls on its competitors, not on its own cost structure. Its European operations are locally integrated, buying European board and selling to European customers, so the cross-border exposure is minimal. In the one grade where overcapacity posed a genuine threat to GPK's pricing, the tariff regime has made the marginal competitor meaningfully more expensive.
 
-Take the grades together, add the tariff tailwind, and the same conclusion lands across all of them. GPK is the dominant player in CUK and CRB, structurally insulated from the SBS overhang, and now the beneficiary of a trade regime that no sell-side model has incorporated. The market is pricing this business as though it were the most vulnerable participant in a deteriorating industry. What the buyer at $9.24 actually receives is the inverse, a dominant franchise in a consolidated market, trading below its physical assets and generating cash the market hasn't yet counted.
+Take the grades together, add the tariff tailwind, and the same conclusion lands across all of them. GPK is the dominant player in CUK and CRB, structurally insulated from the SBS overhang, and now the beneficiary of a trade regime that no sell-side model has incorporated. The market is pricing this business as though it were the most vulnerable participant in a deteriorating industry. What the buyer at $9.24 actually receives is the inverse, a dominant franchise in a consolidated market, trading below its own book value and generating cash the market hasn't yet counted.
 
 #### Where the Cash Goes
 
@@ -442,6 +444,8 @@ A near three-bagger.
 | **Expected** | | | **$15.50** |
 
 Probability-weighted upside from $9.24: **+68%**. Against the bear case, the reward-to-risk is ($15.50 − $9.24) / ($9.24 − $7.50) = $6.26 / $1.74 = roughly **3.6 to 1**. Against the stress case, it is $6.26 / $4.74 = roughly **1.3 to 1**. The asymmetry survives both readings, but the stress case is honest about what failure costs.
+
+! **A note on discounting.** The scenario prices and the +68% expected return are undiscounted two-year forward values. At a 12% cost of equity, inclusive of $0.88 in dividends, the present-value expected return compresses to roughly +42%.
 
 These weightings are judgment calls, as all probability assignments are. Shift 10 percentage points from base to bear (10/40/30/20) and the expected value drops to roughly $14.35, still +55% from today's price. The thesis does not depend on getting the weightings exactly right; it depends on getting the base rate roughly right.
 

@@ -31,7 +31,7 @@ pages:
 cache:
     enabled: true
     check:
-        method: file
+        method: none
     driver: auto
     prefix: 'g'
     lifetime: 604800

@@ -344,7 +344,7 @@ footer .social li a:hover {
     height: auto;
     overflow: visible;
 }
-a:focus, button:focus, input:focus, [tabindex]:focus {
+a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible {
     outline: 2px solid #E85F37;
     outline-offset: 2px;
 }

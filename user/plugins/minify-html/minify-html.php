@@ -56,7 +56,9 @@ class MinifyHtmlPlugin extends Plugin
       // Else only compress the page
       if ($this->config['plugins.minify-html.cache'] and !is_null($this->grav['page']->route())) {
         $cache = $this->grav['cache'];
-        $cache_id = md5('minify-html' . $this->grav['page']->id());
+        // Key on page id + URI params so /page:2, /tag:foo etc. don't collide
+        // with their parent route (page->id() alone is route-agnostic).
+        $cache_id = md5('minify-html' . $this->grav['page']->id() . $this->grav['uri']->params());
         $compressedHtmlCache = $cache->fetch($cache_id);
         // If the page is not already cached compress the output then cache it
         // Else return the precached page

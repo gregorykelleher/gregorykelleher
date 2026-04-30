@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [singleton, design patterns, programming, object-oriented, software architecture]
+    tag: [singleton, design-patterns, programming, object-oriented, software-architecture]
 ---
 
 It's a favourite pastime of critics to bash on the use of singletons, and that argument has merit. Frequent encounters have left an indelible mark on my psyche. This post is a continuation of an age-old argument.

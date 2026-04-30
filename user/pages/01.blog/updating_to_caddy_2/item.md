@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [caddy, web server, update, ssl, server migration]
+    tag: [caddy, web-server, update, ssl, server-migration]
 ---
 
 I've finally bit the bullet and made the long-overdue update to the latest version of Caddy. Read ahead to find out how I made my changes.

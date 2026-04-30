@@ -217,7 +217,7 @@ So I think that covers the SSL configuration for my web server then. So let's sw
 
 ![ssl_labs.png](ssl_labs.png?cropResize=1600,1600&format=webp&quality=82)
 
-That's a definite improvement and reflects the changes and improvements I've made to Nginx. You can see the results yourself [here](ssllabs.com/ssltest/analyze.html?d=gregorykelleher.com&latest).
+That's a definite improvement and reflects the changes and improvements I've made to Nginx. You can see the results yourself [here](https://www.ssllabs.com/ssltest/analyze.html?d=gregorykelleher.com&latest).
 
 It goes to show that upgrading and improving a website's SSL offerings isn't hard and well worth the effort. There's still things to do of course, but I'm satisfied with what I've accomplished so far.
 

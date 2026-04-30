@@ -3,7 +3,7 @@ title: Effects of Convergence Essay
 date: 13:07 09/04/2017
 taxonomy:
     category: blog
-    tag: [copyright, convergence, essay, digital rights, open access]
+    tag: [copyright, convergence, essay, digital-rights, open-access]
 ---
 
 A college essay examining how media convergence has strained the foundations of copyright law, from the Google Books ruling and the SOPA protests to the unresolved question of content ownership on platforms like Instagram.

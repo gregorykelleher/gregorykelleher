@@ -4,7 +4,7 @@ date: 10:00 16/07/2016
 published: false
 taxonomy:
     category: blog
-    tag: [debugging, quark, intel, issm, embedded systems]
+    tag: [debugging, quark, intel, issm, embedded-systems]
 highlight:
     theme: monokai
 ---

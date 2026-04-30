@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [type systems, programming, dynamic typing, static typing, python]
+    tag: [type-systems, programming, dynamic-typing, static-typing, python]
 ---
 
 Having recently returned to dynamically-typed languages, I've found myself stumbling a little without the safety net of type-checking. Yet, I'm not convinced on the principles of duck-typing either.

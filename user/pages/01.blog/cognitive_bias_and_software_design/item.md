@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [cognitive bias, heuristics, software design, decision-making, programming]
+    tag: [cognitive-bias, heuristics, software-design, decision-making, programming]
 ---
 
 For a discipline supposedly rooted in rationality and logic, it's surprising there isn't a greater emphasis placed on decision-making. All too often, critical decisions are led by heuristics rather than formal methods.

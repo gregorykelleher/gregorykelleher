@@ -3,7 +3,7 @@ title: Turks & Caicos
 date: 18:02 21/02/2015
 taxonomy:
     category: blog
-    tag: [graphic design, logo, illustration, vector art, portfolio]
+    tag: [graphic-design, logo, illustration, vector-art, portfolio]
 ---
 
 

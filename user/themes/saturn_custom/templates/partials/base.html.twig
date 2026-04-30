@@ -7,9 +7,10 @@
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
-        <link rel="canonical" href="{{ page.url(true) }}" />
         {% if uri.params %}
         <meta name="robots" content="noindex, follow" />
+        {% else %}
+        <link rel="canonical" href="{{ page.url(true) }}" />
         {% endif %}
 
         {# Open Graph and Twitter Card tags for social sharing previews #}

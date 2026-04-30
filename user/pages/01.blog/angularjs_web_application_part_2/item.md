@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [angular, web development, firebase, angular material, database]
+    tag: [angular, web-development, firebase, angular-material, database]
 ---
     
 As a follow-up on my previous post, I wanted to go into further detail on how the Angular application was built; right from the ground up.

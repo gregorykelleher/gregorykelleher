@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, tutorial, gps, electronics, budget hardware]
+    tag: [arduino, tutorial, gps, electronics, budget-hardware]
 ---
 
 While most components you'll likely use with Arduino are relatively cheap, sometimes there's the odd part that comes at a premium that's outside your budget. Here's my experience with the alternative.

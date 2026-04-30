@@ -4,7 +4,7 @@ date: 16:30 30/03/2026
 author: Gregory Kelleher
 taxonomy:
     category: blog
-    tag: [investing, gpk, graphic packaging, thesis, security, analysis]
+    tag: [investing, gpk, graphic-packaging, thesis, security, analysis]
 ---
 
 My previous article balanced on the cutting edge of technology. This one sits on the edge of a cardboard box. On face value, Graphic Packaging Holding Company (NYSE:GPK) isn't glamorous, but then again, neither is the inside of a cereal box. But somebody still had to make it. As the world's largest producer of paperboard packaging, GPK probably did too.

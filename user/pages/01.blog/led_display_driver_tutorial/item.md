@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [arduino, tutorial, electronics, LED, MAX7219]
+    tag: [arduino, tutorial, electronics, led, max7219]
 ---
 
 There are many different ways of controlling LEDs using an Arduino and using a MAX7219CNG chip is one such way. You’ll most likely stumble across it much like I did once you’ve exhausted all your options using shift registers & ‘daisy-chaining’ begins sounding monotonous. 

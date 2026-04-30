@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [programming, code quality, clean code, readability, software design]
+    tag: [programming, code-quality, clean-code, readability, software-design]
 ---
 
 A walkthrough of my approach to writing a good program, informed by Clean Code and A Philosophy of Software Design. The premise is simple, the structure of a program should be driven by its public interface, not its implementation.

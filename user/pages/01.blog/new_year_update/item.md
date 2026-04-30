@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [caddy, web server, update, dns, https]
+    tag: [caddy, web-server, update, dns, https]
 ---
 
 Given it's the start to a new year and I haven't written much in the last few months, I thought I'd post a short update on just a few things I've done in the last while.

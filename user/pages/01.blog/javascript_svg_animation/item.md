@@ -5,7 +5,7 @@ highlight:
     theme: monokai
 taxonomy:
     category: blog
-    tag: [SVG, Snap, Tutorial, Animation, Javascript]
+    tag: [svg, snap, tutorial, animation, javascript]
 ---
 
 Click the image to animate! And no, that's not a GIF either. It's an SVG drawing being animated and manipulated with Javascript and the Snap SVG library. Read more to learn how I did this. 

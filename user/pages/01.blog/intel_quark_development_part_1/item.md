@@ -4,7 +4,7 @@ date: 00:06 12/06/2016
 published: false
 taxonomy:
     category: blog
-    tag: [quark, intel, iot, issm, embedded systems]
+    tag: [quark, intel, iot, issm, embedded-systems]
 highlight:
     theme: monokai
 ---

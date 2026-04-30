@@ -3,7 +3,7 @@ title: Lyons Café
 date: 16:17 04/09/2015
 taxonomy:
     category: blog
-    tag: [web design, web development, photography, grav, portfolio]
+    tag: [web-design, web-development, photography, grav, portfolio]
 ---
 
 It's a great feeling to say I've finally finished my latest website for [Lyons Café](http://www.lyonscafe.com). To tell the truth, it's possibly the most cutting-edge website I've built so far, and I'm feeling pretty proud about it!

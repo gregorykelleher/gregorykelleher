@@ -3,7 +3,7 @@ title: Dublin Maker Faire 2015
 date: 17:29 25/07/2015
 taxonomy:
     category: blog
-    tag: [maker faire, robotics, event, arduino, dublin]
+    tag: [maker-faire, robotics, event, arduino, dublin]
 ---
 
 Dublin Maker Faire was on and I brought my little rover along for the day. 

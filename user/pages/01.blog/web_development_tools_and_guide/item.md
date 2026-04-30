@@ -2,7 +2,7 @@
 title: Web Development Tools & Guide
 date: 08:44 21/08/2015
 taxonomy:
-    tag: [web development, tutorial, nodejs, sass, build tools]
+    tag: [web-development, tutorial, nodejs, sass, build-tools]
 ---
 
 Building a site these days isn't as easy as when I started. Before, I could've been satisfied with just a html page, some basic css & maybe some javascript. These days I seem to be tripping up over a bunch of different technologies, all vying for attention. 

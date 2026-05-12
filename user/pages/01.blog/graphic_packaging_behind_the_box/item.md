@@ -1,5 +1,5 @@
 ---
-title: Graphic Packaging - Boring Until It Isn't
+title: Graphic Packaging (Part 1) - Boring Until It Isn't
 date: 16:30 30/03/2026
 author: Gregory Kelleher
 taxonomy:

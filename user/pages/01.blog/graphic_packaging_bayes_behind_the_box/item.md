@@ -1,5 +1,5 @@
 ---
-title: Graphic Packaging - Bayes Behind the Box
+title: Graphic Packaging (Part 2) - Bayes Behind the Box
 date: 14:13 04/05/2026
 author: Gregory Kelleher
 taxonomy:
@@ -136,7 +136,7 @@ Some uncertainties aren't waiting for evidence; they're waiting for time, and th
 
 ### Committing to a Number
 
->>> _"The difference between being very smart and very foolish is often very small" ~ Avos Tversky_
+> _"The difference between being very smart and very foolish is often very small" ~ Avos Tversky_
 
 The two tranches outlined above must now be translated into a single set of weights, concrete enough to amount to a probability claim. Stated in advance, the weights can be held accountable to whatever the next quarter brings. Stated afterwards, they aren't a prior at all, only a rationalisation. The whole point of the earlier warning against creeping determinism was to force the commitment now, while the answer is still genuinely unknown, and while the weights can still be moved honestly by the data rather than retrofitted to it.
 
@@ -152,7 +152,7 @@ Each tranche resists a smooth fit for different reasons. On the operational side
 
 The four scenarios from the earlier write-up already provide a discrete distribution, at the resolution the evidence can credibly support, so any continuous form layered over them would be applying imprecise weights in better-looking math without refining the belief beneath. The real value here lies in the pre-commitment, the structured updating, and the accountability that follows from both, not in the form of the distribution itself.
 
-![scenarios_histogram.svg](scenarios_histogram.svg)
+![scenario_histogram.svg](scenario_histogram.svg)
 
 Pinning the estimates then, the prior would read, out of 100 plausible futures, 10 land in stress at around ~$1.05B, 30 in bear at ~$1.20B, 40 in base at ~$1.30B, and 20 in bull at ~$1.55B. Tabulated below:
 

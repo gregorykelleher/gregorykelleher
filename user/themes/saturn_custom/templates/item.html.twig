@@ -17,15 +17,24 @@
 
 			 {% include 'partials/blog_item.html.twig' with {'truncate':false,'big_header':true} %}
 
-      {# Schema.org BlogPosting JSON-LD for SEO rich-result eligibility. #}
-      {# page.media.images is rasters only — SVGs are type=vector and live in
-         page.media.files, so fall back if no raster header image exists. #}
+      {# Schema.org BlogPosting JSON-LD for SEO rich-result eligibility and as
+         the canonical entity AI crawlers (ChatGPT, Perplexity, Gemini) read
+         when deciding to cite the article. The author is referenced by @id to
+         the homepage Person entity to keep entities unified across the site.
+
+         Image fallback mirrors base.html.twig: prefer raster, then first
+         vector. SVGs are accepted by some rich-result types but not all, so
+         this stays the lower-tier signal. #}
       {% set banner = page.media.images|first %}
       {% if not banner %}
           {% for medium in page.media.files if medium.type == 'vector' %}
               {% if loop.first %}{% set banner = medium %}{% endif %}
           {% endfor %}
       {% endif %}
+
+      {% set article_text = page.content|striptags|trim %}
+      {% set word_count = article_text|split(' ')|filter(w => w|length > 0)|length %}
+      {% set article_section = (page.taxonomy.tag|first)|default('Blog')|capitalize %}
       <script type="application/ld+json">
       {
           "@context": "https://schema.org",
@@ -35,16 +44,22 @@
               "@id": {{ page.url(true)|json_encode|raw }}
           },
           "headline": {{ page.title|json_encode|raw }},
+          "description": {{ (page.header.metadata.description ?: page.summary|striptags|trim|truncate(200, true, '…'))|json_encode|raw }},
           "datePublished": {{ page.date|date('c')|json_encode|raw }},
           "dateModified": {{ page.modified|date('c')|json_encode|raw }},
           "author": {
               "@type": "Person",
-              "name": {{ site.author.name|json_encode|raw }}
+              "@id": {{ (base_url_absolute ~ '/#person')|json_encode|raw }},
+              "name": {{ site.author.name|json_encode|raw }},
+              "url": {{ base_url_absolute|json_encode|raw }}
           },
           "publisher": {
-              "@type": "Person",
-              "name": {{ site.author.name|json_encode|raw }}
-          }{% if banner %},
+              "@id": {{ (base_url_absolute ~ '/#person')|json_encode|raw }}
+          },
+          "inLanguage": {{ (grav.language.getActive ?: grav.config.site.default_lang ?: 'en')|json_encode|raw }},
+          "articleSection": {{ article_section|json_encode|raw }},
+          "wordCount": {{ word_count }}{% if page.taxonomy.tag %},
+          "keywords": {{ (page.taxonomy.tag|join(', '))|json_encode|raw }}{% endif %}{% if banner %},
           "image": {{ (base_url_absolute ~ banner.url)|json_encode|raw }}{% endif %}
       }
       </script>

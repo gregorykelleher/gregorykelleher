@@ -7,7 +7,13 @@
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
-        {% if uri.params %}
+        {# Tag/category archive URLs (`/tag:investing`, `/category:blog`) carry
+           Grav params, but they are legitimate hub pages worth indexing.
+           Pagination URLs (`/page:2`) and any other combinations stay noindex
+           to avoid duplicate content. #}
+        {% set indexable_param_keys = ['tag', 'category'] %}
+        {% set noindex_keys = uri.params(null, true)|keys|filter(k => k not in indexable_param_keys) %}
+        {% if noindex_keys|length > 0 %}
         <meta name="robots" content="noindex, follow" />
         {% else %}
         <link rel="canonical" href="{{ page.url(true) }}" />
@@ -15,12 +21,13 @@
 
         {# Per-page meta description: prefer explicit frontmatter, fall back to
            the page summary (first paragraph before ===), then the site default.
-           Without this, every page would inherit site.metadata.description and
-           Google would show the same snippet for every result. #}
-        {% set page_desc = page.header.metadata.description
-            ?: (page.summary|striptags|trim|slice(0, 200))
+           truncate(_, true, _) preserves whole words so the snippet doesn't
+           cut off mid-word in SERPs and social cards. #}
+        {% set page_desc_full = page.header.metadata.description
+            ?: (page.summary|striptags|trim)
             ?: site.metadata.description %}
-        <meta name="description" content="{{ page_desc|slice(0, 160)|e }}" />
+        {% set page_desc = page_desc_full|truncate(200, true, '…') %}
+        <meta name="description" content="{{ page_desc_full|truncate(160, true, '…')|e }}" />
 
         {# Open Graph image: prefer raster (page.media.images), fall back to the
            first vector (page.media.files where type=vector). SVGs preview on
@@ -66,6 +73,42 @@
         {% endif %}
         <link rel="alternate" type="application/rss+xml" title="{{ site.title|e }}" href="{{ base_url_absolute }}/blog.rss" />
 
+        {# Sitewide Person + WebSite JSON-LD on the homepage builds a stable
+           entity for "Gregory Kelleher" in the Knowledge Graph and gives AI
+           Overviews something concrete to attribute work to. sameAs is
+           derived from site.social, dropping mailto: and the local RSS link. #}
+        {% if page.route == config.system.home.alias %}
+        {% set person_sameas = site.social|filter(s => s.icon not in ['send', 'rss'])|map(s => s.link) %}
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": {{ (base_url_absolute ~ '/#person')|json_encode|raw }},
+                    "name": {{ site.author.name|json_encode|raw }},
+                    "url": {{ base_url_absolute|json_encode|raw }},
+                    "image": {{ (base_url_absolute ~ url('theme://img/' ~ site.intro_avatar))|json_encode|raw }},
+                    "email": {{ ('mailto:' ~ site.author.email)|json_encode|raw }}{% if site.author.job_title %},
+                    "jobTitle": {{ site.author.job_title|json_encode|raw }}{% endif %}{% if site.author.works_for %},
+                    "worksFor": { "@type": "Organization", "name": {{ site.author.works_for|json_encode|raw }} }{% endif %}{% if site.author.knows_about %},
+                    "knowsAbout": {{ site.author.knows_about|json_encode|raw }}{% endif %}{% if person_sameas|length %},
+                    "sameAs": {{ person_sameas|values|json_encode|raw }}{% endif %}
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": {{ (base_url_absolute ~ '/#website')|json_encode|raw }},
+                    "url": {{ base_url_absolute|json_encode|raw }},
+                    "name": {{ site.title|json_encode|raw }},
+                    "description": {{ site.metadata.description|json_encode|raw }},
+                    "inLanguage": "en",
+                    "publisher": { "@id": {{ (base_url_absolute ~ '/#person')|json_encode|raw }} }
+                }
+            ]
+        }
+        </script>
+        {% endif %}
+
         {# Inline critical CSS so the browser can paint above-the-fold content
            immediately without waiting for the external stylesheet #}
         <style>{{ source('partials/critical.css')|replace({"\n": " "}) }}</style>
@@ -79,8 +122,10 @@
         <link rel="preload" href="{{ url('theme://fonts/fontawesome-webfont.woff?v=4.2.0') }}" as="font" type="font/woff" crossorigin>
 
         {% block javascripts %}
-            {% do assets.addJs('jquery', {priority: 101}) %}
-            {% do assets.addJs('theme://js/kube.min.js') %}
+            {# Vanilla nav-toggle replaces jQuery + kube.min.js (~100KB
+               minified). Mobile menu is the only interactive widget on the
+               site, so the rest of the kube tooling earned its way out. #}
+            {% do assets.addJs('theme://js/nav-toggle.js') %}
         {% endblock %}
 
         {% block stylesheets %}

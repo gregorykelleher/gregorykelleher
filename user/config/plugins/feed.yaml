@@ -1,0 +1,10 @@
+enabled: true
+limit: 20
+title: 'Gregory Kelleher'
+description: 'Posts on programming, infrastructure, and assorted experiments by Gregory Kelleher.'
+# length: 0 emits the full post body in the feed instead of a 500-char excerpt.
+# Truncated feeds optimise for clicks at the expense of reach; full content is
+# what feed readers, syndicators, and AI crawlers actually consume.
+length: 0
+enable_json_feed: true
+show_last_modified: true

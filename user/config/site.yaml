@@ -7,7 +7,15 @@ author:
   name: Gregory Kelleher
   email: 'gregory@gregorykelleher.com'
   footer: Gregory Kelleher 2026
-  #footer2:
+  job_title: 'Software Engineer'
+  works_for: 'MED-EL GmbH'
+  knows_about:
+    - 'value investing'
+    - 'security analysis'
+    - 'modern C++'
+    - 'embedded systems'
+    - 'decision theory'
+    - 'CMake'
 
 metadata:
     description: 'Writing on technology, investing, and whatever else catches my attention'

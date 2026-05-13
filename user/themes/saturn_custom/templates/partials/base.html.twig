@@ -16,7 +16,10 @@
         {% if noindex_keys|length > 0 %}
         <meta name="robots" content="noindex, follow" />
         {% else %}
-        <link rel="canonical" href="{{ page.url(true) }}" />
+        {# Canonical must include the request URI so tag/category archive pages
+           self-canonicalise; page.url(true) only returns the underlying page
+           route (`/`) and would deindex the very pages we just opened up. #}
+        <link rel="canonical" href="{{ base_url_absolute ~ uri.url }}" />
         {% endif %}
 
         {# Per-page meta description: prefer explicit frontmatter, fall back to
@@ -59,7 +62,7 @@
            "Blog" (which is what page.title resolves to when title: is empty). #}
         <meta property="og:title" content="{% if header.title %}{{ header.title|e }}{% else %}{{ site.title|e }}{% endif %}" />
         <meta property="og:type" content="{% if page.template == 'item' %}article{% else %}website{% endif %}" />
-        <meta property="og:url" content="{{ page.url(true) }}" />
+        <meta property="og:url" content="{{ base_url_absolute ~ uri.url }}" />
         <meta property="og:site_name" content="{{ site.title|e }}" />
         <meta property="og:description" content="{{ page_desc|e }}" />
         {% if og_image_url %}
@@ -77,7 +80,7 @@
            entity for "Gregory Kelleher" in the Knowledge Graph and gives AI
            Overviews something concrete to attribute work to. sameAs is
            derived from site.social, dropping mailto: and the local RSS link. #}
-        {% if page.route == config.system.home.alias %}
+        {% if page.route == grav.config.system.home.alias and uri.params(null, true)|length == 0 %}
         {% set person_sameas = site.social|filter(s => s.icon not in ['send', 'rss'])|map(s => s.link) %}
         <script type="application/ld+json">
         {

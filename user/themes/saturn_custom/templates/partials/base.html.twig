@@ -19,18 +19,25 @@
         {# Canonical must include the request URI so tag/category archive pages
            self-canonicalise; page.url(true) only returns the underlying page
            route (`/`) and would deindex the very pages we just opened up. #}
-        <link rel="canonical" href="{{ base_url_absolute ~ uri.url }}" />
+        <link rel="canonical" href="{{ base_url_absolute ~ uri.uri }}" />
         {% endif %}
+
 
         {# Per-page meta description: prefer explicit frontmatter, fall back to
            the page summary (first paragraph before ===), then the site default.
-           truncate(_, true, _) preserves whole words so the snippet doesn't
-           cut off mid-word in SERPs and social cards. #}
+           Manual word-aware truncate — Grav's `|truncate` filter has signature
+           (string, limit, up_to_break, break, pad) and the third arg is the
+           break char to search for, not an ellipsis, so it cuts mid-word. #}
         {% set page_desc_full = page.header.metadata.description
             ?: (page.summary|striptags|trim)
             ?: site.metadata.description %}
-        {% set page_desc = page_desc_full|truncate(200, true, '…') %}
-        <meta name="description" content="{{ page_desc_full|truncate(160, true, '…')|e }}" />
+        {% set page_desc = page_desc_full|length > 200
+            ? (page_desc_full|slice(0, 200)|split(' ')|slice(0, -1)|join(' ') ~ '…')
+            : page_desc_full %}
+        {% set meta_desc = page_desc_full|length > 160
+            ? (page_desc_full|slice(0, 160)|split(' ')|slice(0, -1)|join(' ') ~ '…')
+            : page_desc_full %}
+        <meta name="description" content="{{ meta_desc|e }}" />
 
         {# Open Graph image: prefer raster (page.media.images), fall back to the
            first vector (page.media.files where type=vector). SVGs preview on
@@ -62,7 +69,7 @@
            "Blog" (which is what page.title resolves to when title: is empty). #}
         <meta property="og:title" content="{% if header.title %}{{ header.title|e }}{% else %}{{ site.title|e }}{% endif %}" />
         <meta property="og:type" content="{% if page.template == 'item' %}article{% else %}website{% endif %}" />
-        <meta property="og:url" content="{{ base_url_absolute ~ uri.url }}" />
+        <meta property="og:url" content="{{ base_url_absolute ~ uri.uri }}" />
         <meta property="og:site_name" content="{{ site.title|e }}" />
         <meta property="og:description" content="{{ page_desc|e }}" />
         {% if og_image_url %}
@@ -80,7 +87,7 @@
            entity for "Gregory Kelleher" in the Knowledge Graph and gives AI
            Overviews something concrete to attribute work to. sameAs is
            derived from site.social, dropping mailto: and the local RSS link. #}
-        {% if page.route == grav.config.system.home.alias and uri.params(null, true)|length == 0 %}
+        {% if uri.uri == '/' %}
         {% set person_sameas = site.social|filter(s => s.icon not in ['send', 'rss'])|map(s => s.link) %}
         <script type="application/ld+json">
         {

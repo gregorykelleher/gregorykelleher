@@ -35,6 +35,11 @@
       {% set article_text = page.content|striptags|trim %}
       {% set word_count = article_text|split(' ')|filter(w => w|length > 0)|length %}
       {% set article_section = (page.taxonomy.tag|first)|default('Blog')|capitalize %}
+      {% set summary_text = page.summary|striptags|trim %}
+      {% set ld_description = page.header.metadata.description
+          ?: (summary_text|length > 200
+              ? (summary_text|slice(0, 200)|split(' ')|slice(0, -1)|join(' ') ~ '…')
+              : summary_text) %}
       <script type="application/ld+json">
       {
           "@context": "https://schema.org",
@@ -44,7 +49,7 @@
               "@id": {{ page.url(true)|json_encode|raw }}
           },
           "headline": {{ page.title|json_encode|raw }},
-          "description": {{ (page.header.metadata.description ?: page.summary|striptags|trim|truncate(200, true, '…'))|json_encode|raw }},
+          "description": {{ ld_description|json_encode|raw }},
           "datePublished": {{ page.date|date('c')|json_encode|raw }},
           "dateModified": {{ page.modified|date('c')|json_encode|raw }},
           "author": {

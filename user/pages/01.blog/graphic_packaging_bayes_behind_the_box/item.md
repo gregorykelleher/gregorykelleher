@@ -69,13 +69,13 @@ Close to $100M of Waco's $160M target was framed by former CEO Doss as cost disp
 
 The remaining $60M is in a different category entirely. Doss conditioned it on a 2027-28 demand recovery, and on that question management has gone silent. The closest that comes to crediting Waco at all is a "Net Performance" bucket of $40-110M in the March 2026 investor slide deck, in which a footnote concedes _"includes benefits from Waco"_ alongside weather offsets without specifying whether those benefits are cost-displacement, volume, or both.
 
-!!! The $160M Waco target gets cut two different ways across management's earnings calls, and it's easy to mix them up. The _structural_ split, which is what actually generates the EBITDA, is ~$100M from cost displacement (the closed mills) and ~$60M from incremental volume sold through Waco. The _temporal_ split, which is when it shows up in reported results, is roughly $80M in 2026 and $80M in 2027, because both pieces phase in gradually rather than landing in a single year. The analysis here uses the structural split, since the cost question and the volume question hinge on different evidence and need to be calibrated separately.
+!!! The $160M Waco target gets cut two different ways across management's earnings calls, and it's easy to mix them up. The _structural_ split, which is what actually generates the EBITDA, is ~$100M from cost displacement (the closed mills) and ~$60M from incremental volume sold through Waco. The _temporal_ split, which is when it shows up in reported results, is roughly $80M in 2026 and $80M in 2027, with Doss framing the second $80M as contingent on a 2027-28 demand recovery rather than as a guaranteed lag. The analysis here uses the structural split, since the cost question and the volume question hinge on different evidence and need to be calibrated separately.
 
 K2 ramped into a boom year; Waco is ramping into a CPG environment where volumes have stabilised but not yet recovered, and where excess SBS capacity continues to pressure packaging pricing at the margin. The ramp may be ahead of schedule, but the demand needed to absorb the extra tons isn't yet visible in the data. That gap is most acute on the volume question, where no reference class will close it; only quarterly demand data will. It also touches cost displacement, because lower-cost tons only book as savings once they sell. If they pile up as unsold inventory instead, the cost advantage is real in the asset but doesn't show up in reported EBITDA until those tons clear.
  
 Even so, the K2 anchor still earns its keep on the cost ramp itself. K2's outcome is known, so it bounds what Waco should deliver at the asset, and the next few quarters of filings will either confirm or contradict that bound.
 
-Why K2 rather than a more skeptical anchor? The intuition parallels Occam's razor. Both hypotheses must explain the same set of facts, but it's only the bear case that introduces a new mechanism, unobserved so far, by which a near-identical mill, run by the same team, produces a materially different result. By contrast, the bull case requires no such mechanism, which is why K2 is the parsimonious anchor, and the burden of proof falls on the bear case to produce one.
+Why K2 rather than a more skeptical anchor? The intuition parallels Occam's razor. Both hypotheses must explain the same set of facts, but it's only the bear case that introduces a new mechanism, unobserved so far, by which a near-identical mill, run by the same team, produces a materially different result. By contrast, the bull case requires no such mechanism, which is why K2 is the parsimonious anchor. The absence of a counter-mechanism is evidence, not proof, in favour of that reading; if one surfaces, the anchor moves with it.
 
 K2 is the right anchor, but anchoring is not the same as calibrating. The next question is whether K2's outcome is typical of large-mill builds or an outlier, and that's the question the rest of the distribution has to answer.
 
@@ -109,9 +109,9 @@ On the questions the base rate is equipped to address, Waco clears the threshold
 
 #### The Volume Tranche
 
-Before pressing on, there's an intrinsic difference to highlight between the volume tranche and the operational one. The earlier operational question was easier to answer, because it bore the signature of epistemic uncertainty, the kind where the answer is already fixed in the world, and only had to be uncovered. Closed mills, cost gaps, accumulating quarterly evidence each narrow the aperture on a fact that was already true.
+Before pressing on, there's an intrinsic difference to highlight between the volume tranche and the operational one. The operational question itself splits into two layers. The unit cost gap (Waco's cost-per-ton against the closed Middletown and East Angus baseline) is epistemic, a fact already fixed in the asset that closed mills and the next few quarters of filings narrow the aperture on. The flow-through to reported EBITDA is partly aleatory, because lower-cost tons only book as savings once they sell. Quarterly evidence narrows the first layer, not the second.
 
-In contrast, the volume question cannot be framed the same way. Whether the remaining ~$60M materialises depends on factors outside of Waco; the answer hasn't yet been made, and is waiting on demand conditions outside of GPK's remit. That is what is meant by aleatory uncertainty, the kind that no quantity of evidence can collapse on its own, only time can.
+The volume tranche, by contrast, is aleatory through and through. Whether the remaining ~$60M materialises depends on demand conditions outside GPK's remit; the answer hasn't yet been made, and no quantity of evidence can collapse it on its own, only time can.
 
 Immediately reaching for the same comparator set logic here would just be choosing the wrong instrument. Base rates are built to interpolate an answer the world already holds, not to forecast one it hasn't yet produced. There's simply no honest reference class for 'incremental tons sold into a stalled CPG demand environment' that would be principled enough to use. The implication for Bayes, then, is that the volume forecast will not collapse on quarterly evidence the same way the operational one did, and hence must be held wider, for longer, and with less faith in narrowing.
 
@@ -177,7 +177,7 @@ The 'No change' default is the load-bearing rule of the three. Quarterly cost ou
 
 #### Waiting on Demand
 
-Quarterly demand readings are noisy by construction; any single soft or strong print sits well inside ordinary cyclical variance, and rarely says anything about whether the underlying demand regime has shifted. A rule that moved the prior on those prints would be updating on cycle noise it has already absorbed into the calibration. The volume stream therefore stays dormant on the quarterly cadence, and is reserved for the point at which the demand picture turns on evidence that survives a single quarter.
+Quarterly demand readings are noisy by construction; any single soft or strong print sits well inside ordinary cyclical variance, and rarely says anything about whether the underlying demand regime has shifted. A rule that moved the prior on those readings would be updating on cycle noise it has already absorbed into the calibration. The volume stream therefore stays dormant on the quarterly cadence, and is reserved for the point at which the demand picture turns on evidence that survives a single quarter. The asymmetric magnitude when it does fire mirrors the calibration; the prior is already biased low on volume, so a downside surprise confirms a posture the weights already carry, whereas an upside surprise contradicts it directly and earns the larger shift.
 
 | Volume Stream Signal                                                                       | Update                                               |
 |--------------------------------------------------------------------------------------------|------------------------------------------------------|
@@ -207,7 +207,7 @@ First, asset-level cost evidence at Waco that breaks from K2 in absolute level. 
 
 Second, a sustained demand outcome at either extreme. A genuine 2027 recovery would invalidate the held-low volume forecast well beyond what the +5pt update can absorb; a multi-year deterioration that takes industry box shipments below the four scenarios' floor would invalidate the whole set together, since no redistribution among them would recover it.
 
-Third, a strategic pivot that breaks the integrated CPG composition the thesis rests on; a divestment of a core segment, or a covenant-permitted acquisition outside the cartonboard franchise that materially changes the asset mix. The FCF covenant and the active buyback authorisation already rule out dilution and capital reallocation as falsification triggers, so asset composition is the one structural surface left. A change there leaves the K2-Waco operating thesis pointing at the wrong company, and the prior has to be retired outright.
+Third, a strategic pivot that breaks the integrated CPG composition the thesis rests on; a divestment of a core segment, or a covenant-permitted acquisition outside the cartonboard franchise that materially changes the asset mix. The credit amendment's leverage ceiling and active buyback authorisation already rule out dilution and capital reallocation as falsification triggers, so asset composition is the one structural surface left. A change there leaves the K2-Waco operating thesis pointing at the wrong company, and the prior has to be retired outright.
 
 I don't expect any of these to fire. Whilst that's the case, the act of naming them now, with the evidence still looking cooperative, is what gives them weight once it stops.
 
@@ -221,20 +221,20 @@ Those terminal prices derive from the deleveraging arithmetic and the EV/EBITDA 
 |----------|-------------------|----------------|--------|--------------|
 | Stress   | $1.05B            | $4.29          | 10/100 | $0.43        |
 | Bear     | $1.20B            | $9.77          | 30/100 | $2.93        |
-| Base     | $1.30B            | $16.50         | 40/100 | $6.60        |
+| Base     | $1.30B            | $16.52         | 40/100 | $6.61        |
 | Bull     | $1.55B            | $26.08         | 20/100 | $5.22        |
 
-The contributions sum to a probability-weighted value of $15.18. Against the current $9.24 quote, that implies roughly 64% upside. Putting the conviction in one number forces every component to be auditable; if the evidence shifts, the weights or the prices move and the $15.18 moves with them.
+The contributions sum to a probability-weighted value of $15.19. Against the current $9.24 quote, that implies roughly 64% upside. Putting the conviction in one number forces every component to be auditable; if the evidence shifts, the weights or the prices move and the $15.19 moves with them.
 
 The contribution column is where the shape of the bet actually sits. The bull tail alone contributes $5.22, against $3.36 from the stress and bear combined. The earlier write-up argued the payoff was asymmetric; here that asymmetry shows up in the arithmetic, with the right tail doing the heavy lifting and the left tail capped well above zero.
 
-$15.18 is a summary, however, and a summary is not a confidence measure. Outcomes span $4.29 to $26.08, so the spread is wide, and the 10/100 stress contribution is the honest reminder that the floor carries a real loss.
+$15.19 is a summary, however, and a summary is not a confidence measure. Outcomes span $4.29 to $26.08, so the spread is wide, and the 10/100 stress contribution is the honest reminder that the floor carries a real loss.
 
 ### Carrying the Prior
 
 The piece opened with the claim that a thesis is worth more when it withstands probability than when it avoids it. The audit suggests the thesis did withstand the test, but came out of it less emphatic than it went in. 60 out of 100 futures landing at base case or better still leaves 40 falling short of it, which is a more measured reading than the bullish prose had implied before the weights were attached. Naming that gap is what the framework requires.
 
-Therein lies the point of the exercise. The work was never going to converge on a single price the reader could lift and act on, because the gap between a thesis argued in prose and the same thesis held to a number is precisely the thing worth surfacing. The prior is the audit; the audit is the deliverable. Walking away with $15.18 in mind and forgetting the procedure that produced it is a way of inheriting the answer without inheriting the discipline that made it answerable.
+Therein lies the point of the exercise. The work was never going to converge on a single price the reader could lift and act on, because the gap between a thesis argued in prose and the same thesis held to a number is precisely the thing worth surfacing. The prior is the audit; the audit is the deliverable. Walking away with $15.19 in mind and forgetting the procedure that produced it is a way of inheriting the answer without inheriting the discipline that made it answerable.
 
 Most of the analytical work is already done; what's left is the part that has to be carried rather than computed. What still has to be carried is patience under the update rule, and alongside that, the willingness to retire the prior the moment a falsifier fires, rather than the moment retiring it becomes psychologically affordable. Pre-commitment is worth only what gets honoured once the evidence stops, or once it begins to cooperate.
 

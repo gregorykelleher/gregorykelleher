@@ -172,7 +172,7 @@ That posture is striking, and worth pausing on. The market read the amendment as
 
 The arithmetic from there is almost purely mechanical. Management's normalised FY2026 EBITDA guidance, stripping out the temporary impact of a deliberate inventory drawdown, sits between $1.2B and $1.4B. I'm using the lower end of that range, $1.2B, which assumes no volume recovery and no benefit from the demand-dependent half of Waco's EBITDA target. CEO Rietbroek has guided $500M of debt paydown in FY2026; I assume the same pace continues into FY2027.
 
-! **A note on the two leverage figures.** GPK's net leverage is quoted two ways: **3.8x** in the press release ($5.31B of net debt divided by $1.395B of headline Adjusted EBITDA) and **3.63x** in the 10-K (same calculation, but using a bank-defined EBITDA of ~$1.469B that includes a few add-backs the credit agreement permits). Both are real, and the 3.63x is what the lenders monitor for compliance. I'm using the 3.8x throughout the scenarios below to stay on the most conservative side.
+! **A note on the two leverage figures.** GPK's net leverage is quoted two ways: **3.8x** in the press release (against headline Adjusted EBITDA of $1.395B) and **3.63x** in the 10-K (against a bank-defined EBITDA of ~$1.469B that includes a few add-backs the credit agreement permits). Both are real, and the 3.63x is what the lenders monitor for compliance. I'm using the 3.8x throughout the scenarios below to stay on the most conservative side.
 
 The path from here writes itself:
 
@@ -184,7 +184,7 @@ The path from here writes itself:
 
 On a conservative $1.2B base, leverage does not cross 3.0x within two years. It reaches roughly 3.6x by the end of FY2027 and, at the same pace of paydown, would approach 3.0x by late FY2028. That timeline is roughly a year longer than it would be at $1.395B, and it is the more honest one to plan around. 3.0x is the level that matters. It is the threshold at which BB-rated packaging peers have historically stopped trading as distressed credits on 6x EV/EBITDA and resumed trading as ordinary cyclicals on 8 to 9x. The re-rating itself is a separate event that may or may not arrive on schedule, but the deleveraging that unlocks it does not depend on the market cooperating.
 
-What makes this engine distinctive is the arithmetic of the transfer. At a constant enterprise value, every dollar of net debt retired lands directly on the equity line. A billion dollars of debt paydown, divided across the 296M shares outstanding, is $3.38 per share of equity value created without anything else happening. The two-year path above retires roughly $1B of debt, approximately $3.38 per share, over a third of the current $9.24 quote, before a single multiple point of re-rating is assumed. If EBITDA recovers toward the upper end of the normalised range ($1.4B), or if Waco's cost displacement adds the guided $80 to 120M from here, the timeline compresses accordingly. The conservative case is not the only case; it's simply the one I'd rather underestimate than overestimate.
+What makes this engine distinctive is the arithmetic of the transfer. At a constant enterprise value, every dollar of net debt retired lands directly on the equity line. A billion dollars of debt paydown, divided across the 296M basic shares outstanding, is $3.38 per share of equity value created without anything else happening. The two-year path above retires roughly $1B of debt, approximately $3.38 per share, over a third of the current $9.24 quote, before a single multiple point of re-rating is assumed. If EBITDA recovers toward the upper end of the normalised range ($1.4B), or if Waco's cost displacement adds the guided $80 to 120M from here, the timeline compresses accordingly. The conservative case is not the only case; it's simply the one I'd rather underestimate than overestimate.
 
 A corroboration sits one rung up the capital stack. GPK's senior notes traded at roughly 99% of par at year-end 2025, with the $3.87B fixed-rate book at 98.7% and the $1.57B variable-rate book at 99.7%. The equity, over the same window, was down 65%.
 
@@ -425,7 +425,7 @@ This is where the multiple matters. A modest re-rate to 7x, still well below the
 
 - Enterprise value: 7 × $1.30B = $9.10B
 - Equity value: $9.10B − $4.21B = $4.89B
-- Per share: $4.89B / 296M = **$16.50**
+- Per share: $4.89B / 296M = **$16.52**
 
 Roughly 78% upside from $9.24, driven not by earnings growth but by deleveraging and a partial normalisation of the multiple.
 

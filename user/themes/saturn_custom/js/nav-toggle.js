@@ -19,7 +19,7 @@
 
         function applyViewportState() {
             if (mq.matches) {
-                toggle.style.display = '';
+                toggle.style.display = 'block';
                 toggle.classList.add('navigation-toggle-show');
                 if (!target.classList.contains('navigation-target-show')) {
                     target.style.display = 'none';

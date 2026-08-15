@@ -1,13 +1,3 @@
-# Snapshot of /etc/caddy/Caddyfile on the herculaneum droplet, captured
-# 2026-04-09. NOT used at runtime by Caddy from this repo — production
-# reads from /etc/caddy/Caddyfile + /etc/caddy/common.conf. Kept here
-# for version control and disaster recovery only. To restore on a fresh
-# host: copy this file to /etc/caddy/Caddyfile and the sibling
-# webserver-configs/common.conf to /etc/caddy/common.conf, then
-# `systemctl reload caddy`.
-#
-# This replaces the upstream Grav default Caddyfile (which was just
-# `localhost` + `php_fastcgi 127.0.0.1:9000` and unused on this server).
 
 {
 	# Re-disable HTTP/3 advertising. We re-enabled it 2026-04-09 alongside

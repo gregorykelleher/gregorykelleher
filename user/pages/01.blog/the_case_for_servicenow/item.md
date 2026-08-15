@@ -9,7 +9,7 @@ taxonomy:
 
 As the 'SaaS-pocalypse' phenomenon advances unabated, and software stocks continue their free-fall, rereading Michael Burry's early writings during the original Dot-Com collapse has felt less like a history lesson and more like a field-guide.
 
-![servicenow.svg](servicenow.svg)
+![Operator at a computer console, hands on an illuminated keypad, working a data terminal](operator_console.webp?width=1178&height=570)
 
 ===
 

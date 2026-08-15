@@ -9,7 +9,7 @@ taxonomy:
 
 The four scenarios that closed out the bull case for Graphic Packaging (NYSE:GPK) were, admittedly, tilted towards my own favourable outlook. Most bullish write-ups would choose to end there, but a thesis is worth more when it withstands probability than when it avoids it. All predictions are uncertain, but the better ones are weighted against base rates and bend when the facts do.
  
-![gpk.svg](gpk.svg)
+![Woodchip mounds and conveyor gantries at a pulp mill, with stack emissions behind](pulp_mill.webp?width=1178&height=570)
 
 ===
 

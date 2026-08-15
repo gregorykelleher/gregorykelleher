@@ -10,7 +10,7 @@ taxonomy:
 
 Security analysis, especially of the 'cigar-butt' variety (as Buffett would describe) has always been an interest of mine. Taking a cue from Michael Burry's old MSN MoneyCentral articles, I'd like to elucidate my own theses, to reinforce my arguments and build a track record going forward.
 
-![scripps.svg](scripps.svg)
+![Television camera operator framing a shot on a broadcast camera](camera_operator.webp?width=1178&height=570)
 
 ===
 

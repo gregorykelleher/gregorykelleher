@@ -9,7 +9,7 @@ taxonomy:
 
 My previous article balanced on the cutting edge of technology. This one sits on the edge of a cardboard box. On face value, Graphic Packaging Holding Company (NYSE:GPK) isn't glamorous, but then again, neither is the inside of a cereal box. But somebody still had to make it. As the world's largest producer of paperboard packaging, GPK probably did too.
 
-![gpk.svg](gpk.svg)
+![Log stacker on the rail between pulpwood piles at a paperboard mill, woodchip mounds and stack emissions behind](log_yard.webp?width=1178&height=570)
 
 ===
 
